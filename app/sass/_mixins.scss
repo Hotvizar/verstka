@@ -1,0 +1,56 @@
+
+@mixin mq($width, $type: max) {
+	@if map_has_key($breakpoints, $width) { 
+		$width: map_get($breakpoints, $width); 
+		@if $type == max {
+			$width: $width - 1px;
+		} 
+
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+
+@mixin img-gray() {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+@mixin img-nogray() {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+    filter: none;
+}
+
+@mixin trans($opt: "all", $sec: 0.3s) {
+  transition: $opt $sec;
+}
+
+//Стиль плейсхолдера
+
+@mixin placeholder($color:#bbb) {
+    .form-control::-webkit-input-placeholder { color: $color; }  /* WebKit, Blink, Edge */
+    .form-control:-moz-placeholder { color: $color; }  /* Mozilla Firefox 4 to 18 */
+    .form-control::-moz-placeholder { color: $color; }  /* Mozilla Firefox 19+ */
+    .form-control:-ms-input-placeholder { color: $color; }  /* Internet Explorer 10-11 */
+    .form-control::-ms-input-placeholder { color: $color; }  /* Microsoft Edge */
+
+    :focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    :focus::-moz-placeholder {
+      color: transparent;
+    }
+    :focus:-moz-placeholder {
+      color: transparent;
+    }
+    :focus:-ms-input-placeholder {
+      color: transparent;
+    }
+}
