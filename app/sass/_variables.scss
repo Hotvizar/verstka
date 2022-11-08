@@ -1,8 +1,10 @@
-$fc: #000;
-$red: #FF0000;
-$lbl: #2B2A29;
-$gray: #F3F3F3;
-$dgrey: #DCDCDC;
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400&family=Noto+Sans:wght@300;400;600&display=swap');
+
+$fc: #171717;
+$main: #C6B097;
+
+$ns: 'Noto Sans', sans-serif;
+$bit: 'Bitter', serif;
 
 $breakpoints: (
 	sm: 576px,

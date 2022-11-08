@@ -6,9 +6,10 @@ html {
 	height: 100%;
 }
 body {
+	font-family: $ns;
 	font-size: 16px;
-	font-weight: 400;
-	line-height: 170%;
+	font-weight: 300;
+	line-height: 160%;
 	min-width: 320px;
 }
 :focus {
@@ -16,9 +17,17 @@ body {
     outline-width: 0px !important;
     outline-color: none !important;
 }
-h1, .h1,
+h1, .h1 {
+	font-family: $bit;
+	font-size: 120px;
+	font-weight: 300;
+	line-height: 110%;
+}
 h3, .h3 {
-	@include font-size(36px);
+	font-family: $bit;
+	font-weight: 300;
+	font-size: 64px;
+	line-height: 100.5%;
 }
 
 a {
