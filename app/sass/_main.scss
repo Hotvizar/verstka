@@ -6,6 +6,7 @@ html {
 	height: 100%;
 }
 body {
+	background-color: $bg;
 	font-family: $ns;
 	font-size: 16px;
 	font-weight: 300;
@@ -51,4 +52,11 @@ button, .form-control {
 .btn {
 	border-radius: 0;
 	transition: all .3s;
+}
+
+.main-container {
+    margin-left: 57px;
+    margin-right: 57px;
+	
+	text-align: justify;
 }

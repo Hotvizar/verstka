@@ -1,4 +1,123 @@
 // HEADER
 .header {
 	
+    .left-sidebar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        max-height: 988px;
+        width: 57px;
+
+        .left-menu {
+            transform: rotate(-90deg);
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0;
+                width: 100%;
+
+                li {
+                    margin: 0 24px;
+                    a {
+                        font-family: $ns;
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: $fc;
+                        line-height: 1;
+
+                        &:after {
+                            content: "";
+                            background-color: $main;
+                            display: block;
+                            opacity: 0;
+                            height: 2px;
+                            transform: scaleX(0);
+                            transition: all .5s;
+                        }
+
+                        &:hover {
+                            &:after {
+                                opacity: 1;
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right-sidebar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        max-height: 988px;
+        width: 57px;
+
+        a, p {
+            font-family: $ns;
+            font-size: 15px;
+            font-weight: 400;
+            color: $fc;
+            line-height: 1;
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        .right-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(90deg);
+
+            .btn-link {
+                padding: 0;
+                line-height: 0;
+                margin-left: 85px;
+                margin-right: 79px;
+            }
+            .menu-icon {
+                fill: $fc;
+                height: 49px;
+                width: 52px;
+                transform: rotate(-90deg);
+            }
+
+            a {
+                font-family: $ns;
+                font-size: 15px;
+                font-weight: 400;
+                color: $fc;
+                line-height: 1;
+
+                &:after {
+                    content: "";
+                    background-color: $main;
+                    display: block;
+                    opacity: 0;
+                    height: 2px;
+                    transform: scaleX(0);
+                    transition: all .5s;
+                }
+
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+
 }
