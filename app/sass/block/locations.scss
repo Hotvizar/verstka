@@ -1,0 +1,51 @@
+.locations {
+
+    h3 {
+        margin-bottom: 93px;
+    }
+
+    .loc-item {
+        position: relative;
+        .image {
+            background-blend-mode: hue, normal;
+            
+            background-position: center !important;
+            margin: 0 28px;
+            overflow: hidden;
+            @include trans(.5s);
+
+            img {
+                filter: saturate(.4);
+                @include trans(.5s);
+            }
+        }
+
+        .title {
+            background: rgba(255, 255, 255, 0.6);
+            font-family: $bit;
+            font-size: 20px;
+            font-weight: 400;
+            color: $fc;
+            padding: 12px;
+            position: absolute;
+            left: 0;
+            top: 27px;
+        }
+
+        .btn-prim {
+            position: absolute;
+            right: 0;
+            bottom: 39px;
+        }
+
+        &:hover {
+            .image {
+                img {
+                    transform: scale(1.3);
+                    filter: saturate(1);
+                }
+            }
+        }
+    }
+
+}

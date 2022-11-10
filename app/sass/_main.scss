@@ -99,3 +99,28 @@ button, .form-control {
 		}
 	}
 }
+
+.btn-prim {
+	background-color: $main;
+	font-size: 16px;
+	font-weight: 400;
+	color: $fc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	height: 47px;
+	max-width: 200px;
+	width: 100%;
+
+	.arrow-right {
+		fill: $fc;
+		margin-left: 13px;
+		height: 18px;
+		width: 18px;
+	}
+
+	&:hover {
+		background-color: #fff;
+	}
+}

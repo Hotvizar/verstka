@@ -1,4 +1,5 @@
 .affiche {
+    margin-bottom: 68px;
     h3 {
         margin-bottom: 92px;
     }
@@ -88,6 +89,8 @@
             .title {
                 min-height: 84px;
                 opacity: 0;
+                /* will-change: transform, opacity; 
+                transform: translateY(150px); */
                 transform: translate3d(0, 150px, 0);
                 @include trans(.5s);
             }
