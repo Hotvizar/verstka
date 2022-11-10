@@ -84,18 +84,15 @@ $slick-opacity-not-active: 0.25 !default;
         fill: #fff;
         height: 28px;
         width: 28px;
-     }
-     .chevron-right {
-         fill: #fff;
-     }
+    }
 }
 
 .slick-prev {
-    left: 186px;
+    left: 94px;
 }
 
 .slick-next {
-    right: 186px;
+    right: 94px;
 }
 
 /* Dots */
@@ -117,9 +114,9 @@ $slick-opacity-not-active: 0.25 !default;
     li {
         position: relative;
         display: inline-block;
-        height: 8px;
-        width: 8px;
-        margin: 0 24px 0 0;
+        height: 10px;
+        width: 10px;
+        margin: 0 12px;
         padding: 0;
         cursor: pointer;
         button {

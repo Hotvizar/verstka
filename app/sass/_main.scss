@@ -29,6 +29,7 @@ h3, .h3 {
 	font-weight: 300;
 	font-size: 64px;
 	line-height: 100.5%;
+	text-align: center;
 }
 
 a {
@@ -57,6 +58,44 @@ button, .form-control {
 .main-container {
     margin-left: 57px;
     margin-right: 57px;
-	
-	text-align: justify;
+}
+.page-content {
+	background: url('image/bg-rabbit.svg') 50% -91px no-repeat;
+	height: 1900px;
+	padding-top: 78px;
+}
+
+.btn-outline {
+	border: 2.79px solid transparent;
+	font-weight: 400;
+	font-size: 19.5349px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	height: 60px;
+	width: 100%;
+
+	.arrow-right {
+		margin-left: 13px;
+		height: 19.53px;
+		width: 19.53px;
+	}
+
+	&.white {
+		border-color: #FFFFFF;
+		color: #fff;
+
+		.arrow-right {
+			fill: #fff;
+		}
+
+		&:hover {
+			background-color: #fff;
+			color: $main;
+			.arrow-right {
+				fill: $main;
+			}
+		}
+	}
 }
