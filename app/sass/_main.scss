@@ -61,7 +61,6 @@ button, .form-control {
 }
 .page-content {
 	background: url('image/bg-rabbit.svg') 50% -91px no-repeat;
-	height: 1900px;
 	padding-top: 78px;
 }
 
@@ -80,6 +79,7 @@ button, .form-control {
 		margin-left: 13px;
 		height: 19.53px;
 		width: 19.53px;
+		@include trans();
 	}
 
 	&.white {
@@ -98,6 +98,24 @@ button, .form-control {
 			}
 		}
 	}
+	
+	&.brown {
+		border-color: $main;
+		color: #fff;
+		@include trans(all, .3s);
+
+		.arrow-right {
+			fill: #fff;
+		}
+
+		&:hover {
+			background-color: $main;
+			color: $fc;
+			.arrow-right {
+				fill: $fc;
+			}
+		}
+	}
 }
 
 .btn-prim {
@@ -111,6 +129,7 @@ button, .form-control {
 	line-height: 1;
 	height: 47px;
 	max-width: 200px;
+	white-space: nowrap;
 	width: 100%;
 
 	.arrow-right {
@@ -118,9 +137,17 @@ button, .form-control {
 		margin-left: 13px;
 		height: 18px;
 		width: 18px;
+		@include trans();
 	}
 
 	&:hover {
 		background-color: #fff;
+		&.black {
+			background-color: $fc;
+			color: #fff;
+			.arrow-right {
+				fill: #fff;
+			}
+		}
 	}
 }
