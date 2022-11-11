@@ -56,7 +56,9 @@
 
         .delivery-info {
             font-weight: 500;
-            background-color: $gray;
+            background: $gray url('image/bg-rabbit.svg') no-repeat;
+            background-size: 426px 816px;
+            background-position: calc(100% + 426px / 2) -70px;
             flex-basis: 50%;
             padding: 100px 70px 80px;
 

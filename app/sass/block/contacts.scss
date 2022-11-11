@@ -1,0 +1,34 @@
+.contacts {
+    h3 {
+        margin-bottom: 93px;
+    }
+
+    .contact-info {
+        background: $gray url('image/bg-rabbit.svg') no-repeat;
+        background-size: 426px 816px;
+        background-position: calc(100% + 426px / 2) -70px;
+        font-weight: 500;
+        padding: 100px 80px 96px;
+
+        h5 {
+            font-family: $bit;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 100.5%;
+            margin-bottom: 53px;
+        }
+        a {
+            font-weight: 500;
+            color: $fc;
+        }
+
+        .col {
+            margin-bottom: 18px;
+        }
+
+        .btn-prim {
+            max-width: 233px;
+            margin: 51px 0 0 55px;
+        }
+    }
+}
