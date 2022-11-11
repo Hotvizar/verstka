@@ -1,0 +1,95 @@
+.projects {
+    h3 {
+        margin-bottom: 93px;
+    }
+
+    .projects-list {
+        .project-item {
+            position: relative;
+            overflow: hidden;
+
+            .image {
+                overflow: hidden;
+
+                img {
+                    filter: saturate(.17);
+                    @include trans(.5s);
+                }
+            }
+
+            .project-logo {
+                position: absolute;
+                left: 50%;
+                bottom: 63px;
+                transform: translate3d(-50%, 0, 0);
+                opacity: 1;
+                @include trans(.7s);
+            }
+
+            .project-caption {
+                background: linear-gradient(180deg, $main 0%, $main 100%);
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 54px 42px 41px;
+                margin: 30px 25px;
+                height: calc(100% - 60px);
+                position: absolute;
+                top: 25%;
+                left: 0;
+                opacity: 0;
+                transform: scale(0.1);
+                @include trans(.5s);
+
+                .title {
+                    position: relative;
+                    text-align: center;
+                    transform: translate3d(0, 300px, 0);
+                    opacity: 1;
+                    @include trans(.5s);
+                }
+
+                .excerpt {
+                    font-family: $bit;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 130%;
+                }
+            }
+
+            .buttons {
+                transform: translate3d(0, 400px, 0);
+                @include trans(.6s);
+            }
+
+            &:hover {
+                .image {
+                    img {
+                        filter: saturate(1);
+                        transform: scale(1.2);
+                    }
+                }
+
+                .project-logo {
+                    transform: translate3d(-50%, -296px, 0);
+                }
+
+                .project-caption {
+                    top: 0;
+                    opacity: 1;
+                    transform: scale(1);
+                    .title {
+                        transform: translate3d(0, 0, 0);
+                        opacity: 1;
+                    }
+                }
+
+                .buttons {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+
+}

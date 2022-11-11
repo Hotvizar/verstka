@@ -28,7 +28,7 @@
     filter: none;
 }
 
-@mixin trans($opt: "all", $sec: 0.3s) {
+@mixin trans($sec: 0.3s, $opt: "all" ) {
   transition: $opt $sec;
 }
 
