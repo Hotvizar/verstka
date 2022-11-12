@@ -30,4 +30,19 @@
             }
         }
     }
+
+    @include mq(md) {
+        .rent-box {
+            flex-direction: column;
+
+            .image {
+                margin-bottom: 30px;
+                padding: 0;
+            }
+            .text {
+                padding-left: 0;
+            }
+        }
+    }
+    
 }

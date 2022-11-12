@@ -91,6 +91,11 @@
                 height: 49px;
                 width: 52px;
                 transform: rotate(-90deg);
+                @include trans();
+
+                &:hover {
+                    fill: $main;
+                }
             }
 
             a {
@@ -117,6 +122,12 @@
                     }
                 }
             }
+        }
+    }
+
+    @media (max-width: 374px) {
+        .left-sidebar, .right-sidebar {
+            width: 43px;
         }
     }
 

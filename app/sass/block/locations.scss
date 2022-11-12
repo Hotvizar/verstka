@@ -6,7 +6,7 @@
 
     .loc-item {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         .image {
             background-blend-mode: hue, normal;
             
@@ -50,4 +50,15 @@
         }
     }
 
+    @media (max-width: 424px) {
+        .loc-item .image {
+            margin: 0;
+        }
+        .row {
+            .col {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
 }

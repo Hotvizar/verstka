@@ -41,7 +41,7 @@
                 @include trans(all, .5s);
             }
 
-            &:hover {
+            &:hover, &.hover-block {
                 &::after {
                     bottom: 0;
                 }
@@ -87,6 +87,55 @@
                 height: 60px;
                 max-width: 288px;
                 margin-top: 71px;
+            }
+        }
+    }
+
+    @media (max-width: 968px) {
+        .menu-delivery-box {
+            flex-direction: column;
+            
+            .menu-image {
+                max-height: 450px;
+            }
+
+            .delivery-info {
+                padding: 50px;
+                .btn-prim {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    @include mq(md) {
+        .menu-delivery-box {
+            .menu-image {
+                .btn-outline {
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        .menu-delivery-box {
+            .delivery-info {
+                padding: 50px 24px;
+                .delivery-phone {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+    @media (max-width: 375px) {
+        .menu-delivery-box {
+            .delivery-info {
+                .btn-prim {
+                    .arrow-right {
+                        display: none;
+                    }
+                }
             }
         }
     }

@@ -30,6 +30,10 @@ h3, .h3 {
 	font-size: 64px;
 	line-height: 100.5%;
 	text-align: center;
+
+	@media (max-width: 480px) {
+		font-size: 48px;
+	}
 }
 
 a {
@@ -58,6 +62,11 @@ button, .form-control {
 .main-container {
     margin-left: 57px;
     margin-right: 57px;
+
+	@media (max-width: 374px) {
+		margin-left: 43px;
+    	margin-right: 43px;
+	}
 }
 .page-content {
 	background: url('image/bg-rabbit.svg') 50% -91px no-repeat;

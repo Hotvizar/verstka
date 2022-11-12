@@ -1,5 +1,9 @@
 .header-slider {
     height: 988px;
+
+    @include mq(md) {
+        height: 768px;
+    }
 }
 
 #home-slider {
@@ -55,5 +59,45 @@
 
     .slick-next {
         right: 94px;
+    }
+
+    @media (max-width: 1280px) {
+        .slick-prev {
+            left: 15px;
+        }
+    
+        .slick-next {
+            right: 15px;
+        }
+    }
+
+    @include mq(md) {
+        .slick-slide {
+            .slide-item {
+                .logo-slide {
+                    margin-top: 20px;
+                }
+                .slide-caption {
+                    h1 {
+                        @include font-size(120px);
+                    }
+                }
+            }
+        }
+        .slick-prev, .slick-next {
+            display: none !important;
+        }
+    }
+    
+    @media (max-width: 374px) {
+        .slick-slide {
+            .slide-item {
+                .slide-caption {
+                    h1 {
+                        font-size: 44px;
+                    }
+                }
+            }
+        }
     }
 }
