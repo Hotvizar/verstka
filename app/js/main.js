@@ -102,3 +102,18 @@ $(function () {
 
 
 });
+
+$(window).on("resize", function () {
+    //closeNav();
+});
+
+
+function openNav() {
+    $('body').addClass('modal-open');
+    $('#slide-menu').addClass("open-menu");
+}
+
+function closeNav() {
+    $('body').removeClass('modal-open');
+    $('#slide-menu').removeClass("open-menu");
+}
