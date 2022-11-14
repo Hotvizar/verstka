@@ -47,6 +47,8 @@ $(function () {
         ],
     });
 
+    $('input[type=tel]').inputmask("+7 999-999-99-99",{ "placeholder": "_" });
+
 
     //scroll
     $("body").on('click', '[href*="#"]', function (e) {
@@ -99,6 +101,10 @@ $(function () {
             scrollTracking();
         }
     });
+
+    $('.modal').on('show.bs.modal', function (event) {
+		closeNav();
+	});
 
 
 });

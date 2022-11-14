@@ -141,6 +141,11 @@ button, .form-control {
 	white-space: nowrap;
 	width: 100%;
 
+	&.white {
+		background-color: #fff;
+		color: $fc;
+	}
+
 	.arrow-right {
 		fill: $fc;
 		margin-left: 13px;
@@ -158,5 +163,29 @@ button, .form-control {
 				fill: #fff;
 			}
 		}
+		&.white {
+			background-color: $fc;
+			color: #fff;
+		}
+	}
+}
+
+@include placeholder(#000);
+
+.form-control {
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid $fc;
+	font-weight: 300;
+	font-size: 20px;
+	color: $fc;
+	line-height: 27px;
+	text-align: center;
+	padding: 0 13px 16px;
+	height: 43px;
+
+	&:focus {
+		background-color: transparent;
+		border-color: $fc;
 	}
 }
