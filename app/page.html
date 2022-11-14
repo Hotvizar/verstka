@@ -1,0 +1,53 @@
+@@include('parts/header.html', {title: "Page"})
+
+<div class="main-container">
+
+    @@include('parts/breadcrumbs.html', {bred: "Ресторация"})
+
+    <div class="header-slider">
+
+        <div id="home-slider">
+    
+            <div class="slide-item" style="background: url(image/restoracia.jpg) center no-repeat; background-size: cover;">
+                <div class="logo-slide">
+                    <img src="../image/rabbit-white.svg" alt="" class="img-fluid">
+                </div>
+                <div class="slide-caption">
+                    <h1>Ресторация</h1> <!-- отступ сверху если есть subtitle -->
+                </div>
+            </div>
+            
+            <div class="slide-item" style="background: url(image/restoracia.jpg) center no-repeat; background-size: cover;">
+                <div class="logo-slide">
+                    <img src="../image/rabbit-white.svg" alt="" class="img-fluid">
+                </div>
+                <div class="slide-caption">
+                    <h1>Ресторация</h1>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <div class="page-content">
+
+        <div class="container">
+            
+            <div class="main-content">
+                <p>Ресторан авторской кухни в исполнении виртуозного шеф-повара Андрея Калугина. На Выбор гостя представлено фуршетное, банкетное и меню а ля карт. Просторный современный зал вмещает до 80 гостей, оснащен современным звуковым и световым оборудованием, большим LED-экраном. Идеален для проведения банкетных торжеств, фуршетов, семинаров.</p>
+                <p>Караоке зал - это сказка «Алиса в стране чудес» воплощенная в реальность.</p>
+                <p>Опытные и знающие свое дело звукооператоры заставят любого поверить в себя и свой талант певца.</p>
+                <p>Радостные и позитивные, молодые и красивые, любящие и умеющие отдыхать - это гости нашего караоке.</p>
+                <p>Атмосферное LOUNGE пространгство с комфортным зонированием, уютными диванами для больших и маленьких компаний, с дымными миксами и авторскими коктейлями, насладиться которыми помогут ненавязчивые ритмы от Ярославских Dj-ев.</p>
+            </div>
+
+        </div>
+
+        @@include('parts/affiche.html')
+
+    </div>
+
+</div> <!-- /.main-container -->
+	
+@@include('parts/footer.html')

@@ -62,15 +62,49 @@ button, .form-control {
 .main-container {
     margin-left: 57px;
     margin-right: 57px;
+	position: relative;
 
 	@media (max-width: 374px) {
 		margin-left: 43px;
     	margin-right: 43px;
 	}
 }
+.wrap-breadcrumbs {
+	position: absolute;
+	top: 48px;
+	left: 148px;
+	z-index: 3;
+	max-width: calc(50% - 205px);
+	a, span {
+		font-size: 12px;
+		font-weight: 400;
+		color: #fff;
+		line-height: 16px;
+		margin-right: 10px;
+	}
+	a {
+		margin-right: 10px;
+
+		+a {
+			margin-left: 10px;
+		}
+
+		&:hover {
+			color: $main;
+		}
+	}
+	.breadcrumb_last {
+		color: $main;
+		margin-left: 10px;
+	}
+}
 .page-content {
 	background: url('image/bg-rabbit.svg') 50% -91px no-repeat;
 	padding-top: 78px;
+}
+
+.main-content {
+	margin-bottom: 70px;
 }
 
 .btn-outline {
