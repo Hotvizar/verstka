@@ -125,9 +125,25 @@
         }
     }
 
-    @media (max-width: 374px) {
-        .left-sidebar, .right-sidebar {
-            width: 43px;
+    @include mq(md) {
+        .right-sidebar {
+            background-color: $bg;
+            height: auto;
+            position: fixed;
+            right: 15px;
+            top: 15px;
+            z-index: 4;
+            .phone, p {
+                display: none;
+            }
+            .right-menu .btn-link {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        .left-sidebar {
+            display: none;
         }
     }
 

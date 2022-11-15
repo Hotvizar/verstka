@@ -11,6 +11,7 @@
 
         .dishes {
             max-width: 720px;
+            width: 100%;
             position: absolute;
             bottom: 65px;
             left: 50%;
@@ -65,7 +66,6 @@
 
         li {
             margin-bottom: 17px;
-            //min-height: 50px;
         }
 
         .dishes-row {
@@ -136,6 +136,15 @@
         }
     }
 
+    @include mq(xl) {
+        .header-slider {
+            .dishes {
+                max-width: none;
+                padding: 0 15px;
+            }
+        }
+    }
+
     @include mq(lg) {
         .dishes-list {
             columns: unset;
@@ -146,7 +155,29 @@
         }
     }
 
+    @include mq(md) {
+        .header-slider {
+            height: 988px;
+        }
+    }
     @include mq(480) {
+        .header-slider {
+            h2 {
+                font-size: 94px;
+            }
+        }
+        #home-slider {
+            .slick-slide {
+                .slide-item {
+                    .slide-caption {
+                        top: 40%;
+                    }
+                }
+                .btn-prim {
+                    top: 40%;
+                }
+            }
+        }
         .dishes-list {
             .dishes-row {
                 flex-wrap: wrap;

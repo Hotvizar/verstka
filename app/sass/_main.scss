@@ -64,9 +64,9 @@ button, .form-control {
     margin-right: 57px;
 	position: relative;
 
-	@media (max-width: 374px) {
-		margin-left: 43px;
-    	margin-right: 43px;
+	@include mq(md) {
+		margin-left: 0;
+    	margin-right: 0;
 	}
 }
 .wrap-breadcrumbs {
