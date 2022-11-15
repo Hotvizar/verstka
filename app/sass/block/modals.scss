@@ -45,12 +45,24 @@
             background-size: 590px 1132px;
             border-radius: 0;
             align-items: center;
-            padding: 130px 20px;
+            padding: 130px 20px 60px;
 
             .modal-body {
+                font-weight: 500;
                 padding: 0;
                 max-width: 749px;
                 width: 100%;
+            }
+
+            .row {
+                margin-top: 36px;
+                .col-md-6 {
+                    margin-bottom: 49px;
+                }
+            }
+
+            textarea {
+                height: 186px;
             }
 
             .btn-prim {
@@ -74,6 +86,9 @@
 }
 
 #callback {
+    .modal-content {
+        padding: 130px 20px;
+    }
     .modal-body {
         text-align: center;
         max-width: 460px;
@@ -99,6 +114,11 @@
 
 
 @media (min-width: 576px) {
+    .modal-dialog-centered {
+        display: flex;
+        align-items: center;
+        min-height: 100%;
+    }
     .modal-dialog {
         max-width: unset;
         margin: .5rem;

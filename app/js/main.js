@@ -59,6 +59,10 @@ $(function () {
         e.preventDefault();
     });
 
+    $('.modal').on('show.bs.modal', function (event) {
+		closeNav();
+	});
+
     //Включение эффекта hover на мобильном при появлении блока на экране
     //https://webgolovolomki.com/poyavlenie-elementov-pri-skrolle/
     //https://snipp.ru/jquery/show-on-scroll
@@ -67,23 +71,27 @@ $(function () {
     var blockShow = null;
 
     function scrollTracking() {
-        var target = $('.menu-image');
-        var wt = $(window).scrollTop();
-        var wh = $(window).height();
-        var et = target.offset().top + 400;
-        var eh = target.outerHeight();
+        var mimg = $('.menu-image');
+        
+        if(mimg.length > 0) {
+            var wt = $(window).scrollTop();
+            var wh = $(window).height();
+            var et = mimg.offset().top + 400;
+            var eh = mimg.outerHeight();
 
-        if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
-            if (blockShow == null || blockShow == false) {
-                target.addClass('hover-block');
+            if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
+                if (blockShow == null || blockShow == false) {
+                    mimg.addClass('hover-block');
+                }
+                blockShow = true;
+            } else {
+                if (blockShow == null || blockShow == true) {
+                    mimg.removeClass('hover-block');
+                }
+                blockShow = false;
             }
-            blockShow = true;
-        } else {
-            if (blockShow == null || blockShow == true) {
-                target.removeClass('hover-block');
-            }
-            blockShow = false;
         }
+        
     }
 
     $(window).on('scroll', function () {
@@ -100,18 +108,12 @@ $(function () {
         if ($(window).innerWidth() < 992) {
             scrollTracking();
         }
+        closeNav();
     });
 
-    $('.modal').on('show.bs.modal', function (event) {
-		closeNav();
-	});
-
 
 });
 
-$(window).on("resize", function () {
-    //closeNav();
-});
 
 
 function openNav() {
