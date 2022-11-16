@@ -4,6 +4,15 @@
     @include mq(md) {
         height: 768px;
     }
+
+    .btn-prim {
+        max-width: 314px;
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, calc(-50% + 174px));
+    }
 }
 
 #home-slider {
@@ -24,12 +33,12 @@
         .slide-item { 
             position: relative;
             
-            .logo-slide {
+            /* .logo-slide {
                 margin-top: 78px;
                 img {
                     margin: auto;
                 }
-            }
+            } */
             
             .slide-caption {
                 position: absolute;
@@ -74,9 +83,6 @@
     @include mq(md) {
         .slick-slide {
             .slide-item {
-                .logo-slide {
-                    margin-top: 20px;
-                }
                 .slide-caption {
                     h1 {
                         @include font-size(120px);

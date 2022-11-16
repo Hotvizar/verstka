@@ -73,8 +73,9 @@ button, .form-control {
 	position: absolute;
 	top: 48px;
 	left: 148px;
+	right: 0;
 	z-index: 3;
-	max-width: calc(50% - 205px);
+	max-width: calc(50% - 204px);
 	a, span {
 		font-size: 12px;
 		font-weight: 400;
@@ -96,6 +97,11 @@ button, .form-control {
 	.breadcrumb_last {
 		color: $main;
 		margin-left: 10px;
+	}
+
+	@include mq(xl) {
+		left: 15px;
+		max-width: calc(50% - 72px);
 	}
 }
 .page-content {
@@ -222,4 +228,166 @@ button, .form-control {
 		background-color: transparent;
 		border-color: $fc;
 	}
+}
+
+.bootstrap-select {
+	width: 100%;
+
+	>.dropdown-toggle,
+	&.show>.dropdown-toggle.btn-light {
+		background-color: transparent;
+		border: none;
+		border-bottom: 2px solid $fc;
+		border-radius: 0;
+		box-shadow: none;
+		font-weight: 300;
+		font-size: 20px;
+		color: $fc;
+		line-height: 27px;
+		padding: 0 13px 16px;
+		height: 43px;
+
+		&:after {
+			border: none;
+			content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.93085 6.21967C5.22374 5.92678 5.69862 5.92678 5.99151 6.21967L9.96118 10.1893L13.9309 6.21967C14.2237 5.92678 14.6986 5.92678 14.9915 6.21967C15.2844 6.51256 15.2844 6.98744 14.9915 7.28033L10.4915 11.7803C10.1986 12.0732 9.72374 12.0732 9.43085 11.7803L4.93085 7.28033C4.63796 6.98744 4.63796 6.51256 4.93085 6.21967Z' fill='%23171717'/%3e%3c/svg%3e");
+			cursor: pointer;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: 0;
+			line-height: 0;
+			transform: scale(1, 1);
+		}
+
+		.bs-caret {
+			display: none;
+		}
+		&.bs-placeholder {
+			color: $fc;
+		}
+
+		&:hover,
+		&:focus,
+		&:active,
+		&.bs-placeholder:hover,
+		&.active,
+		&.btn-light:hover {
+			background-color: transparent !important;
+			border: none;
+			border-bottom: 2px solid $fc;
+			color: $fc;
+			outline: none !important;
+		}
+	}
+
+	&.show>.dropdown-toggle.btn-light {
+		&:after {
+			transform: scale(1, -1);
+		}
+	}
+
+	> .dropdown-menu {
+		border: 1px solid $bg;
+		background-color: $bg;
+		box-shadow: 14px 12px 21px rgba(0, 0, 0, 0.23);
+		border-radius: 0;
+		margin-top: 26px;
+		overflow: visible !important;
+		padding: 15px 0;
+		min-width: unset;
+		max-width: 260px;
+		left: 50% !important;
+		transform: translate3d(-50%, 43px, 0px) !important;
+		width: 100%;
+		&:before {
+			background-color: $bg;
+			content: "";
+			transform: translateX(-50%) rotate(45deg) ;
+			height: 27px;
+			width: 27px;
+			position: absolute;
+			top: -10px;
+			left: 50%;
+			
+		}
+	}
+
+	ul.dropdown-menu {
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		margin: 0;
+		padding: 5px 0;
+		transform: translateX(0);
+		text-align: center;
+
+		>li {
+			>a {
+				color: $fc;
+				background-color: $bg;
+
+				span:after {
+					content: "";
+					background-color: $main;
+					display: block;
+					opacity: 0;
+					height: 2px;
+					transform: scaleX(0);
+					transition: all .5s;
+				}
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: $bg;
+					text-decoration: none;
+
+					span {
+						text-decoration: none;
+						&:after {
+						opacity: 1;
+						transform: scaleX(1);
+					}
+					}
+				}
+			}
+		}
+
+		>.active {
+			>a {
+				background-color: $bg;
+				color: $main;
+
+				&:focus,
+				&:hover,
+				&:active {
+					background-color: $bg;
+					color: $main;
+				}
+
+			}
+		}
+	}
+}
+
+.xdsoft_datetimepicker .xdsoft_label>.xdsoft_select>div>.xdsoft_option.xdsoft_current {
+    background: $main;
+    box-shadow: $main 0 1px 3px 0 inset;
+    color: #fff;
+    font-weight: 700;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td, .xdsoft_datetimepicker .xdsoft_calendar th{
+	line-height: 1.5;
+	text-align: center;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box>div>div.xdsoft_current {
+    background: $main;
+    box-shadow: $main 0 1px 3px 0 inset;
+    color: #fff;
+    font-weight: 700;
+	text-align: center;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td>div {
+	padding-right: 0;
 }

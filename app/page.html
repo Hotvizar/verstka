@@ -2,28 +2,32 @@
 
 <div class="main-container">
 
-    @@include('parts/breadcrumbs.html', {bred: "Ресторация"})
+    <div class="logo-block">
+        
+        @@include('parts/breadcrumbs.html', {bred: "Ресторация"})
+
+        <div class="logo">
+            <a href="/"><img src="image/rabbit-white.svg" alt="" class="img-fluid"></a>
+        </div>
+
+    </div>
 
     <div class="header-slider">
 
         <div id="home-slider">
     
             <div class="slide-item" style="background: url(image/restoracia.jpg) center no-repeat; background-size: cover;">
-                <div class="logo-slide">
-                    <img src="../image/rabbit-white.svg" alt="" class="img-fluid">
-                </div>
-                <div class="slide-caption">
-                    <h1>Ресторация</h1> <!-- отступ сверху если есть subtitle -->
-                </div>
-            </div>
-            
-            <div class="slide-item" style="background: url(image/restoracia.jpg) center no-repeat; background-size: cover;">
-                <div class="logo-slide">
-                    <img src="../image/rabbit-white.svg" alt="" class="img-fluid">
-                </div>
                 <div class="slide-caption">
                     <h1>Ресторация</h1>
                 </div>
+                <button type="button" class="btn btn-prim" data-toggle="modal" data-target="#book">Забронировать</button>
+            </div>
+            
+            <div class="slide-item" style="background: url(image/restoracia.jpg) center no-repeat; background-size: cover;">
+                <div class="slide-caption">
+                    <h1>Ресторация</h1>
+                </div>
+                <button type="button" class="btn btn-prim" data-toggle="modal" data-target="#book">Забронировать</button>
             </div>
     
         </div>

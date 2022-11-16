@@ -48,6 +48,27 @@ $(function () {
     });
 
     $('input[type=tel]').inputmask("+7 999-999-99-99",{ "placeholder": "_" });
+    $('select').selectpicker();
+
+    //Дата и время
+	jQuery.datetimepicker.setLocale('ru');
+	
+	$('#data').datetimepicker({
+		mask: false,
+		format: 'd.m.Y',
+		minDate: new Date(),
+		dayOfWeekStart: 1,
+		timepicker: false,
+		lang: 'ru',
+	});
+	
+	$('#time').datetimepicker({
+		mask: false,
+		format: 'H:i',
+		step: 5,
+		roundTime: 'round', // round, ceil, floor
+		datepicker: false,
+	});
 
 
     //scroll

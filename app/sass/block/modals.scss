@@ -55,7 +55,9 @@
             }
 
             .row {
-                margin-top: 36px;
+                .mt-5 {
+                    margin-top: 36px;
+                }
                 .col-md-6 {
                     margin-bottom: 49px;
                 }

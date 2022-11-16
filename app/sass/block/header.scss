@@ -148,3 +148,29 @@
     }
 
 }
+
+.logo-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+
+    .logo img {
+        display: block;
+        margin: 22px auto 0;
+        
+    }
+}
+.home {
+    .logo-block {
+        .logo img {
+            display: block;
+            margin: 78px auto 0;
+            
+            @include mq(md) {
+                margin: 22px auto 0;
+            }
+        }
+    }
+}

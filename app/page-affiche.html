@@ -1,23 +1,14 @@
-@@include('parts/header.html', {title: "Меню"})
+@@include('parts/header.html', {title: "Афиша"})
 
 <div class="main-container page-menu">
 
-    <div class="logo-block">
-        
-        @@include('parts/breadcrumbs.html', {bred: "Меню"})
-
-        <div class="logo">
-            <a href="/"><img src="image/rabbit-white.svg" alt="" class="img-fluid"></a>
-        </div>
-
-    </div>
+    @@include('parts/breadcrumbs.html', {bred: "Афиша"})
 
     <div class="header-slider">
 
         <div id="home-slider">
 
-            <div class="slide-item"
-                style="background: url(image/page-menu.jpg) center no-repeat; background-size: cover;">
+            <div class="slide-item" tyle="background: url(image/page-menu.jpg) center no-repeat; background-size: cover;">
                 
                 <div class="slide-caption">
                     <h2 class="h1">Меню</h2> <!-- отступ сверху если есть subtitle -->

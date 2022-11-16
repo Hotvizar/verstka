@@ -23,11 +23,11 @@
 </div>
 
 <!-- delivery -->
-<div class="modal" id="delivery" tabindex="-1" aria-labelledby="callbackLabel" aria-hidden="true">
+<div class="modal" id="delivery" tabindex="-1" aria-labelledby="deliveryLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 id="callbackLabel">Доставка</h5>
+                <h5 id="deliveryLabel">Доставка</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <svg class="close-icon">
                         <use xlink:href="image/icons/symbol/sprite.svg#close" /></svg>
@@ -51,6 +51,56 @@
 
                     <div class="text-center">
                         <button class="btn btn-prim white">Заказать доставку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BOOK -->
+<div class="modal" id="book" tabindex="-1" aria-labelledby="bookLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="bookLabel">Забронировать</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg class="close-icon">
+                        <use xlink:href="image/icons/symbol/sprite.svg#close" /></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Депозит для бронирования зала караоке состовляет 1500 руб. Бронирование места в ресторане без депозита. После того как Вы оставите заявку с Вами свяжется менеджер для уточнения деталей.</p>
+                <form method="post">
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control" placeholder="+7 ___-___-__-__ ">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row no-gutters">
+                                <div class="col-7 pr-3">
+                                    <input type="text" id="data" name="data" value="Дата" class="form-control" placeholder="Дата">
+                                </div>
+                                <div class="col-5">
+                                    <input type="text" id="time" name="time" value="Время" class="form-control" placeholder="Время">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <select name="zal" id="zal" class="form-control text-left" title='Зал'>
+                                <option value="1">Ресторация</option>
+                                <option value="2">Караоке-клуб</option>
+                                <option value="3">Веранда</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Количество человек">
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-prim white">Забронировать</button>
                     </div>
                 </form>
             </div>
