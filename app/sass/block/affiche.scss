@@ -193,3 +193,153 @@
     }
 
 }
+
+.event-slider {
+    height: 988px;
+
+    @include mq(md) {
+        height: 1100px;
+    }
+}
+
+#affiche-page-slider {
+
+    height: 100%;
+
+    .slick-list,
+    .slick-list>div,
+    .slick-slide,
+    .slick-slide>div,
+    .event-row,
+    .event-item {
+        height: 100%;
+    }
+
+    .event-row {
+        display: flex;
+
+        .event-banner {
+            width: calc(100% / 2);
+        }
+
+        .event-info {
+            text-align: center;
+            padding: 88px 0 80px 2%;
+            width: calc(100% / 2);
+
+            .logo {
+                margin-bottom: 57px;
+
+                img {
+                    display: inline-block;
+                    margin: 0 auto;
+                }
+            }
+
+            .description {
+                font-family: $bit;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 110%;
+                margin-bottom: 85px;
+            }
+
+            .h3 {
+                @include font-size(64px);
+                margin-bottom: 18px;
+                overflow-wrap: break-word;
+            }
+
+            .event-date {
+                font-family: $bit;
+                font-weight: 300;
+                font-size: 36px;
+                line-height: 110%;
+                margin-bottom: 107px;
+            }
+
+            .btn-prim {
+                margin: 0 auto;
+                max-width: 304px;
+                height: 70px;
+            }
+        }
+    }
+
+    .slick-next .chevron-right {
+        fill: $fc;
+    }
+
+    .slick-dots {
+        left: 25%;
+        width: auto;
+        transform: translateX(-50%);
+    }
+
+    @include mq(md) {
+
+        .event-row {
+            flex-wrap: wrap;
+
+            .event-banner, .event-info {
+                height: 50%;
+                width: 100%;
+            }
+
+            .event-info {
+                padding: 30px 2%;
+                
+                .logo {
+                    margin-bottom: 30px;
+    
+                    img {
+                        max-height: 130px;
+                    }
+                }
+
+                .description {
+                    margin-bottom: 30px;
+                }
+
+                .event-date {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        .slick-next, .slick-prev {
+            display: none;
+        }
+
+        .slick-dots {
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+
+            li {
+                button {
+                    border: 2px solid $fc;
+                }
+                &.slick-active button {
+                    background-color: $fc;
+                }
+            }
+
+        }
+    }
+
+    @include mq(380) {
+        .event-row {
+            .event-info {
+                .h3 {
+                    font-size: 30px; 
+                }
+                .event-date {
+                    font-size: 28px;
+                }
+            }
+        }
+    
+    }
+
+}
