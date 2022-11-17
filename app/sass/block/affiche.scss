@@ -196,6 +196,7 @@
 
 .event-slider {
     height: 988px;
+    margin-bottom: 78px;
 
     @include mq(md) {
         height: 1100px;
@@ -223,6 +224,9 @@
         }
 
         .event-info {
+            background: $gray url('image/bg-rabbit.svg') no-repeat;
+            background-size: 998px 1912px;
+            background-position: -499px -511px;
             text-align: center;
             padding: 88px 0 80px 2%;
             width: calc(100% / 2);
