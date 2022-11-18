@@ -156,20 +156,18 @@
     width: 100%;
     z-index: 3;
 
-    .logo img {
-        display: block;
-        margin: 22px auto 0;
-        
+    .logo {
+        padding-top: 22px;
+        text-align: center;
     }
 }
 .home {
     .logo-block {
-        .logo img {
-            display: block;
-            margin: 78px auto 0;
+        .logo {
+            padding-top: 78px;
             
             @include mq(md) {
-                margin: 22px auto 0;
+                padding-top: 22px;
             }
         }
     }

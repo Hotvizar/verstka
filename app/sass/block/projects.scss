@@ -102,3 +102,80 @@
     }
 
 }
+
+#page-projects {
+    .wrap-breadcrumbs {
+        a, span {
+            color: $fc;
+            &:hover {
+                color: $main;
+            }
+        }
+        .breadcrumb_last {
+            color: $main;
+        }
+    } 
+    .logo-block {
+        position: static;
+
+        .h3 {
+            margin: 32px 0 66px;
+        }
+    }
+
+    .projects-list {
+        .project-info {
+            font-weight: 400;
+            background-color: $gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 100px 159px;
+            height: 100%;
+
+            .logo-link {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 73px;
+                
+                img[src*="rabbit-black.svg"] {
+                    max-width: 74px;
+                }
+
+                a {
+                    color: $fc;
+                    text-decoration: underline;
+                    &:hover {
+                        color: $main;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .project-img {
+            height: 100%;
+        }
+
+        @media (max-width: 1370px) {
+            .project-info {
+                padding: 50px 30px;
+            }
+        }
+        @include mq(lg) {
+            .project-img {
+                background: none !important;
+            }
+        }
+        @include mq(480) {
+            .logo-link {
+                flex-direction: column;
+                align-items: center;
+                img {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
