@@ -393,6 +393,72 @@ button, .form-control {
 	padding-right: 0;
 }
 
+.page-template-success {
+	background: $bg url('image/success-img.webp') no-repeat;
+	background-position: calc(50% - 360px) bottom;
+	.left-sidebar, .right-sidebar {
+		background-color: $bg;
+	}
+
+	.block-success {
+		font-family: $bit;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 160%;
+		margin-left: auto;
+		width: 50%;
+
+		h1 {
+			font-family: $bit;
+			font-weight: 400;
+			font-size: 58px;
+			@include font-size(58px);
+			line-height: 140%;
+			max-width: 457px;
+		}
+
+		.btn-prim {
+			margin-top: 40px;
+			max-width: 241px;
+		}
+	}
+
+	@include mq(lg) {
+		background-position: calc(50% - 209px) bottom;
+    	background-size: auto 70%;
+	}
+
+	@include mq(480) {
+		background-position: calc(50% - 209px) bottom;
+		background-size: auto 57%;
+
+		.block-success {
+			width: 68%;
+		}
+	}
+	
+	@include mq(380) {
+		background-position: calc(50% - 146px) bottom;
+		background-size: auto 48%;
+
+		.block-success {
+			width: 80%;
+		}
+	}
+}
+
+#page-success, #page-404 {
+	background: url("image/bg-rabbit.svg") no-repeat;
+	background-position: center -218px;
+	background-size: 584px 1118px;
+	height: 100%;
+
+	.logo-block {
+		position: static;
+		margin-bottom: 87px;
+	}
+}
+
 .error404 {
 	background: url("image/spoon.webp") no-repeat, url("image/fork.png") no-repeat;
 	background-size: 494px 831px, 453px 792px;
@@ -412,15 +478,6 @@ button, .form-control {
 }
 
 #page-404 {
-	background: url("image/bg-rabbit.svg") no-repeat;
-	background-position: center -218px;
-	background-size: 584px 1118px;
-	height: 100%;
-
-	.logo-block {
-		position: static;
-		margin-bottom: 87px;
-	}
 
 	.block-404 {
 		text-align: center;
