@@ -1,5 +1,18 @@
-<section id="contacts" class="contacts">
-    <h3>Контакты</h3>
+@@include('parts/header.html', {title: "Контакты"})
+
+<div id="page-contacts" class="main-container">
+
+    <div class="logo-block">
+        
+        @@include('parts/breadcrumbs.html', {bred: "Контакты"})
+
+        <div class="logo">
+            <a href="/"><img src="image/rabbit-black.svg" alt="" class="img-fluid"></a>
+        </div>
+
+        <h1 class="h3">Контакты</h1>
+
+    </div> <!-- /.logo-block -->
 
     <div class="row row-cols-1 row-cols-xl-2 no-gutters">
         <div class="col">
@@ -26,5 +39,8 @@
             </div>
         </div>
     </div>
+    
 
-</section>
+</div> <!-- /.main-container -->
+	
+@@include('parts/footer.html')
