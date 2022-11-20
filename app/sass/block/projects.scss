@@ -20,11 +20,17 @@
 
             .project-logo {
                 position: absolute;
-                left: 50%;
+                left: 0;
                 bottom: 63px;
-                transform: translate3d(-50%, 0, 0);
                 opacity: 1;
+                text-align: center;
+                padding: 0 57px;
+                width: 100%;
                 @include trans(.7s);
+
+                img {
+                    max-height: 201px;
+                }
             }
 
             .project-caption {
@@ -49,6 +55,10 @@
                     transform: translate3d(0, 300px, 0);
                     opacity: 1;
                     @include trans(.5s);
+
+                    img {
+                        max-height: 201px;
+                    }
                 }
 
                 .excerpt {
@@ -76,7 +86,7 @@
                 }
 
                 .project-logo {
-                    transform: translate3d(-50%, -296px, 0);
+                    transform: translate3d(0, -296px, 0);
                     opacity: 0;
                 }
 
@@ -96,9 +106,88 @@
             }
         }
 
-        /* @media (max-width: 1610px) {
-            
-        } */
+        @media (max-width: 1674px) and (min-width: 1450px) {
+            .project-item {
+
+                .project-logo {
+                    img {
+                        max-height: 156px;
+                    }
+                }
+
+                .project-caption {
+                    padding: 42px 33px 33px;
+                    margin: 23px;
+                    height: calc(100% - 46px);
+                    .title {
+                        img {
+                            max-height: 156px;
+                        }
+                    }
+
+                    .excerpt {
+                        font-size: 14px;
+                    }
+
+                    .btn-outline {
+                        height: 46px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1449px) {
+            .row-cols-1 {
+                .col {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+        }
+
+        @media(max-width: 930px) {
+            .project-item {
+
+                .project-logo {
+                    img {
+                        max-height: 156px;
+                    }
+                }
+
+                .project-caption {
+                    padding: 42px 33px 33px;
+                    margin: 23px;
+                    height: calc(100% - 46px);
+                    .title {
+                        img {
+                            max-height: 156px;
+                        }
+                    }
+
+                    .excerpt {
+                        font-size: 14px;
+                    }
+
+                    .btn-outline {
+                        height: 46px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 700px) {
+            .row-cols-1 {
+                .col {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+
+            .project-item {
+                max-width: 400px;
+                margin: 0 auto 20px;
+            }
+        }
     }
 
 }

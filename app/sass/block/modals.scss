@@ -15,6 +15,10 @@
                 line-height: 100.5%;
                 text-align: center;
                 margin-bottom: 43px;
+
+                @media (max-width: 480px) {
+                    font-size: 37px;
+                }
             }
 
             .close {
@@ -99,6 +103,10 @@
             font-size: 40px;
             color: #000;
             height: 62px;
+
+            @media (max-width: 374px) {
+                font-size: 34px;
+            }
         }
     }
 }
@@ -114,6 +122,16 @@
     }
 }
 
+@media (min-width: 768px) {
+    .modal .modal-dialog {
+        max-width: 74.15%;
+        margin: auto;
+    }
+
+    #callback .modal-header h5 {
+        margin-bottom: 117px;
+    }
+}
 
 @media (min-width: 576px) {
     .modal-dialog-centered {
@@ -124,16 +142,5 @@
     .modal-dialog {
         max-width: unset;
         margin: .5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .modal .modal-dialog {
-        max-width: 74.15%;
-        margin: auto;
-    }
-
-    #callback .modal-header h5 {
-        margin-bottom: 117px;
     }
 }

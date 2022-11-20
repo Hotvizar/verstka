@@ -6,7 +6,7 @@
 
     .loc-item {
         position: relative;
-        margin-bottom: 30px;
+        margin: 0 auto 30px;
         .image {
             background-blend-mode: hue, normal;
             
@@ -47,6 +47,12 @@
                     filter: saturate(1);
                 }
             }
+        }
+    }
+
+    @include mq(md) {
+        .loc-item {
+            max-width: 556px;
         }
     }
 
