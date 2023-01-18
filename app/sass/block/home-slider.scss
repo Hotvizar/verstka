@@ -1,0 +1,59 @@
+.header-slider {
+
+    .slide-item {
+        position: relative;
+        overflow: hidden;
+        min-height: 674px;
+
+        .slide-caption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: auto;
+            width: 100%;
+            
+            h3 {
+                font-weight: 700;
+                font-size: 52px;
+                color: #fff;
+                line-height: 69px;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 57px;
+                span {
+                    color: $yelh;
+                }
+            }
+            
+            .btn-prime {
+                margin: 0 auto;
+                height: 64px;
+                max-width: 259px;
+            }
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 0;
+
+            @media (orientation: landscape) {
+                width: 100%;
+                height: auto;
+            }
+
+            @media (orientation: portrait) {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+    }
+
+
+}

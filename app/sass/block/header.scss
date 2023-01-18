@@ -1,4 +1,107 @@
 // HEADER
 .header {
-	
+	padding: 8px 0 20px;
+
+    .header-top-right-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 27px;
+    }
+
+    .lang-switch {
+        margin-left: 45px;
+        .btn {
+            border: 1px solid rgba(7, 10, 13, .3);
+            border-radius: 3px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 31px;
+            width: 48px;
+            padding: 0;
+
+            
+        }
+
+        .dropdown {
+            &:hover {
+                >.dropdown-menu {
+                    display: block;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            background-color: transparent;
+            border: none;
+            padding: 7px 0 0;
+            margin: 0;
+            min-width: 101px;
+            left: -25px;
+
+            &::before {
+                content: "";
+                background-color: #fff;
+                display: block;
+                height: 7px;
+                width: 7px;
+                position: absolute;
+                left: 50%;
+                top: 3px;
+                transform: translateX(-50%) rotate(45deg);
+            }
+
+            ul {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 11px;
+
+                li {
+                    margin-bottom: 5px;
+                }
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 400;
+                color: $fc;
+                text-transform: uppercase;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+                &:active {
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .main-menu {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 0;
+
+            li {
+                margin-left: 24px;
+                line-height: 1;
+                a {
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: $fc;
+                    line-height: 16px;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: $yel;
+                    }
+                }
+            }
+        }
+    }
 }

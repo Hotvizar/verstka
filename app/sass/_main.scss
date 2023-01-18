@@ -6,11 +6,12 @@ html {
 	height: 100%;
 }
 body {
-	/* background-color: $bg;
-	font-family: $ns;
+	background-color: $bg;
+	font-family: 'LatoWeb';
 	font-size: 16px;
-	font-weight: 300;
-	line-height: 160%; */
+	font-weight: 400;
+	color: $fc;
+	line-height: 22px;
 	min-width: 320px;
 }
 :focus {
@@ -19,11 +20,13 @@ body {
     outline-color: none !important;
 }
 h1, .h1 {
-
+	font-weight: 800;
+	font-size: 48px;
+	line-height: 54px;
 }
-h3, .h3 {
+/* h3, .h3 {
 
-}
+} */
 
 a {
 	transition: all .3s;
@@ -46,4 +49,53 @@ button, .form-control {
 .btn {
 	border-radius: 0;
 	transition: all .3s;
+}
+
+.btn-prime {
+	background: linear-gradient(132.22deg, #FFD500 4.4%, #EAB840 100%);
+	box-shadow: 0px 12px 42px rgba(0, 20, 51, 0.2), inset 1px 1px 1px rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 16px;
+	color: $fc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 24px;
+	text-transform: uppercase;
+	height: 48px;
+	max-width: 205px;
+	width: 100%;
+
+	&:hover {
+		background: linear-gradient(131.92deg, #FFD500 56.93%, #EAB840 146.02%);
+	}
+	&:active {
+		background: linear-gradient(131.98deg, #FFD500 4.17%, #EAB840 47.36%);
+	}
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	a {
+		background: linear-gradient(116.73deg, #FFD500 -19.22%, #EAB840 66.75%);
+		border-radius: 50%;
+		display: flex;
+		margin-left: 25px;
+		align-items: center;
+		justify-content: center;
+		height: 28px;
+		width: 28px;
+		@include trans();
+
+		&:hover, &:focus {
+			background: linear-gradient(113.48deg, #FFD500 58.59%, #EAB840 133.67%);
+		}
+	}
+	.icon-social {
+		height: 16px;
+		width: 16px;
+	}
 }
