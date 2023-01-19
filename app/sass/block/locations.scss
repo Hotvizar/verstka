@@ -1,0 +1,40 @@
+.locations {
+
+    .maps {
+        iframe {
+            width: 100%;
+        }
+    }
+
+    .list-locations {
+        padding: 48px 0;
+
+        h5 {
+            border: 1px solid rgba(7, 10, 13, .3);
+            border-radius: 5px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 28px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            text-align: center;
+            height: 99px;
+
+            span {
+                font-family: $lbl;
+            }
+        }
+
+        ul {
+            columns: 3;
+            column-gap: 30px;
+            margin-bottom: 0;
+            li {
+                text-align: center;
+                padding: 8px 0;
+            }
+        }
+    }
+}
