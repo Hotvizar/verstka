@@ -1,0 +1,65 @@
+.about {
+
+    .meter {
+        background: url('image/spidometr.png') 50% 0 no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+
+        .cols {
+            font-family: $lb;
+            font-size: 75px;
+            line-height: 48px;
+            margin-top: 38px;
+            margin-bottom: 26px;
+        }
+
+        .text {
+            font-family: $lb;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+            text-align: center;
+            max-width: 270px;
+            margin: 0 auto;
+        }
+    }
+
+    .about-img {
+        position: relative;
+        padding: 17px 15px 0 0;
+        &::before {
+            content: "";
+            display: block;
+            opacity: 0.3;
+            border: 1px solid $fc;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 503px;
+            max-height: 249px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+
+    .benefits {
+        .media {
+            margin-bottom: 45px;
+            img {
+                margin-right: 30px;
+            }
+        }
+        .media-body {
+            font-size: 20px;
+            line-height: 27px;
+            text-transform: uppercase;
+        }
+    }
+
+}

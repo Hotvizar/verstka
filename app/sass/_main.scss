@@ -20,13 +20,16 @@ body {
     outline-color: none !important;
 }
 h1, .h1 {
-	font-weight: 800;
+	font-family: $lbl;
 	font-size: 48px;
 	line-height: 54px;
 }
-/* h3, .h3 {
-
-} */
+h3, .h3 {
+	font-family: $lbl;
+	font-size: 48px;
+	line-height: 54px;
+	margin-bottom: 28px;
+}
 
 a {
 	transition: all .3s;
