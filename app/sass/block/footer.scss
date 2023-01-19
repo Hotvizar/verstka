@@ -1,4 +1,143 @@
 /* FOOTER */
+$lh: #EEDAB1;
 .footer {
-    
+    background-color: #334457;
+    color: #fff;
+    padding: 49px 0 74px;
+
+    .footer-col-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .social {
+        justify-content: flex-start;
+
+        a {
+            margin-left: 0;
+            margin-right: 25px;
+        }
+    }
+
+    h5 {
+        font-family: $lb;
+        font-size: 32px;
+        line-height: 45px;
+        margin-bottom: 28px;
+    }
+
+    .footer-menu {
+        margin-bottom: 0;
+        li {
+            margin-bottom: 21px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                font-family: $lb;
+                font-size: 14px;
+                display: inline-block;
+                line-height: 16px;
+                color: #fff;
+                text-transform: uppercase;
+
+                &:after {
+                    content: "";
+                    background-color: $lh;
+                    display: block;
+                    opacity: 0;
+                    height: 1px;
+                    transform: scaleX(0);
+                    transition: all .3s;
+                }
+        
+                &:hover {
+                    color: $lh;
+                    &::after {
+                        opacity: 1;
+                        transform: scaleX(1);
+                    }
+                }
+                &:active {
+                    color: $lh;
+                    &::after {
+                        opacity: 0;
+                        transform: scaleX(0);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-contacts {
+        margin-bottom: 60px;
+
+        li {
+            margin-bottom: 22px;
+            a {
+                color: #fff;
+                display: inline-block;
+
+                &.email {
+                    &:after {
+                        content: "";
+                        background-color: #fff;
+                        display: block;
+                        opacity: 1;
+                        height: 0.75px;
+                        transform: scaleX(1);
+                        transition: all .3s;
+                    }
+                    
+                    &:hover {
+                        color: $lh;
+                        
+                        &::after {
+                            opacity: 0;
+                            transform: scaleX(0);
+                        }
+                    }
+                }
+
+                span {
+                    color: $yelh;
+                }
+
+                &:after {
+                    content: "";
+                    background-color: $lh;
+                    display: block;
+                    opacity: 0;
+                    height: 1px;
+                    transform: scaleX(0);
+                    transition: all .3s;
+                }
+        
+                &:hover {
+                    color: $lh;
+                    
+                    &::after {
+                        opacity: 1;
+                        transform: scaleX(1);
+                    }
+
+                    span {
+                        color: $lh;
+                    }
+                }
+
+                &:active {
+                    color: $lh;
+                    &::after {
+                        opacity: 0;
+                        transform: scaleX(0);
+                    }
+                }
+            }
+        }
+        
+    }
 }
