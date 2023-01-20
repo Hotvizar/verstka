@@ -137,7 +137,23 @@ $lh: #EEDAB1;
                     }
                 }
             }
+        }   
+    }
+
+    @include mq(sm) {
+        .footer-col-wrap {
+            align-items: center;
+
+            .social {
+                a {
+                    margin-left: 12px;
+                    margin-right: 12px;
+                }
+            }
         }
-        
+
+        .footer-contacts {
+            margin-bottom: 0;
+        }
     }
 }

@@ -25,6 +25,11 @@
                 span {
                     color: $yelh;
                 }
+
+                @include mq(md) {
+                    @include font-size(52px);
+                    line-height: 133%;
+                }
             }
             
             .btn-prime {
@@ -45,17 +50,15 @@
             min-height: 100%;
             z-index: 0;
 
-            @media (orientation: landscape) {
-                width: 100%;
-                height: auto;
-            }
-
-            @media (orientation: portrait) {
-                width: auto;
+            @include mq(xl) {
                 height: 100%;
             }
         }
 
+    }
+
+    @include mq(lg) {
+        margin-bottom: 50px;
     }
 
 }

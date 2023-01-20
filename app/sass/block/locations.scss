@@ -60,4 +60,19 @@
             }
         }
     }
+
+    @include mq(480) {
+        .list-locations {
+            h5 {
+                flex-direction: column;
+            }
+        }
+    }
+    @include mq(380) {
+        .list-locations {
+            ul {
+                columns: 2;
+            }
+        }
+    }
 }

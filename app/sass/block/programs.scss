@@ -133,4 +133,37 @@
         }
 
     }
+
+    @include mq(xl) {
+        .programs-banner {
+            min-height: 520px;
+        }
+    }
+    @include mq(md) {
+        .programs-banner {
+            min-height: 368px;
+        }
+    }
+    @media (max-width: 489px) {
+        .programs-banner {
+            min-height: 368px;
+
+            h5 br {
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        .programs-banner {
+
+            h5 {
+                font-size: 18px;
+            }
+        }
+    }
+    @media (max-width: 369px) {
+        .programs-banner {
+            min-height: 480px;
+        }
+    }
 }

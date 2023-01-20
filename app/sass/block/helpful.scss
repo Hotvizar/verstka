@@ -42,4 +42,8 @@
             }
         }
     }
+
+    @include mq(md) {
+        padding: 50px 0;
+    }
 }

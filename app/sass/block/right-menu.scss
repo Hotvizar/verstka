@@ -1,0 +1,66 @@
+#right-menu {
+    background-color: $bg;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 100;
+    will-change: transition;
+    transition: all .5s ease-out;
+
+    &.open-menu {
+        right: 0;
+    }
+
+    .wrapper {
+        padding: 60px 20px;
+    }
+
+    .close-icon {
+        height: 24px;
+        width: 24px;
+    }
+
+    .lang-switch {
+        position: absolute;
+        right: 20px;
+        top: 6px;
+    }
+
+    .mobile-logo {
+        margin-bottom: 20px;
+        height: auto;
+        width: 200px;
+    }
+
+    .modile-menu {
+        ul {
+            margin-bottom: 30px;
+            li {
+                margin-bottom: 15px;
+                a {
+                    font-family: $lbl;
+                    color: $fc;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .social {
+        justify-content: flex-start;
+
+        a {
+            margin-left: 0;
+            margin-right: 25px;
+        }
+    }
+}
+
+#close-menu {
+    padding: 0;
+    position: absolute;
+    left: 20px;
+    top: 6px;
+}
