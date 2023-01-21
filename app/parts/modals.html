@@ -1,0 +1,36 @@
+<div class="modal" id="proposal" tabindex="-1" aria-labelledby="proposalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="proposalLabel">Написати повідомлення</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg class="close-icon">
+                        <use xlink:href="image/icons/symbol/sprite.svg#close-icon" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group required">
+                        <label for="userEmail">Ваш Email</label>
+                        <input type="email" class="form-control" id="userEmail" placeholder="Email">
+                    </div>
+                    
+                    <div class="form-group required">
+                        <label for="userTel">Ваш Телефон</label>
+                        <input type="tel" class="form-control" id="userTel" placeholder="_ _ _">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Ваше повідомлення</label>
+                        <input type="text" class="form-control" id="message" placeholder="Текст повідомлення">
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-prime">НАДІСЛАТИ ПОВІДОМЛЕННЯ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

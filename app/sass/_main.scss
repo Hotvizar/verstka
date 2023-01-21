@@ -131,3 +131,49 @@ button, .form-control {
 		}
 	}
 }
+
+@include placeholder(#EBEBEB);
+
+.form-group {
+	margin-bottom: 28px;
+	&.required label:after { 
+		content:"*";
+		color:#F60C0C;
+		font-weight: bold;
+		margin-left: 2px;
+	}
+
+	label {
+		font-size: 12px;
+		color: #565658;
+		line-height: 16px;
+	}
+}
+
+.form-control {
+	background-color: #fff;
+	border: none;
+	border-radius: 0;
+	height: 50px;
+
+	&:focus {
+		border-color: transparent;
+	}
+}
+
+.page-404 {
+	background-color: #fff;
+	text-align: center;
+	padding-bottom: 67px;
+
+	img {
+		margin-bottom: 53px;
+	}
+
+	.btn-prime {
+		font-size: 16px;
+		margin: 30px auto 0;
+		height: 64px;
+		max-width: 260px;
+	}
+}
