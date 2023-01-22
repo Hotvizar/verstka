@@ -65,8 +65,64 @@
 
 @@include('modals.html')
 
+<script type="text/javascript">
+    var geocoder;
+    var map;
+    var centermap = {lat: 49.28728295915891, lng: -123.12768217725582};
+    var query = new Array(
+                        'Ванкувер, Британская Колумбия, Канада', 
+                        'Даунтаун Ванкувер, Ванкувер, Британская Колумбия, Канада', 
+                        'Норт-Ванкувер, Британская Колумбия, Канада', 
+                        'Кокітлам', 'Ленглі, Британская Колумбия, Канада', 
+                        'Тсовассен , Делта, Британская Колумбия, Канада', 
+                        'Уистлер-Блэккомб, Британская Колумбия', 
+                        'Делта, Британская Колумбия, Канада', 
+                        'Ладнер, Делта, Британская Колумбия, Канада'); //Адреса на карте
+
+    var idArr = new Array('marker1', 'marker2', 'marker3', 'marker4', 'marker5', 'marker6', 'marker7', 'marker8', 'marker9');
+
+    function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var mapOptions = {
+            zoom: 10,
+            center: centermap
+        }
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        codeAddress();
+    }
+
+    function codeAddress() {
+        for (var i = 0; i < query.length; i++) {
+            var address = query[i];
+            geocoder.geocode({
+                'address': address
+            }, function (k) {
+                return function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        var a = document.getElementById(idArr[k]);
+                        a.onclick = function () {
+                            map.setZoom(14);
+                            map.setCenter(results[0].geometry.location);
+                        }
+
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: results[0].geometry.location
+                        });
+                    } else {
+                        alert('Геокод не был успешным по следующей причине: ' + status);
+                    }
+                }
+            }(i)
+            );
+        }
+    }
+</script>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC-8mBPXf3rdWHLepG7BAzTWhWrhocsI20&language=uk&callback=initialize"></script>
+
 </body>
 </html>
