@@ -1,5 +1,18 @@
 $(function () {
 
+    //scroll
+    $("body").on('click', '[href*="#"]', function (e) {
+        const fixedOffset = 0;
+        $('html,body').stop().animate({
+            scrollTop: $(this.hash).offset().top - fixedOffset
+        }, 1000);
+        e.preventDefault();
+    });
+
+    $('.modal').on('show.bs.modal', function (event) {
+		closeNav();
+	});
+
     //анимация цифр спидометра
     $('.meter .cols').each(function () {
         $(this).prop('Counter', 0).animate({
