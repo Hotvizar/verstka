@@ -1,20 +1,9 @@
 @charset "UTF-8";
 
-@import "fonts";
 @import "variables";
 @import "mixins";
 @import "rtitle";
 @import "main";
-@import "block/header";
-@import "block/right-menu";
-@import "block/home-slider";
-@import "block/about";
-@import "block/programs";
-@import "block/locations";
-@import "block/contacts";
-@import "block/helpful";
-/* @import "block/slick";
-@import "block/slick-theme"; */
-@import "block/modals";
+@import "block/header.scss";
 
-@import "block/footer";
+@import "block/footer.scss";
