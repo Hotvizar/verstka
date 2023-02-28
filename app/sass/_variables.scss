@@ -1,8 +1,13 @@
-$fc: #000;
-$red: #FF0000;
-$lbl: #2B2A29;
-$gray: #F3F3F3;
-$dgrey: #DCDCDC;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Oswald:wght@200;300;400&display=swap');
+
+$fc: #fff;
+$bg: #111618;
+$lbl: #191F21;
+$gray: #C9C9C9;
+$beg: #E8DBCC;
+
+$ns: 'Noto Sans', sans-serif;
+$osw: 'Oswald', sans-serif;
 
 $breakpoints: (
 	sm: 576px,

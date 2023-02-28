@@ -6,9 +6,13 @@ html {
 	height: 100%;
 }
 body {
+	background-color: $bg;
+	font-family: $ns;
 	font-size: 16px;
-	font-weight: 400;
-	line-height: 170%;
+	font-weight: 300;
+	color: $fc;
+	line-height: 160%;
+	letter-spacing: 0.05em;
 	min-width: 320px;
 }
 :focus {
@@ -18,7 +22,19 @@ body {
 }
 h1, .h1,
 h3, .h3 {
-	@include font-size(36px);
+	font-family: $osw;
+	font-weight: 300;
+}
+
+h1, .h1 {
+	font-size: 96px;
+	color: $beg;
+	line-height: 100%;
+}
+h3, .h3 {
+	font-size: 64px;
+	font-weight: 200;
+	line-height: 95px;
 }
 
 a {

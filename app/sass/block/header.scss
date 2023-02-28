@@ -1,4 +1,131 @@
 // HEADER
 .header {
 	
+    position: relative;
+    padding: 54px 0;
+
+    .btn-menu {
+        color: $fc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: none;
+        padding: 10px;
+        height: 49px;
+        width: 52px;
+        position: absolute;
+        left: 50px;
+        top: 52px;
+
+        span {
+            background-color: $beg;
+            display: block;
+            height: 3px;
+            width: 100%;
+            transition: all .5s;
+
+            &:nth-child(2) {
+                width: 21px;
+            }
+
+            &:nth-child(3) {
+                width: 28px;
+            }
+        }
+
+        &:hover {
+            span {
+                width: 100%;
+            }
+        }
+    }
+
+    .phone-callback {
+        border: 1px solid transparent;
+        padding: 10px 10px 10px 30px;
+        width: 253px;
+
+        a {
+            color: $fc;
+            font-size: 20px;
+            font-weight: 400;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .btn-link {
+            border: none;
+            font-size: 16px;
+            font-weight: 400;
+            color: $beg;
+            text-decoration: underline;
+            padding: 0;
+            display: block;
+            width: 100%;
+
+            &::after {
+                content: "";
+                background-color: $beg;
+                display: inline-block;
+                margin-left: 5px;
+                height: 1px;
+                width: 69px;
+                vertical-align: middle;
+                transition: all .3s;
+            }
+        }
+
+        &:hover {
+            border-color: $beg;
+
+            .btn-link {
+                letter-spacing: 0.05em;
+                text-decoration: none;
+                
+                &::after {
+                    width: 58px;
+                }
+            }
+        }
+    }
+
+
+    .link-cart {
+        background-color: $beg;
+        padding: 10px 16px;
+        height: 50px;
+        width: 183px;
+        position: fixed;
+        right: 0;
+        top: 54px;
+
+        a {
+            color: #000;
+            font-size: 20px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .cart-icon {
+            background: url('image/full-cart.svg') center no-repeat;
+            background-size: contain;
+            margin-right: 10px;
+            height: 20.56px;
+            width: 21.9px;
+        }
+
+        &.empty {
+            
+            .cart-icon {
+                background: url('image/cart-empty.svg') center no-repeat;
+                background-size: contain;
+            }
+
+        }
+    }
+
 }
