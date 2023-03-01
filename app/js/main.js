@@ -39,7 +39,7 @@ $(function () {
         $slider.slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 5000,
             speed: 1000,
             dots: false,

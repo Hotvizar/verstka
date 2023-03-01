@@ -1,6 +1,7 @@
 #home-slider {
     height: 100vh;
-    min-height: 730px;
+    //height: 1041px;
+    min-height: 1041px;
     
     .slick-list {
         height: 100%;
@@ -14,9 +15,11 @@
         background-size: 47.5% auto;
         font-size: 24px;
         line-height: 150%;
+
         h2 {
             font-family: $osw;
             font-size: 140px;
+            //font-size: calc($index / 20.63);
             font-weight: 300;
             color: $beg;
             line-height: 100%;
@@ -35,11 +38,14 @@
             margin-bottom: 0;
         }
     }
+
+
+
 }
 
 .footer-home-slider {
     position: relative;
-    margin-top: -138px;
+    margin-top: -219px;
     #prev-slide,
     #next-slide {
         background-color: transparent;
