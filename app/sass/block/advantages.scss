@@ -1,5 +1,7 @@
 .advantages {
     margin-top: 10px;
+    margin-bottom: 78px;
+    
     .adv-item {
         background-color: $lbl;
         font-size: 18px;
@@ -8,6 +10,7 @@
         min-height: 338px;
         letter-spacing: normal;
         transition: all .5s ease-in-out;
+        margin-bottom: 30px;
         .image {
             background-color: $beg;
             margin-bottom: 16px;

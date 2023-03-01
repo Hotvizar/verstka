@@ -1,0 +1,97 @@
+.catalog-box {
+
+    .container {
+        position: relative;
+    }
+
+    h3.h1 {
+        position: absolute;
+        left: 39.9%;
+        top: 66px;
+        z-index: 2;
+    }
+}
+
+.catalog-container {
+
+    .cat-item {
+        position: relative;
+        max-width: 100%;
+
+        img {
+            filter: grayscale(78%);
+            transition: all .5s;
+        }
+
+        .title {
+            font-family: $osw;
+            font-size: 80px;
+            font-weight: 200;
+            color: $beg;
+            line-height: 1;
+            position: absolute;
+            transition: all .5s ease-in-out;
+        }
+
+        &.des-1 {
+            float: left;
+            .title {
+                left: 48px;
+                bottom: 66px;
+            }
+
+        }
+
+        &.des-2 {
+            float: right;
+            margin-top: 234px;
+            margin-bottom: 26px;
+
+            .title {
+                top: 38px;
+                right: 86px;
+            }
+        }
+
+        &.des-3 {
+            float: left;
+            margin-left: 69px;
+            .title {
+                font-size: 64px;
+                top: 44px;
+                left: 47px;
+                max-width: min-content;
+            }
+            a:hover {
+                .title {
+                    font-size: 48px;
+                }
+            }
+        }
+
+        &.des-4 {
+            float: right;
+            .title {
+                bottom: 48px;
+                left: 53px;
+            }
+        }
+
+        &.catalog-text {
+            font-weight: 300;
+            float: left;
+            margin-top: -45px;
+            max-width: 555px;
+        }
+
+        a:hover {
+            img {
+                filter: grayscale(0);
+            }
+            .title {
+                font-size: 64px;
+            }
+        }
+
+    }
+}
