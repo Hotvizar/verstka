@@ -43,7 +43,9 @@
     .phone-callback {
         border: 1px solid transparent;
         padding: 10px 10px 10px 30px;
+        margin-left: 52px;
         width: 253px;
+        transition: all .3s;
 
         a {
             color: $fc;
@@ -128,4 +130,14 @@
         }
     }
 
+}
+
+.home {
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+    }
 }

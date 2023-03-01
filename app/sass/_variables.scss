@@ -9,6 +9,12 @@ $beg: #E8DBCC;
 $ns: 'Noto Sans', sans-serif;
 $osw: 'Oswald', sans-serif;
 
+$index: calc(100vw + 100vh);
+
+/* :root {
+	--index: calc(100vw + 100vh);
+} */
+
 $breakpoints: (
 	sm: 576px,
 	md: 768px,
