@@ -1,5 +1,5 @@
 .catalog-box {
-
+    background: linear-gradient(to top, $lbl 26px, transparent 26px);
     .container {
         position: relative;
     }
@@ -13,7 +13,7 @@
 }
 
 .catalog-container {
-
+    overflow: hidden;
     .cat-item {
         position: relative;
         max-width: 100%;
