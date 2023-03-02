@@ -4,6 +4,7 @@
 html {
 	font-size: 16px;
 }
+
 body {
 	background-color: $bg;
 	font-family: $ns;
@@ -16,23 +17,30 @@ body {
 
 	padding-bottom: 300px;
 }
+
 :focus {
-    outline-style: none;
-    outline-width: 0px !important;
-    outline-color: none !important;
+	outline-style: none;
+	outline-width: 0px !important;
+	outline-color: none !important;
 }
-h1, .h1,
-h3, .h3 {
+
+h1,
+.h1,
+h3,
+.h3 {
 	font-family: $osw;
 	font-weight: 300;
 }
 
-h1, .h1 {
+h1,
+.h1 {
 	font-size: 96px;
 	color: $beg;
 	line-height: 100%;
 }
-h3, .h3 {
+
+h3,
+.h3 {
 	font-size: 64px;
 	font-weight: 200;
 	line-height: 100%;
@@ -40,23 +48,119 @@ h3, .h3 {
 
 a {
 	transition: all .3s;
+
 	&:focus {
 		outline: none;
 	}
+
 	&:hover {
 		text-decoration: none;
 	}
 }
-button, .form-control {
+
+button,
+.form-control {
 	&:focus {
 		box-shadow: none;
 		outline: none;
 	}
 }
-.btn.focus, .btn:focus {
+
+.btn.focus,
+.btn:focus {
 	box-shadow: none;
 }
+
 .btn {
 	border-radius: 0;
 	transition: all .3s;
+}
+
+.btn-outline {
+	background-color: transparent;
+	border: 2px solid $fc;
+	font-family: $ns;
+	font-size: 20px;
+	font-weight: 400;
+	color: $fc;
+	letter-spacing: 0.05em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	height: 62px;
+	max-width: 276px;
+	width: 100%;
+
+	&.btn-beg {
+		border-color: $beg;
+		color: $beg;
+
+		&::before {
+			background-color: $beg;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			z-index: -1;
+			transition: all .1s;
+		}
+
+		&:hover {
+			color: #fff;
+			letter-spacing: 0.07em;
+		}
+
+		&:active {
+			color: $bg;
+
+			&::before {
+				width: 100%;
+			}
+		}
+	}
+}
+
+//@include placeholder($beg);
+
+.form-control {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid $beg;
+	border-radius: 0;
+	font-family: $ns;
+	font-size: 20px;
+	font-weight: 300;
+	color: $beg;
+	height: 64px;
+
+	&::placeholder {
+		color: $beg;
+		transition: all .3s;
+	}
+
+	&:hover, &:focus:hover {
+		color: $fc;
+		border-bottom-color: $fc;
+		transition: all .3s;
+
+		&::placeholder {
+			color: $fc;
+			transition: all .3s;
+		}
+	}
+
+	&:focus {
+		background-color: transparent;
+		border-bottom-color: $beg;
+		color: $beg;
+
+		&::placeholder, &:hover::placeholder {
+			color: transparent;
+		}
+	}
 }

@@ -1,0 +1,45 @@
+.wrap-reviews-callback {
+
+    position: relative;
+
+    &::before {
+        background-image: url('image/callback-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% auto;
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 5%;
+        z-index: -1;
+    }
+}
+
+.box-callback {
+    color: $gray;
+    text-align: center;
+    padding: 117px 0 68px;
+
+    h3 {
+        color: $fc;
+        margin-bottom: 33px;
+    }
+
+    .form-callback {
+        max-width: 555px;
+        margin: 33px auto 0;
+        text-align: center;
+        
+        .form-control {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+    }
+
+    .btn-outline {
+        margin: 0 auto;
+    }
+}
