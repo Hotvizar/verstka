@@ -14,8 +14,6 @@ body {
 	line-height: 160%;
 	letter-spacing: 0.05em;
 	min-width: 320px;
-
-	padding-bottom: 300px;
 }
 
 :focus {
@@ -124,8 +122,6 @@ button,
 		}
 	}
 }
-
-//@include placeholder($beg);
 
 .form-control {
 	background-color: transparent;

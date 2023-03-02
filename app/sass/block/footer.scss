@@ -1,4 +1,111 @@
 /* FOOTER */
 .footer {
-	
+    padding: 104px 0 41px;
+
+    .footer-menu {
+        ul {
+            columns: 2;
+            column-gap: 64px;
+
+            li {
+                margin-bottom: 10px;
+
+                a {
+                    color: $fc;
+                    display: inline-block;
+                    letter-spacing: normal;
+
+                    &::after {
+                        background-color: $beg;
+                        content: "";
+                        display: block;
+                        opacity: 0;
+                        transform: scaleX(0);
+                        transition: all .5s;
+                        height: 1px;
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        &:after {
+                            opacity: 1;
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .social-links {
+        margin-bottom: 28px;
+
+        a {
+            margin-left: 34px;
+
+            &:hover {
+                .soc-icon {
+                    fill: $beg;
+                }
+            }
+        }
+
+        .soc-icon {
+            fill: $fc;
+            transition: all .5s;
+
+            &.youtube {
+                height: 19px;
+                width: 28px;
+            }
+
+            &.facebook {
+                height: 23px;
+                width: 23px;
+            }
+
+            &.instagram {
+                height: 23px;
+                width: 23px;
+            }
+
+            &.vk {
+                height: 17px;
+                width: 30px;
+            }
+        }
+    }
+
+    .footer-phones {
+        margin-bottom: 28px;
+
+        a {
+            color: $fc;
+            display: inline-block;
+            letter-spacing: normal;
+
+            &::after {
+                background-color: $beg;
+                content: "";
+                display: block;
+                opacity: 0;
+                transform: scaleX(0);
+                transition: all .5s;
+                height: 1px;
+                width: 100%;
+            }
+
+            &:hover {
+                &:after {
+                    opacity: 1;
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+
+    .copy {
+        font-weight: 500;
+    }
 }
