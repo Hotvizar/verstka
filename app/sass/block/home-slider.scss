@@ -60,8 +60,8 @@
         text-transform: uppercase;
         transition: all .5s;
 
-        .arrow-left,
-        .arrow-right {
+        .chevron-left,
+        .chevron-right {
             fill: $beg;
             height: 24px;
             width: 24px;
@@ -97,7 +97,7 @@
             width: 17px;
             transition: all .5s;
         }
-        .arrow-left {
+        .chevron-left {
             order: -1;
         }
 
@@ -114,7 +114,7 @@
                 width: 34px;
             }
 
-            .arrow-left {
+            .chevron-left {
                 fill: $bg;
             }
         }
@@ -131,7 +131,7 @@
             width: 17px;
             transition: all .5s;
         }
-        .arrow-right {
+        .chevron-right {
             order: 1;
         }
 
@@ -148,7 +148,7 @@
                 width: 34px;
             }
 
-            .arrow-right {
+            .chevron-right {
                 fill: $bg;
             }
         }

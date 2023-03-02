@@ -103,4 +103,20 @@ $(function () {
 
     }
 
+    //reviews
+    $('#reviews-slider').slick({
+        centerMode: true,
+        centerPadding: '380px',
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 5000,
+        speed: 1000,
+        dots: false,
+        pauseOnDotsHover: true,
+        arrows: true,
+        prevArrow: $('#review-prev'),
+        nextArrow: $('#review-next'),
+    });
+
 });
