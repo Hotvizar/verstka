@@ -119,6 +119,10 @@ $(function () {
         nextArrow: $('#review-next'),
     });
 
+    $('.modal').on('show.bs.modal', function (event) {
+		closeNav();
+	});
+
 });
 
 function openNav() {
