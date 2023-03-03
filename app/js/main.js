@@ -48,7 +48,7 @@ $(function () {
             prevArrow: $('#prev-slide'),
             nextArrow: $('#next-slide'),
         });
-    
+
 
         //Для кнопок слайдера
 
@@ -63,7 +63,7 @@ $(function () {
         $('.footer-home-slider').on('click', '#next-slide', function () {
             get_next_slick_img();
         });
-        
+
         $slider.on('swipe', function (event, slick, direction) {
             if (direction == 'left') {
                 get_prev_slick_img();
@@ -84,7 +84,7 @@ $(function () {
             // For prev img
             var prevSlickImg = $('.slick-current').prev('.slick-slide').find('img').attr('src');
             $('#prev-slide img').attr('src', prevSlickImg);
-            
+
             // For next img
             var prevNextSlickImg = $('.slick-current').next('.slick-slide').find('img').attr('src');
             $('#next-slide img').attr('src', prevNextSlickImg);
@@ -95,7 +95,7 @@ $(function () {
             // For next img
             var nextSlickImg = $('.slick-current').next('.slick-slide').find('img').attr('src');
             $('#next-slide img').attr('src', nextSlickImg);
-            
+
             // For prev img
             var nextPrevSlickImg = $('.slick-current').prev('.slick-slide').find('img').attr('src');
             $('#prev-slide img').attr('src', nextPrevSlickImg);
@@ -120,3 +120,13 @@ $(function () {
     });
 
 });
+
+function openNav() {
+    $('body').addClass('modal-open');
+    $('#slide-menu').addClass("open-menu");
+}
+
+function closeNav() {
+    $('body').removeClass('modal-open');
+    $('#slide-menu').removeClass("open-menu");
+}

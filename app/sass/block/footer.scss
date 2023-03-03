@@ -40,41 +40,6 @@
 
     .social-links {
         margin-bottom: 28px;
-
-        a {
-            margin-left: 34px;
-
-            &:hover {
-                .soc-icon {
-                    fill: $beg;
-                }
-            }
-        }
-
-        .soc-icon {
-            fill: $fc;
-            transition: all .5s;
-
-            &.youtube {
-                height: 19px;
-                width: 28px;
-            }
-
-            &.facebook {
-                height: 23px;
-                width: 23px;
-            }
-
-            &.instagram {
-                height: 23px;
-                width: 23px;
-            }
-
-            &.vk {
-                height: 17px;
-                width: 30px;
-            }
-        }
     }
 
     .footer-phones {

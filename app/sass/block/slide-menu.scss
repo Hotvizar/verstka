@@ -1,0 +1,108 @@
+#slide-menu {
+    background-color: $bg;
+    position: fixed;
+    display: flex;
+    right: 100%;
+    top: 0;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    will-change: transition;
+    transition: all .5s ease-out;
+    z-index: 8;
+
+    &.open-menu {
+        right: 0;
+    }
+
+    #close-menu {
+        border: none;
+        padding: 0;
+        position: absolute;
+        right: 67px;
+        top: 39px;
+        .close-menu {
+            fill: $fc;
+            height: 52px;
+            width: 52px;
+            @include trans();
+        }
+        &:hover {
+            .close-menu {
+                fill: $beg;
+            }
+        }
+    }
+    
+    .slide-menu-info {
+        flex-basis: 41%;
+        padding: 122px 57px 104px 98px;
+        position: relative;
+        height: 100%;
+
+        ul {
+            margin-bottom: 45px;
+            li {
+                margin-bottom: 25px;
+                a {
+                    font-size: 24px;
+                    font-weight: 300;
+                    color: $fc;
+                    display: inline-block;
+                    letter-spacing: normal;
+
+                    &::after {
+                        background-color: $beg;
+                        content: "";
+                        display: block;
+                        margin-top: 2px;
+                        opacity: 0;
+                        transform: scaleX(0);
+                        transition: all .5s;
+                        height: 1px;
+                        width: 100%;
+                    }
+        
+                    &:hover {
+                        &:after {
+                            opacity: 1;
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+
+                &:nth-child(6), &:nth-child(7) {
+                    &::after {
+                        background-color: $beg;
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        margin: 40px 0;
+                        max-width: 264px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .btn-outline {
+            margin-bottom: 45px;
+        }
+
+        .social-links {
+            a {
+                margin-left: 0;
+                margin-right: 34px;
+            }
+        }
+    }
+
+    .image-block {
+        background-size: cover;
+        flex-basis: 59%;
+        height: 100%;
+    }
+
+    
+}
