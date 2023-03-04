@@ -44,6 +44,14 @@ h3,
 	line-height: 100%;
 }
 
+h5,
+.h5 {
+	font-family: $osw;
+	font-size: 40px;
+	font-weight: 200;
+	line-height: 1;
+}
+
 a {
 	transition: all .3s;
 
@@ -139,7 +147,8 @@ button,
 		transition: all .3s;
 	}
 
-	&:hover, &:focus:hover {
+	&:hover,
+	&:focus:hover {
 		color: $fc;
 		border-bottom-color: $fc;
 		transition: all .3s;
@@ -155,7 +164,8 @@ button,
 		border-bottom-color: $beg;
 		color: $beg;
 
-		&::placeholder, &:hover::placeholder {
+		&::placeholder,
+		&:hover::placeholder {
 			color: transparent;
 		}
 	}
@@ -197,4 +207,52 @@ button,
 			width: 30px;
 		}
 	}
+}
+*::selection {
+	background-color: $beg;
+	color: $bg;
+}
+.wrap-breadcrumbs {
+	margin-bottom: 50px;
+}
+#breadcrumbs {
+	font-size: 12px;
+	font-weight: 400;
+	color: $fc;
+	margin-right: 10px;
+
+	a {
+		color: $beg;
+		display: inline-block;
+		line-height: 1;
+        letter-spacing: normal;
+		margin-right: 10px;
+		
+		+a {
+			margin-left: 10px;
+		}
+
+		&::after {
+			background-color: $beg;
+			content: "";
+			display: block;
+			opacity: 0;
+			transform: scaleX(0);
+			transition: all .5s;
+			height: 1px;
+			width: 100%;
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1;
+				transform: scaleX(1);
+			}
+		}
+	}
+
+	.breadcrumb_last {
+		margin-left: 10px;
+	}
+
 }
