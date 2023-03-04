@@ -42,7 +42,7 @@
         padding: 122px 57px 20px 98px;
         position: relative;
         height: 100%;
-        min-width: 400px;
+        //min-width: 400px;
         overflow-y: auto;
         transition: all .3s;
 
@@ -69,10 +69,6 @@
             &:active {
                 background-color: darken($color: $beg, $amount: 30%);
             }
-        }
-
-        @include mq(lg) {
-            padding: 122px 57px 20px 72px;
         }
 
         ul {
@@ -143,9 +139,30 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        flex-basis: 59%;
+        //flex-basis: 59%;
+        flex: auto;
         height: 100%;
     }
 
+    @include mq(lg) {
+        .slide-menu-info {
+            flex-basis: 400px;
+            padding: 122px 57px 20px 72px;
+        } 
+    }
+    @include mq(sm) {
+        .slide-menu-info {
+            flex-basis: 100%;
+        }
+        .image-block {
+            display: none;
+        }
+    }
+
+    @include mq(420) {
+        .slide-menu-info {
+            padding: 122px 20px 20px;
+        } 
+    }
 
 }

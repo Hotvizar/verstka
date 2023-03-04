@@ -177,7 +177,7 @@ $(function () {
 
     $(window).on('resize', function () {
         cartClick();
-        //closeNav();
+        closeNav();
     });
 
     cartClick();
