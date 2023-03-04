@@ -1,6 +1,10 @@
 .advantages {
     margin-top: 10px;
     margin-bottom: 78px;
+
+    .col {
+        margin-bottom: 30px;
+    }
     
     .adv-item {
         background-color: $lbl;
@@ -10,7 +14,6 @@
         min-height: 338px;
         letter-spacing: normal;
         transition: all .5s ease-in-out;
-        margin-bottom: 30px;
         .image {
             background-color: $beg;
             margin-bottom: 16px;
@@ -32,6 +35,11 @@
                 background-color: $bg;
                 height: 150px;
                 width: 150px;
+
+                @include mq(xl) {
+                    height: 124px;
+                    width: 124px;
+                }
             }
         }
     }

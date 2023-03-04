@@ -22,29 +22,65 @@
         position: absolute;
         right: 67px;
         top: 39px;
+
         .close-menu {
             fill: $fc;
             height: 52px;
             width: 52px;
             @include trans();
         }
+
         &:hover {
             .close-menu {
                 fill: $beg;
             }
         }
     }
-    
+
     .slide-menu-info {
         flex-basis: 41%;
-        padding: 122px 57px 104px 98px;
+        padding: 122px 57px 20px 98px;
         position: relative;
         height: 100%;
+        min-width: 400px;
+        overflow-y: auto;
+        transition: all .3s;
+
+        // scroll
+        scrollbar-color: $beg $lbl; //firefox
+        scrollbar-width: thin; //firefox
+        
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track-piece {
+            background-color: $lbl;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $beg;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: #fff;
+            }
+
+            &:active {
+                background-color: darken($color: $beg, $amount: 30%);
+            }
+        }
+
+        @include mq(lg) {
+            padding: 122px 57px 20px 72px;
+        }
 
         ul {
             margin-bottom: 45px;
+
             li {
                 margin-bottom: 25px;
+
                 a {
                     font-size: 24px;
                     font-weight: 300;
@@ -63,7 +99,7 @@
                         height: 1px;
                         width: 100%;
                     }
-        
+
                     &:hover {
                         &:after {
                             opacity: 1;
@@ -72,7 +108,8 @@
                     }
                 }
 
-                &:nth-child(6), &:nth-child(7) {
+                &:nth-child(6),
+                &:nth-child(7) {
                     &::after {
                         background-color: $beg;
                         content: "";
@@ -94,15 +131,21 @@
             a {
                 margin-left: 0;
                 margin-right: 34px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }
 
     .image-block {
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         flex-basis: 59%;
         height: 100%;
     }
 
-    
+
 }

@@ -1,6 +1,7 @@
 .catalog-box {
     background: linear-gradient(to top, $lbl 26px, transparent 26px);
-    .container {
+
+    .container-lg {
         position: relative;
     }
 
@@ -9,14 +10,31 @@
         left: 39.9%;
         top: 66px;
         z-index: 2;
+
+        @include mq(md) {
+            position: static;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        @include mq(sm) {
+            font-size: calc(100vw / 5.26);
+        }
     }
 }
 
 .catalog-container {
     overflow: hidden;
+
     .cat-item {
         position: relative;
         max-width: 100%;
+        max-height: 728px;
+        max-width: calc(50% - 22px);
+        max-width: calc(50% - 13px);
+
+        a {
+            display: block;
+        }
 
         img {
             filter: grayscale(78%);
@@ -26,6 +44,7 @@
         .title {
             font-family: $osw;
             font-size: 80px;
+            //font-size: calc($index / 36);
             font-weight: 200;
             color: $beg;
             line-height: 1;
@@ -35,6 +54,7 @@
 
         &.des-1 {
             float: left;
+
             .title {
                 left: 48px;
                 bottom: 66px;
@@ -44,7 +64,7 @@
 
         &.des-2 {
             float: right;
-            margin-top: 234px;
+            margin-top: 26px;
             margin-bottom: 26px;
 
             .title {
@@ -53,24 +73,36 @@
             }
         }
 
+        &:nth-child(2).des-2 {
+            margin-top: 234px;
+        }
+
         &.des-3 {
             float: left;
             margin-left: 69px;
+            margin-left: calc($index / 41);
+
             .title {
                 font-size: 64px;
                 top: 44px;
                 left: 47px;
                 max-width: min-content;
             }
+
             a:hover {
                 .title {
                     font-size: 48px;
                 }
             }
+
+            @include mq(lg) {
+                margin-left: 0;
+            }
         }
 
         &.des-4 {
             float: right;
+
             .title {
                 bottom: 48px;
                 left: 53px;
@@ -88,8 +120,27 @@
             img {
                 filter: grayscale(0);
             }
+
             .title {
                 font-size: 64px;
+            }
+        }
+
+        @include mq(md) {
+            .title {
+                font-size: calc(100vw / 9.17);
+            }
+            &.des-3 .title {
+                font-size: calc(100vw / 14.28);
+            }
+        }
+        @include mq(sm) {
+            float: none !important;
+            margin: 0 0 30px !important;
+            max-width: none;
+
+            .title, &.des-3 .title {
+                font-size: calc(100vw / 6.25);
             }
         }
 

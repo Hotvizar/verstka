@@ -1,8 +1,7 @@
 // HEADER
 .header {
-	
     position: relative;
-    padding: 54px 0;
+    padding: 54px 100px;
 
     .btn-menu {
         color: $fc;
@@ -15,7 +14,7 @@
         width: 52px;
         position: absolute;
         left: 50px;
-        top: 52px;
+        top: 47px;
 
         span {
             background-color: $beg;
@@ -85,7 +84,7 @@
             .btn-link {
                 letter-spacing: 0.05em;
                 text-decoration: none;
-                
+
                 &::after {
                     width: 58px;
                 }
@@ -103,6 +102,7 @@
         right: 0;
         top: 54px;
         z-index: 9;
+        transition: all .5s;
 
         a {
             color: #000;
@@ -113,6 +113,7 @@
             height: 100%;
             width: 100%;
         }
+
         .cart-icon {
             background: url('image/full-cart.svg') center no-repeat;
             background-size: contain;
@@ -122,13 +123,49 @@
         }
 
         &.empty {
-            
+
             .cart-icon {
                 background: url('image/cart-empty.svg') center no-repeat;
                 background-size: contain;
             }
-
         }
+
+    }
+
+    @media (max-width: 625px) {
+        padding: 54px 60px;
+
+        .btn-menu {
+            left: 10px;
+        }
+        .link-cart {
+            right: -128px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 99;
+            }
+
+            &.block {
+                &::before {
+                    display: none;
+                }
+            }
+
+            a {
+                justify-content: space-between;
+            }
+            
+            &:hover {
+                right: 0;        
+            }
+        }
+
     }
 
 }
