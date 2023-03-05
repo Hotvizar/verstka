@@ -254,5 +254,48 @@ button,
 	.breadcrumb_last {
 		margin-left: 10px;
 	}
+}
 
+.pagination {
+	margin: 26px 0 0;
+	.nav-links {
+		text-align: center;
+		width: 100%;
+		a, span {
+			border: 2px solid transparent;
+			font-size: 20px;
+			font-weight: 400;
+			color: $beg;
+			border-radius: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 5px 0;
+			text-align: center;
+			transition: all .3s;
+			height: 62px;
+			vertical-align: middle;
+			width: 62px;
+			&:hover, &.current {
+				border-color: $beg;
+				text-decoration: none;
+			}
+			&:active {
+				background-color: $beg;
+				color: $bg;
+				.chevron-left, .chevron-right {
+					fill: $bg;
+				}
+			}
+		}
+		.prev, .next {
+			line-height: 37px;
+		}
+		.chevron-left, .chevron-right {
+			fill: $beg;
+			height: 24px;
+			width: 24px;
+			@include trans();
+		}
+	}
 }
