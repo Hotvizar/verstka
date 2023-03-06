@@ -32,8 +32,8 @@
                 margin: 0;
                 opacity: 1;
                 position: absolute;
-                right: 57px;
-                top: 39px;
+                left: 50px;
+                top: 52px;
 
                 .close-icon {
                     fill: $fc;
@@ -86,4 +86,98 @@
         }
     }
 
+}
+
+#noticeCart {
+    .modal-dialog {
+        max-width: 862px;
+        transform: translate3d(-110%, 0, 0);
+        transition: all .5s cubic-bezier(.4,.39,.34,1.52); //cubic-bezier(.4,.39,.61,1.45); //cubic-bezier(.41,.35,.52,1.49);
+
+        .modal-header {
+            border: none;
+            padding: 0;
+
+            .close {
+                border: 2px solid transparent;
+                padding: 3px;
+                margin: 0;
+                opacity: 1;
+                position: absolute;
+                right: 20px;
+                top: 13px;
+                transition: all .3s;
+
+                .close-icon {
+                    fill: $bg;
+                    height: 44px;
+                    width: 44px;
+                    @include trans();
+                }
+
+                &:hover {
+                    border-color: $bg;
+                }
+                &:active {
+                    border-color: $bg;
+                    background-color: $bg;
+                    .close-icon {
+                        fill: $beg;
+                    }
+                }
+            }
+        }
+
+        .modal-content {
+            background-color: $beg;
+            border: 0;
+            border-radius: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 468px;
+
+            .modal-body {
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 1;
+                color: $bg;
+                flex: none;
+                padding: 0 15px;
+                max-width: 600px;
+                width: 100%;
+
+                a {
+                    color: $bg;
+                    font-weight: 500;
+                    text-decoration: underline;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .buttons {
+                    margin-top: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .btn-outline {
+                    text-decoration: none;
+
+                    &:active {
+                        color: $beg;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &.show {
+        .modal-dialog {
+            transform: translate3d(0, 0, 0);
+        }
+    }
 }

@@ -2,6 +2,7 @@
 .header {
     position: relative;
     padding: 54px 100px;
+    z-index: 2;
 
     .btn-menu {
         color: $fc;
@@ -92,46 +93,6 @@
         }
     }
 
-
-    .link-cart {
-        background-color: $beg;
-        padding: 10px 16px;
-        height: 50px;
-        width: 183px;
-        position: fixed;
-        right: 0;
-        top: 54px;
-        z-index: 9;
-        transition: all .5s;
-
-        a {
-            color: #000;
-            font-size: 20px;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-        }
-
-        .cart-icon {
-            background: url('image/full-cart.svg') center no-repeat;
-            background-size: contain;
-            margin-right: 10px;
-            height: 20.56px;
-            width: 21.9px;
-        }
-
-        &.empty {
-
-            .cart-icon {
-                background: url('image/cart-empty.svg') center no-repeat;
-                background-size: contain;
-            }
-        }
-
-    }
-
     @media (max-width: 625px) {
         padding: 54px 60px;
 
@@ -164,6 +125,75 @@
             &:hover {
                 right: 0;        
             }
+        }
+
+    }
+
+}
+
+.link-cart {
+    background-color: $beg;
+    padding: 10px 16px;
+    height: 50px;
+    width: 183px;
+    position: fixed;
+    right: 0;
+    top: 54px;
+    z-index: 1051;
+    transition: all .5s;
+
+    a {
+        color: #000;
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .cart-icon {
+        background: url('image/full-cart.svg') center no-repeat;
+        background-size: contain;
+        margin-right: 10px;
+        height: 20.56px;
+        width: 21.9px;
+    }
+
+    &.empty {
+
+        .cart-icon {
+            background: url('image/cart-empty.svg') center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    @media (max-width: 625px) {
+
+        right: -128px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        &.block {
+            &::before {
+                display: none;
+            }
+        }
+
+        a {
+            justify-content: space-between;
+        }
+        
+        &:hover {
+            right: 0;        
         }
 
     }

@@ -10,7 +10,7 @@
     z-index: 100;
     will-change: transition;
     transition: all .5s ease-out;
-    z-index: 8;
+    z-index: 1049;
 
     &.open-menu {
         right: 0;
@@ -42,7 +42,6 @@
         padding: 122px 57px 20px 98px;
         position: relative;
         height: 100%;
-        //min-width: 400px;
         overflow-y: auto;
         transition: all .3s;
 

@@ -1,6 +1,6 @@
 $(function () {
 
-    //slick counter
+    //slick counter home slider
     var $slider = $('#home-slider');
 
     if ($slider.length) {
@@ -162,18 +162,69 @@ $(function () {
         ],
     });
 
+    //product thumbs slider
+
+    $('#productBigSlider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '#productSliderNav'
+      });
+      $('#productSliderNav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '#productBigSlider',
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true
+      });
+
+    ////////
+
+    //crossSellSlider
+    $('#crossSellSlider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 5000,
+        speed: 1000,
+        dots: false,
+        arrows: true,
+        prevArrow: '<button type="button" id="cross-prev"><svg class="icon chevron-left"><use xlink:href="/image/icons/symbol/sprite.svg#arrow-left" /></svg></button>',
+        nextArrow: '<button type="button" id="cross-next"><svg class="icon chevron-right"><use xlink:href="/image/icons/symbol/sprite.svg#arrow-right" /></svg></button>',
+        /* responsive: [
+            {
+                breakpoint: 1740,
+                settings: {
+                    centerPadding: '250px',
+                }
+            },
+            
+        ], */
+    });
+
     $('.modal').on('show.bs.modal', function (event) {
-		closeNav();
-	});
+        closeNav();
+    });
 
     function cartClick() {
         if ($(window).innerWidth() < 625) {
-            $('.link-cart').on('click', function(e) {
+            $('.link-cart').on('click', function (e) {
                 $(this).toggleClass('block');
             });
         }
     }
 
+    //Удаление стиля блока при клике вне его
+    $(document).on('mouseup', function (e) {
+        let s = $('.link-cart.block'); 
+        if (!s.is(e.target) && s.has(e.target).length === 0) {
+            
+            s.removeClass('block');
+        }
+    });
 
     $(window).on('resize', function () {
         cartClick();

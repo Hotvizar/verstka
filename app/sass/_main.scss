@@ -73,7 +73,10 @@ button,
 }
 
 .btn.focus,
-.btn:focus {
+.btn:focus,
+.btn-light:not(:disabled):not(.disabled).active:focus,
+.btn-light:not(:disabled):not(.disabled):active:focus,
+.show>.btn-light.dropdown-toggle:focus {
 	box-shadow: none;
 }
 
@@ -94,6 +97,7 @@ button,
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	text-decoration: none;
 	overflow: hidden;
 	position: relative;
 	height: 62px;
@@ -101,20 +105,12 @@ button,
 	width: 100%;
 
 	&.btn-beg {
+		background-image: linear-gradient($beg, $beg);
+		background-repeat: no-repeat;
+		background-position: 0% 50%;
+		background-size: 0% 100%;
 		border-color: $beg;
 		color: $beg;
-
-		&::before {
-			background-color: $beg;
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 0;
-			z-index: -1;
-			transition: all .1s;
-		}
 
 		&:hover {
 			color: #fff;
@@ -122,11 +118,23 @@ button,
 		}
 
 		&:active {
+			background-size: 100% 100%;
 			color: $bg;
+		}
+	}
 
-			&::before {
-				width: 100%;
-			}
+	&.btn-black {
+		border-color: $bg;
+		color: $bg;
+
+		&:hover {
+			color: $bg;
+			letter-spacing: 0.07em;
+		}
+
+		&:active {
+			color: $beg;
+			background-color: $bg;
 		}
 	}
 }
@@ -208,13 +216,16 @@ button,
 		}
 	}
 }
+
 *::selection {
 	background-color: $beg;
 	color: $bg;
 }
+
 .wrap-breadcrumbs {
 	margin-bottom: 50px;
 }
+
 #breadcrumbs {
 	font-size: 12px;
 	font-weight: 400;
@@ -225,9 +236,9 @@ button,
 		color: $beg;
 		display: inline-block;
 		line-height: 1;
-        letter-spacing: normal;
+		letter-spacing: normal;
 		margin-right: 10px;
-		
+
 		+a {
 			margin-left: 10px;
 		}
@@ -258,10 +269,13 @@ button,
 
 .pagination {
 	margin: 26px 0 0;
+
 	.nav-links {
 		text-align: center;
 		width: 100%;
-		a, span {
+
+		a,
+		span {
 			border: 2px solid transparent;
 			font-size: 20px;
 			font-weight: 400;
@@ -276,22 +290,31 @@ button,
 			height: 62px;
 			vertical-align: middle;
 			width: 62px;
-			&:hover, &.current {
+
+			&:hover,
+			&.current {
 				border-color: $beg;
 				text-decoration: none;
 			}
+
 			&:active {
 				background-color: $beg;
 				color: $bg;
-				.chevron-left, .chevron-right {
+
+				.chevron-left,
+				.chevron-right {
 					fill: $bg;
 				}
 			}
 		}
-		.prev, .next {
+
+		.prev,
+		.next {
 			line-height: 37px;
 		}
-		.chevron-left, .chevron-right {
+
+		.chevron-left,
+		.chevron-right {
 			fill: $beg;
 			height: 24px;
 			width: 24px;
