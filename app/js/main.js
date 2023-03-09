@@ -178,7 +178,7 @@ $(function () {
         dots: false,
         arrows: false,
         centerMode: false,
-        focusOnSelect: true
+        focusOnSelect: true,
       });
 
     ////////
@@ -194,15 +194,32 @@ $(function () {
         arrows: true,
         prevArrow: '<button type="button" id="cross-prev"><svg class="icon chevron-left"><use xlink:href="/image/icons/symbol/sprite.svg#arrow-left" /></svg></button>',
         nextArrow: '<button type="button" id="cross-next"><svg class="icon chevron-right"><use xlink:href="/image/icons/symbol/sprite.svg#arrow-right" /></svg></button>',
-        /* responsive: [
+        responsive: [
             {
-                breakpoint: 1740,
+                breakpoint: 1440,
                 settings: {
-                    centerPadding: '250px',
+                    slidesToShow: 4,
                 }
             },
-            
-        ], */
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ],
     });
 
     $('.modal').on('show.bs.modal', function (event) {
@@ -233,7 +250,101 @@ $(function () {
 
     cartClick();
 
+    //plus/minus quantity
+	$('.btn-number').on('click', function (e) {
+		e.preventDefault();
+
+		var fieldName = $(this).attr('data-field');
+		var type = $(this).attr('data-type');
+		var input = $("input[name='" + fieldName + "']");
+		var currentVal = parseInt(input.val());
+		if (!isNaN(currentVal)) {
+			if (type == 'minus') {
+
+				if (currentVal > input.attr('min')) {
+					input.val(currentVal - 1).change();
+				}
+				if (parseInt(input.val()) == input.attr('min')) {
+					$(this).attr('disabled', true);
+				}
+
+			} else if (type == 'plus') {
+
+				if (currentVal < input.attr('max')) {
+					input.val(currentVal + 1).change();
+				}
+				if (parseInt(input.val()) == input.attr('max')) {
+					$(this).attr('disabled', true);
+				}
+
+			}
+		} else {
+			input.val(0);
+		}
+	});
+	$('.input-number').on('focusin', function () {
+		$(this).data('oldValue', $(this).val());
+	});
+	$('.input-number').on('change', function() {
+
+		var minValue = parseInt($(this).attr('min'));
+		var maxValue = parseInt($(this).attr('max'));
+		var valueCurrent = parseInt($(this).val());
+
+		var name = $(this).attr('name');
+		if (valueCurrent >= minValue) {
+			$(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled');
+		} else {
+			alert('Извините, достигнуто минимальное значение');
+			$(this).val($(this).data('oldValue'));
+		}
+		if (valueCurrent <= maxValue) {
+			$(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled');
+		} else {
+			alert('Извините, достигнуто максимальное значение');
+			$(this).val($(this).data('oldValue'));
+		}
+
+
+	});
+	$(".input-number").keydown(function(e) {
+		// Allow: backspace, delete, tab, escape, enter and .
+		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+			// Allow: Ctrl+A
+			(e.keyCode == 65 && e.ctrlKey === true) ||
+			// Allow: home, end, left, right
+			(e.keyCode >= 35 && e.keyCode <= 39)) {
+			// let it happen, don't do anything
+			return;
+		}
+		// Ensure that it is a number and stop the keypress
+		if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+			e.preventDefault();
+		}
+	});
+
+	//===================
+
+    //динамический размер скрытого блока заголовка
+
+    function floatHide() {
+        var h1 = $(".product-page h1").outerHeight() - 67;
+
+        $("#float-hide").css('margin-top', "-" + h1 + "px");
+    }
+    
+    $(window).on('load', function() {
+        floatHide()
+    });
+
+    $(window).on('resize', function () {
+        floatHide();
+    });
+    
+
 });
+
+
 
 function openNav() {
     $('body').addClass('modal-open');
