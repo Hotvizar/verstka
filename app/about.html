@@ -1,8 +1,53 @@
-@@include('parts/header.html', {title: "About"})
+@@include('parts/header.html', {title: "TSINDELIANI FAMILY", class: "about"})
 
-<div class="container">
-	<h1>About page</h1>
+<div class="about-page">
+
+    @@include('parts/breadcrumbs.html', {bred: "О нас"})
+
+    <div class="container-md">
+
+        <div class="about-image">
+
+            <img src="image/about-img.jpg" alt="" class="img-fluid">
+
+        </div> <!-- /.product-images -->
+
+        <h1>TSINDELIANI FAMILY</h1>
+        <h3>Давайте знакомиться</h3>
+
+        <div id="float-hide"></div>
+        <div class="description">
+            <p>Меня зовут Фатима Цинделиани. Я создатель и идейный вдохновитель Tsindeliani Family. <br>Я родилась в солнечной Грузии и хотя большую часть жизни живу в России, продолжаю бережно хранить традиции нашей семьи.</p>
+            <p>Грузинская культура неизменно связана с гастрономией и пышными застольями. Секрет наших блюд в правильно подобранных специях. На этом сайте вы найдете секретные ингредиенты для своих кулинарных шедевров, научитесь сочетать специи с продуктами, узнаете много вкуснейших рецептов.</p>
+            <p>Все наши специи приготовлены в Грузии по рецептам, которые передаются десятками лет из поколения в поколения в семье моего отца. Поэтому в этих баночках не просто специи, в них квинтэссенция грузинской культуры, наша любовь и частица души нашего рода.</p>
+        </div>
+
+    </div>
+
+    @@include('parts/advantages.html')
+
+    <div class="container">
+        <div class="svan-salt">
+            <div class="image"><img src="image/svan-salt.jpg" alt="" class="img-fluid"></div>
+            <div class="text">
+                <h3>Сванская соль</h3>
+                <div class="wrap">
+                    Это традиционная приправа, которая появилась в высокогорном районе Грузии – Сванетии. <br>Травы и
+                    ингредиенты сванской соли могут отличаться в зависимости от того, кем и где она была приготовлена. В
+                    этой волшебной баночке – наша семейная реликвия, вот уже много лет её составляющие передаются по
+                    линии моего отца из поколения в поколение и бережно храниться. <br>Угадайте, сколько всего
+                    ингредиентов в составе?
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-reviews-callback">
+        @@include('parts/reviews.html')
+    </div>
+
+    @@include('parts/last-articles.html')
+
 </div>
 
-	
 @@include('parts/footer.html')
