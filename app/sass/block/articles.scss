@@ -1,4 +1,228 @@
-.last-articles {
+.articles-page {
+    overflow: hidden;
+    h1 {
+        margin-bottom: 100px;
+    }
+
+    .art-design1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .art-design1-text {
+            margin-right: 30px;
+            flex: 1;
+        }
+        h3 {
+            margin-bottom: 47px;
+            max-width: 417px;
+
+            a {
+                color: #fff;
+            }
+        }
+        .readmore {
+            margin-top: 23px;
+        }
+
+        .art-design1-img {
+            flex-basis: 59.824%;
+        }
+
+        img {
+            filter: grayscale(80%);
+            transition: all .5s;
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+        }
+    }
+
+    .art-design2 {
+        float: left;
+        display: flex;
+        align-items: center;
+        max-width: 755px;
+        margin-top: 104px;
+
+        .art-design2-img {
+            //flex-basis: 349px;
+            flex-basis: 46.225%;
+        }
+
+        img {
+            filter: grayscale(80%);
+            transition: all .5s;
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+        }
+
+        .art-design2-text {
+            flex: 1;
+            margin-left: -73px;
+            position: relative;
+
+            h3 {
+                margin-bottom: 50px;
+                margin-left: 57px;
+                max-width: 417px;
+                a {
+                    color: #fff;
+                }
+            }
+
+            .text-wrap {
+                background-color: $lbl;
+                padding: 35px 41px;
+            }
+        }
+    }
+
+    .art-design3 {
+        float: right;
+        max-width: 360px;
+        margin-top: -145px;
+        position: relative;
+
+        .art-design3-img {
+            margin-bottom: 46px;
+            max-width: 327px;
+        }
+
+        img {
+            filter: grayscale(80%);
+            transition: all .5s;
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+        }
+
+        .art-design3-text {
+            h3 {
+                margin-bottom: 41px;
+            }
+        }
+    }
+
+    .pagination {
+        margin-top: 106px;
+    }
+
+    @include mq(xl) {
+        .art-design2 {
+            max-width: 575px;
+        }
+        .art-design3 {
+            max-width: 330px;
+        }
+    }
+
+    @include mq(lg) {
+        .art-design1 {
+            .art-design1-img {
+                flex-basis: 45%;
+            }
+        }
+
+        .art-design2 {
+            float: none;
+            margin-top: 60px;
+            max-width: none;
+        }
+
+        .art-design3 {
+            float: none;
+            display: flex;
+            align-items: center;
+            max-width: none;
+            margin-top: 60px;
+
+            .art-design3-text {
+                flex: 1;
+                margin-right: 30px;
+            }
+            .art-design3-img {
+                flex-basis: 45%;
+                max-width: none;
+                margin-bottom: 0;
+                order: 2;
+            }
+        }
+    }
+    
+    @include mq(md) {
+        .art-design1 {
+            flex-direction: column;
+            .art-design1-text {
+                margin-bottom: 30px;
+
+                h3 {
+                    max-width: none;
+                }
+            }
+        }
+
+        .art-design2 {
+            flex-direction: column;
+
+            .art-design2-img {
+                order: 2;
+                flex-basis: content;
+            }
+
+            .art-design2-text {
+                margin-left: 0;
+                margin-bottom: 30px;
+
+                h3 {
+                    margin-left: 0;
+                    max-width: none;
+                }
+
+                .text-wrap {
+                    background-color: $bg;
+                    padding: 0;
+                }
+            }
+        }
+
+        .art-design3 {
+            flex-direction: column;
+
+            .art-design3-text {
+                margin-bottom: 30px;
+                margin-right: 0;
+            }
+            .art-design3-img {
+                flex-basis: 45%;
+                max-width: none;
+                margin-bottom: 0;
+                order: 2;
+            }
+        }
+    }
+
+    @include mq(sm) {
+        h1 {
+            font-size: 20vw;
+        }
+        h3 {
+            font-size: 11vw;
+        }
+    }
+}
+.latest-articles {
     padding-top: 51px;
     
     h3 {

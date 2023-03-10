@@ -53,6 +53,7 @@ h5,
 }
 
 a {
+	color: #fff;
 	transition: all .3s;
 
 	&:focus {
@@ -60,6 +61,7 @@ a {
 	}
 
 	&:hover {
+		color: #fff;
 		text-decoration: none;
 	}
 }
@@ -319,6 +321,49 @@ button,
 			height: 24px;
 			width: 24px;
 			@include trans();
+		}
+	}
+}
+
+.readmore {
+	display: inline-flex;
+	align-items: center;
+	color: $beg;
+	letter-spacing: normal;
+	transform: scale(1);
+	will-change: transform;
+	.arrow-right {
+		position: relative;
+		height: 2px;
+		background-color: $beg;
+		margin-left: 11px;
+		width: 12px;
+		transition: all .3s;
+
+		&:before, &::after {
+			background-color: $beg;
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			height: 2px;
+			width: 6px;
+			transform-origin: 100%;
+		}
+		&:before {
+			transform: rotate(45deg);
+			top: 0.5px;
+		}
+		&::after {
+			transform: rotate(-45deg);
+			top: -0.3px;
+		}
+	}
+	&:hover {
+		color: $beg;
+		transform: scale(1.03);
+		.arrow-right {
+			width: 20px;
 		}
 	}
 }

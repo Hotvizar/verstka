@@ -1,0 +1,62 @@
+@@include('parts/header.html', {title: "Статьи и новости", class: "articles"})
+
+@@include('parts/breadcrumbs.html', {bred: "Статьи и новости"})
+
+<div class="articles-page">
+    <div class="container">
+        <h1>Статьи и новости</h1>
+
+        <div class="art-design1">
+            <div class="art-design1-text">
+                <h3><a href="article.html">Заголовок новости</a></h3>
+                <p>Как уже неоднократно упомянуто, непосредственные участники технического прогресса преданы социально-демократической анафеме! Приятно, граждане, наблюдать, как некоторые особенности внутренней политики, инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали. Каждый из нас понимает очевидную вещь: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение анализа существующих паттернов поведения ...</p>
+                <a href="article.html" class="readmore">Читать далее <span class="arrow-right"></span></a>
+            </div>
+            <div class="art-design1-img">
+                <a href="article.html"><img src="image/news1.jpg" alt="" class="img-fluid"></a>
+            </div>
+        </div>
+
+        <div class="art-design2">
+            <div class="art-design2-img">
+                <a href="article.html"><img src="image/news2.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="art-design2-text">
+                <h3><a href="article.html">Заголовок новости</a></h3>
+                <div class="text-wrap">
+                    <p>Александр Журкин, шеф-повар ресторана «Пироги Вино и Гусь», поделился рецептом приготовления запеченного судака, который станет отличным вариантом ужина для всей семьи. И долго ждать не нужно!</p>
+                    <a href="article.html" class="readmore">Читать далее <span class="arrow-right"></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="art-design3">
+            <div class="art-design3-img">
+                <a href="article.html"><img src="image/news3.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="art-design3-text">
+                <h3><a href="article.html">Заголовок новости</a></h3>
+                <div class="text-wrap">
+                    <p>Как уже неоднократно упомянуто, непосредственные участники технического прогресса преданы социально-демократической анафеме! Приятно, граждане, наблюдать, как некоторые особенности внутренней политики, инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали ...</p>
+                    <a href="article.html" class="readmore">Читать далее <span class="arrow-right"></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <nav class="navigation justify-content-center w-100 pagination" role="navigation">
+            <div class="nav-links">
+                <a class="prev page-numbers" href="#"><svg class="chevron-left"><use xlink:href="image/icons/symbol/sprite.svg#chevron-left" /></svg></a>
+                <span aria-current="page" class="page-numbers current">1</span>
+                <a class="page-numbers" href="#">2</a>
+                <a class="page-numbers" href="#">3</a>
+                <a class="page-numbers" href="#">4</a>
+                <a class="next page-numbers" href="#"><svg class="chevron-right"><use xlink:href="image/icons/symbol/sprite.svg#chevron-right" /></svg></a>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+@@include('parts/footer.html')
