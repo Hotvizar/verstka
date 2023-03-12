@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@300&display=swap');
+$sof: 'Sofia Sans Extra Condensed', sans-serif;
+
+.page-projects {
+
+    .catalog-container {
+
+        .cat-item.des-1 .title {
+            font-size: 96px;
+            top: 34px;
+            bottom: auto;
+        }
+
+        .cat-item.des-2 .title {
+            font-size: 96px;
+            left: 49px;
+            top: 45px;
+        }
+
+        .cat-item.des-3 {
+            .title {
+                font-size: 64px;
+                left: 48px;
+                bottom: 37px;
+                top: auto;
+            }
+
+            a:hover {
+                .title {
+                    font-size: 48px !important;
+                }
+            }
+        }
+
+        .cat-item.des-4 {
+            .title {
+                font-size: 96px;
+                left: 53px;
+                bottom: 35px;
+                transition: all .5s;
+                max-width: 82%;
+            }
+
+            a:hover {
+                .title {
+                    max-width: 50%;
+                }
+            }
+        }
+
+        .cat-item[class*="des-"] {
+            .title {
+                font-family: $sof;
+                font-weight: 300;
+            }
+
+            a:hover {
+                .title {
+                    font-size: 64px;
+                }
+            }
+
+            @include mq(xl) {
+                &.des-4 .title {
+                    font-size: 7.6vw;
+                }
+            }
+            @include mq(sm) {
+                .title, &.des-4 .title {
+                    font-size: 17vw;
+                }
+            }
+        }
+    }
+}
