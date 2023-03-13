@@ -487,3 +487,76 @@ button,
 		}
 	}
 }
+
+.page-success {
+	padding: 30px 0;
+	height: 73vh;
+	min-height: 460px;
+	
+	.success-image {
+		position: absolute;
+        right: 0;
+        top: 0;
+        height: auto;
+        max-width: 914px;
+        width: 49%;
+        z-index: -1;
+	}
+
+	h1 {
+		font-size: 140px;
+		letter-spacing: 0.04em;
+		margin-bottom: 30px;
+		max-width: 885px;
+	}
+	h3 {
+		font-weight: 300;
+		margin-bottom: 65px;
+		max-width: 541px;
+	}
+
+	@include mq(xl) {
+        .success-image {
+            width: 65%;
+        }
+
+		h1 {
+			font-size: calc($index / 15);
+			max-width: none;
+		}
+	}
+	
+	@include mq(md) {
+        .success-image {
+            max-width: 500px;
+			width: 100%;
+        }
+
+		h1 {
+			font-size: calc($index / 16);
+			max-width: none;
+		}
+		
+		h3 {
+			font-size: calc($index / 26);
+			max-width: none;
+		}
+	}
+
+	@include mq(sm) {
+
+		h1 {
+			font-size: calc($index / 16);
+			text-align: center;
+		}
+		
+		h3 {
+			font-size: calc($index / 26);
+			text-align: center;
+		}
+
+		.btn-outline {
+			margin: 0 auto;
+		}
+	}
+}
