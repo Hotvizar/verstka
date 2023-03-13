@@ -151,6 +151,7 @@ button,
 	font-weight: 300;
 	color: $beg;
 	height: 64px;
+	padding: 10px 15px;
 
 	&::placeholder {
 		color: $beg;
@@ -177,6 +178,117 @@ button,
 		&::placeholder,
 		&:hover::placeholder {
 			color: transparent;
+		}
+	}
+}
+
+.dropdown.bootstrap-select {
+	&:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+		width: 100%;
+	}
+
+	>.dropdown-toggle {
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid $beg;
+		border-radius: 0;
+		font-family: $ns;
+		font-size: 20px;
+		font-weight: 300;
+		color: $beg;
+		padding: 10px 15px;
+		height: 64px;
+		width: 100%;
+
+		&::after {
+			border: none;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17 9.5L12 14.5L7 9.5' stroke='%23E8DBCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+			background-position: center;
+			height: 24px;
+			width: 24px;
+		}
+
+		.filter-option {
+			height: auto;
+		}
+
+		&:hover {
+			color: $beg;
+		}
+
+		&:active {
+			background-color: $beg;
+
+		}
+
+		&:focus {
+			outline: none !important;
+		}
+	}
+
+	&.show {
+		>.dropdown-toggle {
+			background-color: $beg;
+			color: $bg;
+
+			&::after {
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 14.5L12 9.5L17 14.5' stroke='%23111618' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+			}
+		}
+
+		.dropdown-menu {
+			background-color: $beg;
+			border: none;
+			border-radius: 0;
+			margin: 0;
+			padding: 0;
+
+			li {
+				padding: 0 15px;
+
+				&:last-child {
+					a {
+						border-bottom-color: transparent;
+					}
+				}
+			}
+
+			.dropdown-item {
+				border-bottom: 1px solid rgba(255, 255, 255, .3);
+				font-size: 20px;
+				font-weight: 300;
+				color: $bg;
+				display: inline-block;
+				padding: 15px 0 16px;
+
+				&.active,
+				&:hover,
+				&:active {
+					background-color: $beg;
+				}
+
+				span {
+					&::after {
+						background-color: $bg;
+						content: "";
+						display: block;
+						opacity: 0;
+						transform: scaleX(0);
+						transition: all .5s;
+						height: 1px;
+						width: 100%;
+					}
+				}
+
+
+				&:hover {
+					span:after {
+						opacity: 1;
+						transform: scaleX(1);
+					}
+				}
+			}
+
 		}
 	}
 }
@@ -334,6 +446,7 @@ button,
 	letter-spacing: normal;
 	transform: scale(1);
 	will-change: transform;
+
 	.arrow-right {
 		position: relative;
 		height: 2px;
@@ -342,7 +455,8 @@ button,
 		width: 12px;
 		transition: all .3s;
 
-		&:before, &::after {
+		&:before,
+		&::after {
 			background-color: $beg;
 			content: "";
 			display: block;
@@ -352,18 +466,22 @@ button,
 			width: 6px;
 			transform-origin: 100%;
 		}
+
 		&:before {
 			transform: rotate(45deg);
 			top: 0.5px;
 		}
+
 		&::after {
 			transform: rotate(-45deg);
 			top: -0.3px;
 		}
 	}
+
 	&:hover {
 		color: $beg;
 		transform: scale(1.03);
+
 		.arrow-right {
 			width: 20px;
 		}

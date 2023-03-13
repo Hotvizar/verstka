@@ -27,8 +27,6 @@
 
     #float-hide {
         float: right;
-        //height: calc((100vw - 1170px) / 4);
-        //width: 51%;
         height: 180px;
         width: 974px;
     }
@@ -76,25 +74,4 @@
             max-width: none;
         }
     }
-    /* @media (max-width: 1640px) {
-        .privacy-image {
-            width: 55%;
-        }
-    
-        #float-hide {
-            height: calc((100vw - 1170px) / 3);
-            width: calc(55% + 61px);
-        }
-    }
-    
-    @media (max-width: 1440px) {
-        .privacy-image {
-            width: 65%;
-        }
-    
-        #float-hide {
-            height: calc((100vw - 1170px) / 3);
-            width: calc(55% + 61px);
-        }
-    } */
 }

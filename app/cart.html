@@ -3,7 +3,9 @@
 @@include('parts/breadcrumbs.html', {bred: "Корзина"})
 
 <div class="page-cart">
-    <div class="container">
+    <div class="container-md">
+
+        <h1>Корзина</h1>
 
         <div class="product-big-image">
 
@@ -20,8 +22,6 @@
             </div> <!-- /#productBigSlider -->
 
         </div> <!-- /.product-big-image -->
-
-        <h1>Корзина</h1>
 
         <div class="products-in-cart">
             
@@ -63,7 +63,7 @@
                     <img src="image/product2-in-cart.jpg" alt="" class="img-fluid" data-index="1">
                 </div>
 
-                <div class="prod-name">Название товара</div>
+                <div class="prod-name">Название товара за словесными горами в стране гласных и согласных живут</div>
 
                 <div class="prod-price">345.00 р</div>
                 
@@ -142,7 +142,7 @@
         <div class="checkout-form">
             <form>
 
-                <div class="row row-cols-1 row-cols-md-2">
+                <div class="row row-cols-1 row-cols-sm-2">
                     <div class="col">
                         <input type="text" class="form-control" placeholder="Имя">
                     </div>
@@ -156,10 +156,9 @@
                         <input type="text" class="form-control" placeholder="Улица, дом, квартира">
                     </div>
                     <div class="col">
-                        <select name="" class="form-control">
-                            <option>Способ оплаты</option>
-                            <option value="1">На карту</option>
-                            <option value="2">Наложенный платеж</option>
+                        <select name="" title="Способ оплаты">
+                            <option value="1">Наличный расчёт</option>
+                            <option value="2">Безналичный расчёт</option>
                         </select>
                     </div>
                     <div class="clearfix"></div>

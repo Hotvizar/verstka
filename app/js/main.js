@@ -230,6 +230,8 @@ $(function () {
         fade: true,
     });
 
+    $('select').selectpicker();
+
     //Навигация по клику на фото продукта
     $(".product-in-cart-item .prod-img img").on("mouseenter mouseleave", function(e){
         e.preventDefault();
