@@ -1,0 +1,189 @@
+.article {
+
+    h5 {
+        font-size: 32px;
+        font-weight: 300;
+        margin-bottom: 31px;
+    }
+
+    .article-block1 {
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        img {
+            float: right;
+            margin-left: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 64px;
+            letter-spacing: 0.04em;
+            margin-bottom: 69px;
+        }
+
+        ul {
+            padding-left: 28px;
+
+            &.ul-col-2 {
+                columns: 2;
+            }
+
+            &.ul-col-3 {
+                columns: 3;
+                column-gap: 2em;
+            }
+        }
+
+        @include mq(xl) {
+            img {
+                width: 50%;
+            }
+        }
+
+        @include mq(lg) {
+            ul {
+
+                &.ul-col-3 {
+                    columns: 2;
+                }
+            }
+        }
+
+        @include mq(sm) {
+            ul {
+                padding-left: 28px;
+
+                &.ul-col-2 {
+                    columns: unset;
+                }
+
+                &.ul-col-3 {
+                    columns: unset;
+                }
+            }
+        }
+
+        @include mq(md) {
+            img {
+                float: none;
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .article-block2 {
+        margin-bottom: 52px;
+
+        .sub-block-text {
+            background-color: $lbl;
+            padding: 45px 36px;
+            margin-left: -66px;
+            margin-top: 78px;
+        }
+
+        .sub-block2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: -104px;
+            position: relative;
+            z-index: 1;
+
+            .sub-block2-text {
+                flex: 0 1 360px;
+                margin-bottom: 97px;
+            }
+
+            .sub-block2-img {
+                margin-left: 57px;
+            }
+        }
+
+        @include mq(xl) {
+            .sub-block2 {
+                margin-top: 0;
+                align-items: center;
+            }
+
+            .sub-block2 {
+                .sub-block2-text {
+                    flex: 0 1 360px;
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+
+        @include mq(md) {
+            margin-bottom: 30px;
+
+            .sub-block1 {
+                margin-bottom: 30px;
+            }
+
+            .sub-block-text {
+                background-color: transparent;
+                margin-left: 0;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                padding: 0;
+            }
+
+            .sub-block2 {
+                flex-direction: column;
+
+                .sub-block2-text {
+                    flex: 100%;
+                    margin-bottom: 14px;
+                }
+
+                .sub-block2-img {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .article-block3 {
+        margin-bottom: 46px;
+
+        img {
+            margin-bottom: 46px;
+        }
+
+        @include mq(md) {
+            img {
+                margin-bottom: 30px;
+            }
+            margin-bottom: 0;
+        }
+    }
+
+    .article-block4 {
+        position: relative;
+
+        .block4-img {
+            max-width: 927px;
+        }
+
+        .block4-text {
+            background-color: $lbl;
+            position: absolute;
+            right: 0;
+            bottom: 43px;
+            padding: 35px 41px 19px;
+            max-width: 479px;
+        }
+
+        @include mq(md) {
+            .block4-text {
+                background-color: transparent;
+                position: static;
+                padding: 0;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
