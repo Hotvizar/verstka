@@ -231,6 +231,7 @@ $(function () {
     });
 
     $('select').selectpicker();
+    $('input[type=tel]').inputmask("+7 ( 999 ) 999-99-99",{ "placeholder": "_" });
 
     //Навигация по клику на фото продукта
     $(".product-in-cart-item .prod-img img").on("mouseenter mouseleave", function(e){
