@@ -6,6 +6,7 @@ html {
 }
 
 body {
+	font-family: 'Exo 2', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	color: $fc;
@@ -17,6 +18,10 @@ body {
 	outline-style: none;
 	outline-width: 0px !important;
 	outline-color: none !important;
+}
+h1 {
+	font-size: 48px;
+	font-weight: 700;
 }
 
 a {
