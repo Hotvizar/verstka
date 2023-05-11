@@ -1,1 +1,103 @@
 // HEADER
+.header {
+    padding: 34px 0 28px;
+
+    .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            max-width: 199px;
+            margin-right: 36px;
+        }
+
+        .lang-switch {
+            margin-left: 35px;
+
+            ul {
+                display: flex;
+                align-items: center;
+                padding-left: 0;
+                margin-bottom: 0;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 39px;
+                    width: 49px;
+                    margin-right: 8px;
+
+                    &.current-lang {
+
+                        background: $yel;
+                        box-shadow: 0px 3px 0px rgba(176, 57, 19, 0.5), inset 0px 2px 0px #FFEEB1;
+                        border-radius: 20px 0;
+                        
+                        &.lang-item-first {
+                            border-radius: 0px 20px;
+                        }
+                        
+                        a {
+                            color: $fc;
+
+                            &:hover {
+                                color: $fc;
+                            }
+                        }
+
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $fc;
+
+                        &:hover {
+                            color: $yel;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home {
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        .top-nav {
+    
+            .lang-switch {
+    
+                ul {
+                    li {
+                        &.current-lang {
+                            a {
+                                color: $fc;
+                            }
+                        }
+    
+                        a {
+                            color: #fff;
+    
+                            &:hover {
+                                color: $fc;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ html {
 }
 
 body {
+	//background: url("image/slide.jpg") center 0 no-repeat;
 	font-family: 'Exo 2', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
@@ -55,4 +56,23 @@ button,
 .btn {
 	border-radius: 0;
 	transition: all .3s;
+}
+
+.btn-yellow {
+	background: $yel;
+	box-shadow: 0px 5px 0px rgba(176, 57, 19, 0.5), inset 0px 3px 0px #FFEEB1;
+	border-radius: 0px 40px;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 59px;
+	padding: 5px 13px;
+	max-width: 292px;
+
+	&:hover {
+		background: #FFC632;
+	}
 }

@@ -1,0 +1,99 @@
+#home-slider {
+    .slide-item {
+        background-size: cover;
+        background-position: center center;
+        height: 910px;
+        position: relative;
+
+        .slide-caption {
+            font-size: 26px;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 228px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+
+            h3 {
+                font-size: 89px;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 20px;
+            }
+
+            .btn-yellow {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        margin-top: 36px;
+    }
+}
+
+.home-slider-icons {
+    margin-top: -85px;
+    position: relative;
+
+    .socials {
+        .icon {
+            fill: #fff;
+            height: 22px;
+            margin-right: 34px;
+
+            &.facebook {
+                width: 11px;
+            }
+
+            &.instagram {
+                width: 22px;
+            }
+
+            &.youtube {
+                width: 33px;
+            }
+        }
+    }
+
+    .mouse-icon {
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 51px;
+        will-change: contents;
+
+        .mouse,
+        .arrow-down {
+            fill: #fff;
+            height: 24px;
+            width: 24px;
+        }
+
+        .arrow-down {
+            margin-top: 3px;
+        }
+
+        &:hover {
+            animation: move .7s infinite linear;
+        }
+    }
+}
+
+@keyframes move {
+    from {
+        height: 51px;
+    }
+
+    to {
+        height: 55px;
+    }
+}
