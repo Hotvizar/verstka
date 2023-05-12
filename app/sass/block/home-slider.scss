@@ -40,26 +40,6 @@
     margin-bottom: 130px;
     position: relative;
 
-    .socials {
-        .icon {
-            fill: #fff;
-            height: 22px;
-            margin-right: 34px;
-
-            &.facebook {
-                width: 11px;
-            }
-
-            &.instagram {
-                width: 22px;
-            }
-
-            &.youtube {
-                width: 33px;
-            }
-        }
-    }
-
     .mouse-icon {
         position: absolute;
         top: -22px;
@@ -85,6 +65,35 @@
 
         &:hover {
             animation: move .7s infinite linear;
+        }
+    }
+}
+
+.socials {
+    .icon {
+        fill: #fff;
+        height: 22px;
+        transition: all .5s;
+
+        &.facebook {
+            width: 11px;
+        }
+
+        &.instagram {
+            width: 22px;
+        }
+
+        &.youtube {
+            width: 33px;
+        }
+    }
+    a {
+        margin-right: 34px;
+
+        &:hover {
+            .icon {
+                fill: $yel;
+            }
         }
     }
 }
