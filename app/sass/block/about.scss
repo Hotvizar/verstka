@@ -1,0 +1,46 @@
+.home-about {
+
+    .row {
+        position: relative;
+        padding: 82px 0 71px;
+
+        &::before {
+            content: "";
+            border: 3px solid $gr;
+            border-radius: 0px 100px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 90%;
+        }
+    }
+    .home-about-img {
+        img {
+            filter: grayscale(100%) drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
+            border-radius: 0px 130px;
+            transition: all .5s;
+
+            &:hover {
+                filter: grayscale(0) drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
+            }
+        }
+    }
+
+    .home-about-text {
+        padding-right: 67px;
+
+        h3 {
+            margin-bottom: 12px;
+        }
+        h6 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 54px;
+        }
+
+        .btn-red {
+            margin-top: 45px;
+        }
+    }
+}
