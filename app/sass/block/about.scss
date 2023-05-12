@@ -44,4 +44,41 @@
             margin-top: 45px;
         }
     }
+
+    @include mq(lg) {
+        .home-about-img {
+            margin-bottom: 40px;
+        }
+        .home-about-text {
+            padding-left: 124px;
+        }
+    }
+
+    @include mq(sm) {
+        .row {
+            padding: 30px 0 70px;
+            &::before {
+                right: 15px;
+            }
+        }
+
+        .home-about-img {
+            padding-right: 45px;
+        }
+        
+        .home-about-text {
+            padding-left: 70px;
+            padding-right: 45px;
+
+            h3 {
+                @include font-size(48px);
+            }
+        }
+    }
+
+    @include mq(380) {
+        .home-about-text {
+            padding-left: 50px;
+        }
+    }
 }

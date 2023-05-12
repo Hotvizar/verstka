@@ -8,14 +8,15 @@ $(function () {
 		arrows: true,
         prevArrow: '<button type="button" class="slick-prev"><svg class="icon chevron-left"><use xlink:href="image/icons/symbol/sprite.svg#chevron-left" /></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg class="icon chevron-right"><use xlink:href="image/icons/symbol/sprite.svg#chevron-right" /></svg></button>',
-		/* responsive: [
+		responsive: [
 			{
-				breakpoint: 1300,
+				breakpoint: 576,
 				settings: {
 					arrows: false,
+					dots: true
 				}
 			},
-		], */
+		],
 	});
 
 });
