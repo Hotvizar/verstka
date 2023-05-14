@@ -10,7 +10,7 @@
     width: 320px;
     z-index: 100;
     will-change: transition;
-    transition: all .8s ease-out;
+    transition: all .5s ease-out;
 
     &.open-menu {
         right: 0;
