@@ -1,0 +1,108 @@
+@@include('parts/header.html', {title: "Офіс", class: "office"})
+
+<div class="container">
+    @@include('parts/breadcrumbs.html', {bred: "Офіс"})
+
+    <div id="content">
+
+        <h1>Офіс</h1>
+
+        <div class="row general-office">
+            <div class="col-lg-6">
+                <img src="image/general-office.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-6">
+                <div class="general-office-info">
+                    <h3>Центральний офіс</h3>
+                    <p>Центральний офіс нашої команди розташовано за адресою:</p>
+
+                    <div class="media">
+                        <svg class="location">
+                            <use xlink:href="image/icons/symbol/sprite.svg#location" />
+                        </svg>
+                        <div class="media-body">
+                            м. Маріуполь, вул.Архитектора Нільсена (в минулому – вулиця Енгельса), 60, БЦ «Галакс», офіс
+                            123.
+                        </div>
+                    </div>
+
+                    <div class="media">
+                        <svg class="time">
+                            <use xlink:href="image/icons/symbol/sprite.svg#time" />
+                        </svg>
+                        <div class="media-body">
+                            Час роботи понеділок–п’ятниця з 9:00 по 17:00.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="field-offices">
+            <h3>Адреси виїзних офісів, що працюють за графіками:</h3>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center">
+                <div class="col">
+                    <div class="office-item">
+                        <div>
+                            <h5>ВИНОГРАДНЕНСЬКА СІЛЬСЬКА РАДА</h5>
+                            <p>с. Виноградне, вул.Центральна, буд. 22-б</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="office-item">
+                        <div>
+                            <h5>САРТАНСЬКА СІЛЬСЬКА РАДА</h5>
+                            <p>с. Сартана, вул. Челюскінців, буд. 67-а</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="office-item">
+                        <div>
+                            <h5>ПАВЛОПІЛЬСЬКА СІЛЬСЬКА РАДА</h5>
+                            <p>с. Павлопіль, вул. Сивухина, буд. 77</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="office-item">
+                        <div>
+                            <h5>ТАЛАКІВСЬКА СІЛЬСЬКА РАДА</h5>
+                            <p>с. Талаківка, вул. 40 Років Жовтня, буд. 235</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="office-item">
+                        <div>
+                            <h5>ГРАНІТНЕ</h5>
+                            <p>с.Гранітне, вул. Б. Хмельницького, 42</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="office-item">
+                        <div>
+                            <h5>СІЛЬСКА РАДА СЕЛА ЧЕРМАЛИК</h5>
+                            <p>с. Чермалик, вул. Мира, 38</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> <!-- /#content -->
+
+</div>
+
+@@include('parts/footer.html')
