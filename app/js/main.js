@@ -50,4 +50,30 @@ $(function () {
 		],
 	});
 
+	//mobile menu
+	$("#mobile-menu .menu-item-has-children").on("click", function(e){
+		e.preventDefault();
+
+   		var $this = $(this);
+
+		$this.children("ul").slideToggle(350);
+		$this.toggleClass('show');
+	});
+
+	$(window).on('resize', function () {
+        closeNav();
+    });
+
 });
+
+function openNav() {
+	$('body').addClass('modal-open');
+	$('#mobile-menu').addClass("open-menu");
+	$('.backdrop').addClass('open-drop');
+ }
+ 
+ function closeNav() {
+	$('body').removeClass('modal-open');
+	$('#mobile-menu').removeClass("open-menu");
+	$('.backdrop').removeClass('open-drop');
+ }
