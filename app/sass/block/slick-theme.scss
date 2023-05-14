@@ -62,13 +62,13 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev,
 .slick-next {
-    border: 2px solid #fff;
+    border: 2px solid $red;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    height: 52px;
-    width: 52px;
+    height: 36px;
+    width: 36px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
@@ -86,9 +86,10 @@ $slick-opacity-not-active: 0.25 !default;
        fill: #C4C4C4 !important;
     }
     .chevron-left, .chevron-right {
-        fill: #fff;
-        height: 17px;
-        width: 10px;
+        fill: $red;
+        height: 14px;
+        width: 7px;
+        @include trans();
     }
     
     .chevron-left {
@@ -100,16 +101,20 @@ $slick-opacity-not-active: 0.25 !default;
     }
 
     &:hover {
-        background: $yel;
+        background: $red;
+
+        .chevron-left, .chevron-right {
+            fill: #fff;
+        }
     }
 }
 
 .slick-prev {
-    left: 161px;
+    left: 0;
 }
 
 .slick-next {
-    right: 161px;
+    right: 0;
 }
 
 /* Dots */
