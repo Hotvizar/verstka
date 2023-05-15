@@ -1,0 +1,86 @@
+@@include('parts/header.html', {title: "Події", class: "category"})
+
+<div class="container">
+    @@include('parts/breadcrumbs.html', {bred: "Події"})
+
+    <div id="content">
+
+        <h1>Події</h1>
+
+        <div class="row">
+            <div class="col-md-8 article-list">
+
+                <article class="article">
+                    <div class="image"><img src="image/podii/pod1.jpg" alt="" class="img-fluid"></div>
+                    <div class="description">
+                        <h5>Боротьба з насильством продовжується</h5>
+                        <p>Насилля не завжди залишає сліди на тілі. Сліди, що залишаються внаслідок психологічного насилля, не можна побачити. Але вони переслідують людину протягом всього житття. Дуже важливо, щоб жінки та дівчата, які потерпають від насилля, не замовчувлаи такі випадки. [...]</p>
+
+                        <div class="article-footer">
+                            <div class="date">01.02.2021</div>
+                            <a href="#" class="readmore">Детальніше <svg class="arrow-right"><use xlink:href="image/icons/symbol/sprite.svg#arrow-right" /></svg></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article">
+                    <div class="image"><img src="image/podii/pod2.jpg" alt="" class="img-fluid"></div>
+                    <div class="description">
+                        <h5>Фото: наша робота у жовтні 2021</h5>
+                        <p>Насилля не завжди залишає сліди на тілі. Сліди, що залишаються внаслідок психологічного насилля, не можна побачити. Але вони переслідують людину протягом всього житття. Дуже важливо, щоб жінки та дівчата, які потерпають від насилля, не замовчувлаи такі випадки. [...]</p>
+
+                        <div class="article-footer">
+                            <div class="date">01.02.2021</div>
+                            <a href="#" class="readmore">Детальніше <svg class="arrow-right"><use xlink:href="image/icons/symbol/sprite.svg#arrow-right" /></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <nav class="navigation justify-content-center w-100 pagination" role="navigation">
+                    <div class="nav-links">
+                        <a class="prev page-numbers" href="#"><svg class="chevron-left"><use xlink:href="image/icons/symbol/sprite.svg#chevron-left" /></svg></a>
+                        <span aria-current="page" class="page-numbers current">1</span>
+                        <a class="page-numbers" href="#">2</a>
+                        <a class="page-numbers" href="#">3</a>
+                        <a class="page-numbers" href="#">4</a>
+                        <a class="next page-numbers" href="#"><svg class="chevron-right"><use xlink:href="image/icons/symbol/sprite.svg#chevron-right" /></svg></a>
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="right-sidebar">
+                    
+                    <div class="socblock">
+                        <h5>Долучайтесь до наших<br>сторінок у ФБ!</h5>
+                        <a href="https://facebook.com" class="facebook-btn" target="_blank">
+                            <img src="image/facebook-btn.svg" alt="" class="img-fluid">
+                        </a>
+                    </div>
+
+                    <div class="last-articles">
+                        <h5>Останні події</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="#">Боротьба з насильством продовжується</a></li>
+                            <li><a href="#">Фотозвіт: наша робота у жовтні 2021</a></li>
+                            <li><a href="#">Просвітницька робота нашго лікаря щодо COVID-19</a></li>
+                            <li><a href="#">Наші курси та майстер-класи у жовтні 2021</a></li>
+                            <li><a href="#">Конгрес жінок Донеччини</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="articles-calendar">
+                        <h5>Календар новин</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /#content -->
+
+</div>
+
+@@include('parts/footer.html')

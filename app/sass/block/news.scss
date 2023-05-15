@@ -29,11 +29,127 @@
 
         .text {
             margin-left: 29px;
+
+            .readmore {
+                margin-top: 9px;
+            }
         }
 
         @include mq(lg) {
             max-width: 342px;
             margin: 0 auto 30px;
+        }
+    }
+}
+
+#content {
+    .article-list {
+
+        .article {
+            border: 3px solid #ECECEC;
+            border-radius: 0px 40px;
+            padding: 39px 39px 34px 0;
+            margin-left: 32px;
+            margin-bottom: 37px;
+
+            .image {
+                margin-left: -32px;
+
+                img {
+                    margin-bottom: 0;
+                }
+            }
+
+            .description {
+                margin-top: 34px;
+                margin-left: 28px;
+
+                h5 {
+                    margin-bottom: 20px;
+                }
+
+                .article-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 20px;
+
+                    .date {
+                        font-weight: 500;
+                    }
+
+                    @media (max-width: 330px) {
+                        flex-direction: column;
+                    }
+                }
+            }
+
+            @include mq(380) {
+                padding: 20px 20px 34px 0;
+            }
+
+        }
+    }
+
+    .right-sidebar {
+        padding: 5px 0;
+
+        > div {
+            margin-bottom: 32px;
+        }
+        h5 {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .socblock {
+            .facebook-btn {
+                background: #4E6CAA;
+                border-radius: 9px;
+                text-align: center;
+                display: block;
+                padding: 15px;
+
+                &:hover {
+                    background: #5176C1;
+                }
+            }
+        }
+
+        .last-articles {
+            ul {
+                margin-bottom: 0;
+                li {
+                    border-bottom: 1px solid $gr;
+                    display: block;
+                    padding: 10px 0;
+
+                    &::before {
+                        display: none;
+                    }
+                    a {
+                        font-size: 18px;
+                        font-weight: 400;
+                        text-decoration: none;
+                        line-height: 25px;
+
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include mq(md) {
+            margin-top: 30px;
+            text-align: center;
+
+            ul li {
+                text-align: center;
+            }
         }
     }
 }

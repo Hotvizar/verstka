@@ -111,7 +111,6 @@ button,
 	font-weight: 500;
 	color: $red;
 	display: inline-block;
-	margin-top: 9px;
 
 	.arrow-right {
 		fill: $red;
@@ -149,6 +148,61 @@ button,
 		}
 		span + span {
 			margin-left: 7px;
+		}
+	}
+}
+
+.pagination {
+	margin: 49px 0 0;
+
+	.nav-links {
+		text-align: center;
+		width: 100%;
+
+		a,
+		span {
+			font-size: 18px;
+			font-weight: 500;
+			color: $fc;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 2.5px 0;
+			text-align: center;
+			transition: all .3s;
+			height: 42px;
+			vertical-align: middle;
+			width: 42px;
+
+			&:hover,
+			&.current {
+				background-color: $gr;
+				border-radius: 0px 10px;
+				text-decoration: none;
+			}
+
+			&:active {
+				background-color: $gr;
+				color: $fc;
+
+				.chevron-left,
+				.chevron-right {
+					fill: $fc;
+				}
+			}
+		}
+
+		.prev,
+		.next {
+			line-height: 37px;
+		}
+
+		.chevron-left,
+		.chevron-right {
+			fill: $fc;
+			height: 12px;
+			width: 12px;
+			@include trans();
 		}
 	}
 }
