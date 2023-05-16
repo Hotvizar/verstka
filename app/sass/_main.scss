@@ -152,6 +152,41 @@ button,
 	}
 }
 
+#content {
+	#page-gallery {
+		.slick-list {
+			margin: 0 8.56%;
+
+			img {
+				border-radius: 0 40px;
+			}
+
+			@include mq(sm) {
+				margin: 0;
+			}
+		}
+
+		.slick-next, .slick-prev {
+			top: 43.8%;
+
+			@include mq(lg) {
+				top: 41.4%;
+			}
+			
+			@include mq(md) {
+				top: 35%;
+			}
+		}
+
+		.slick-dots {
+			bottom: unset;
+			top: var(--heightSlide);
+			margin-top: -30px;
+		}
+	}
+}
+
+
 .pagination {
 	margin: 49px 0 0;
 

@@ -124,7 +124,7 @@
         }
     }
 
-    ul {
+    ul:not(.slick-dots) {
         li {
             display: flex;
             align-items: center;
