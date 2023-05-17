@@ -1,0 +1,50 @@
+@@include('parts/header.html', {title: "Контакти", class: "page-contacts"})
+
+<div class="container">
+    @@include('parts/breadcrumbs.html', {bred: "Контакти"})
+
+    <div id="content">
+
+        <h1>Контакти</h1>
+
+        <div class="contact-box">
+            <div class="image">
+                <img src="image/contacts.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="contact-info">
+                <div class="media">
+                    <svg class="icon location"><use xlink:href="image/icons/symbol/sprite.svg#location" /></svg>
+                    <div class="media-body">
+                        м. Маріуполь, вул.Архитектора Нільсена (в минулому – вулиця Енгельса), 60, БЦ «Галакс», офіс 123.
+                    </div>
+                </div>
+                <div class="media">
+                    <svg class="icon phone-icon"><use xlink:href="image/icons/symbol/sprite.svg#phone-icon" /></svg>
+                    <div class="media-body">
+                        <a href="tel:0953400692">095 340 06 92</a>
+                    </div>
+                </div>
+                <div class="media">
+                    <svg class="icon site"><use xlink:href="image/icons/symbol/sprite.svg#site" /></svg>
+                    <div class="media-body">
+                        <a href="https://donbasforpeople.org">donbasforpeople.org</a>
+                    </div>
+                </div>
+                <div class="media">
+                    <svg class="icon geo"><use xlink:href="image/icons/symbol/sprite.svg#geo" /></svg>
+                    <div class="media-body">
+                        4H22+F4 Маріуполь, Донецька область
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /#content -->
+
+</div>
+
+<div class="maps">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11184.557778288892!2d37.53909633662842!3d47.08850494404704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e461b3539a4f%3A0xeeefaa3ace220f41!2z0JTQvtC8INCw0YDRhdC40YLQtdC60YLQvtGA0LAg0J3QuNC70YzRgdC10L3QsCDQki4g0JAu!5e0!3m2!1sru!2s!4v1684299190091!5m2!1sru!2s" width="100%" height="494" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+@@include('parts/footer.html')

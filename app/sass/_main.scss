@@ -197,6 +197,7 @@ button,
 
 		a,
 		span {
+			border-radius: 0px 10px;
 			font-size: 18px;
 			font-weight: 500;
 			color: $fc;
@@ -210,20 +211,22 @@ button,
 			vertical-align: middle;
 			width: 42px;
 
-			&:hover,
+			&:hover {
+				background-color: $yel;
+				color: $fc;
+			}
 			&.current {
 				background-color: $gr;
-				border-radius: 0px 10px;
 				text-decoration: none;
 			}
 
 			&:active {
-				background-color: $gr;
-				color: $fc;
+				background-color: $red;
+				color: #fff;
 
 				.chevron-left,
 				.chevron-right {
-					fill: $fc;
+					fill: #fff;
 				}
 			}
 		}

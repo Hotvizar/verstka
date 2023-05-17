@@ -20,7 +20,13 @@
                 margin-bottom: 31px;
 
                 img {
+                    filter: grayscale(1) drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
                     margin-bottom: 0;
+
+                    &:hover {
+                        filter: grayscale(0) drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
+                    margin-bottom: 0;
+                    }
                 }
             }
 

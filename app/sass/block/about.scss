@@ -116,11 +116,11 @@
         max-width: 100%;
         height: auto;
 
-        filter: grayscale(1);
+        filter: grayscale(1) drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
         transition: all .5s;
 
         &:hover {
-            filter: grayscale(0);
+            filter: grayscale(0) drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.1));
         }
     }
 
