@@ -6,11 +6,12 @@ html {
 }
 
 body {
-	font-family: sans-serif;
+	background-color: #fff;
+	font-family: $ff;
 	font-size: 16px;
 	font-weight: 300;
-	color: #000;
-	line-height: 160%;
+	color: $fc;
+	line-height: 150%;
 	min-width: 320px;
 }
 
@@ -19,13 +20,23 @@ body {
 	outline-width: 0px !important;
 	outline-color: none !important;
 }
-h1, .h1, h3, .h3 {
-	font-size: 48px;
+
+h1,
+.h1 {
+	font-family: $ff;
+	font-size: 38px;
 	font-weight: 700;
-	margin-bottom: 0;
 }
 
-h5, .h5 {
+h3,
+.h3 {
+	font-family: $ff;
+	font-size: 48px;
+	font-weight: 700;
+}
+
+h5,
+.h5 {
 	font-size: 18px;
 	font-weight: 700;
 	margin-bottom: 25px;
@@ -34,6 +45,7 @@ h5, .h5 {
 
 a {
 	color: $fc;
+	text-decoration: none;
 	transition: all .3s;
 
 	&:focus {
@@ -41,7 +53,6 @@ a {
 	}
 
 	&:hover {
-		color: $red;
 		text-decoration: none;
 	}
 }

@@ -1,10 +1,22 @@
-$fc: #3F3F3F;
-$dgr: #757273;
-$red: #E74B5B;
-$yel: #FFD748;
-$gr: #ECECEC;
+$fc: #000;
+$viol: #AF39FE;
+$yel: #FFD04D;
+$gr: #F5F5F5;
+$green: #79F9C0;
 
+$ff: 'Geologica';
 
+@media (min-width: 1320px) {
+
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 1320px;
+	}
+}
 
 $breakpoints: (
 	sm: 576px,
