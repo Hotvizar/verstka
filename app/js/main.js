@@ -4,7 +4,11 @@ $(function () {
 });
 
 
-
+Fancybox.bind("[data-fancybox]", {
+    Thumbs: {
+        type: "classic",
+      },
+});
 
 /* function openNav() {
 	$('body').addClass('modal-open');
