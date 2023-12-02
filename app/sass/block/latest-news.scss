@@ -1,0 +1,117 @@
+.latest-news {
+    
+    h3 {
+        text-align: center;
+        margin-bottom: 61px;
+    }
+
+    .news-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 24px 24px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "first second"
+            "first third";
+
+        .news-item {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            &:hover {
+                a {
+                    text-decoration: underline;
+                }
+            }
+
+            
+
+            .news-info {
+                color: #fff;
+                position: absolute;
+                bottom: 32px;
+                left: 0;
+                margin: 0 24px;
+
+                .date {
+                    font-size: 12px;
+                    font-weight: 700;
+                    margin-bottom: 16px;
+                }
+
+                a {
+                    color: #fff;
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 130%;
+                }
+            }
+        }
+
+        .first {
+            grid-area: first;
+
+            &::before {
+                background: linear-gradient(0deg, rgba(118, 42, 169, 0.85) 12.29%, rgba(175, 57, 254, 0.76) 42.92%, rgba(175, 57, 254, 0.25) 100%);
+            }
+        }
+            
+        .second {
+            grid-area: second;
+
+            &::before {
+                background: linear-gradient(0deg, rgba(118, 42, 169, 0.85) 12.29%, rgba(175, 57, 254, 0.76) 42.92%, rgba(175, 57, 254, 0.25) 100%);
+            }
+        }
+            
+        .third {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 24px 24px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "third1 third2";
+            grid-area: third;
+
+            .news-info {
+
+                .date {
+                    font-size: 10px;
+                }
+
+                a {
+                    font-size: 18px;
+                }
+            }
+
+            .third1 {
+                grid-area: third1;
+
+                &::before {
+                    background: linear-gradient(0deg, rgba(27, 30, 34, 0.85) 13.67%, rgba(27, 30, 34, 0.50) 59.79%, rgba(175, 57, 254, 0.20) 111.25%);
+                }
+            }
+            
+            .third2 {
+                grid-area: third2;
+
+                &::before {
+                    background: linear-gradient(0deg, rgba(27, 30, 34, 0.85) 13.67%, rgba(27, 30, 34, 0.50) 59.79%, rgba(175, 57, 254, 0.20) 111.25%);
+                }
+            }
+        }
+        
+    }
+}
+
+

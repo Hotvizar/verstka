@@ -5,12 +5,17 @@
         color: #fff;
         height: 100%;
         padding: 64px;
+        position: relative;
 
         h5 {
             font-size: 38px;
             font-weight: 700;
             line-height: 115%;
             margin-bottom: 30px;
+
+            a {
+                color: #fff;
+            }
         }
 
         &.prod-1 {
@@ -18,12 +23,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            position: static;
         }
 
     }
 
     .first-product {
         margin-bottom: 44px;
+        position: relative;
     }
 
         .other-products {
