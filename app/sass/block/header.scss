@@ -7,6 +7,17 @@
         justify-content: space-between;
         align-items: flex-end;
 
+        .btn-menu {
+            padding: 0;
+            line-height: 0;
+        }
+        
+        .hamburger {
+            fill: $fc;
+            height: 24px;
+            width: 24px;
+        }
+
         .logo {
             flex: 1 1 32%;
             text-align: center;
@@ -106,6 +117,42 @@
                 &:hover {
                     .basket {
                         filter: drop-shadow(2px 1px 1px $yel);    
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq(xl) {
+        .header-row {
+            .logo {
+                flex: 1 1 16%;
+            }
+        }
+    }
+
+    @include mq(lg) {
+        padding: 14px 0;
+
+        .header-row {
+            align-items: center;
+            
+            .logo {
+                margin-bottom: 0;
+            }
+            .info-block {
+                flex: 0 1 auto;
+            }
+
+            .cart {
+                margin-right: 3px;
+                a {
+                    height: auto;
+                    width: auto;
+
+                    .basket {
+                        height: 19px;
+                        width: 15px;
                     }
                 }
             }

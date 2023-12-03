@@ -1,0 +1,88 @@
+#mobmenu {
+
+    .menu-list {
+        ul {
+            margin-bottom: 30px;
+
+            li {
+                margin-bottom: 10px;
+
+                a {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-right: 12px;
+            height: 25px;
+            width: 25px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .icon {
+                fill: $fc;
+                height: 70%;
+                width: 70%;
+                transition: all .3s;
+            }
+
+            &:hover {
+                .icon {
+                    filter: drop-shadow(2px 1px 1px $yel);    
+                }
+            }
+        }
+    }
+
+    .callback {
+        a {
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+            line-height: 19px;
+
+            &::after  {
+                border-top: 2px dashed $yel;
+                content: "";
+                display: block;
+                height: 0;
+                width: 100%;
+                transition: all .3s;
+            }
+        }
+        .phone-icon {
+            fill: $fc;
+            margin-right: 12px;
+            margin-top: -2px;
+            width: 16.657px;
+            height: 16.641px;
+            transition: all .3s;
+        }
+
+        &:hover {
+            a {
+                &::after {
+                    border-top: 2px solid $yel;
+                }
+            }
+
+            .phone-icon {
+                fill: $yel;
+            }
+        }
+    }
+
+}
