@@ -62,10 +62,25 @@
             &::before {
                 background: linear-gradient(0deg, rgba(118, 42, 169, 0.85) 12.29%, rgba(175, 57, 254, 0.76) 42.92%, rgba(175, 57, 254, 0.25) 100%);
             }
+
+            .news-img {
+                height: 100%;
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                }
+            }
         }
             
         .second {
             grid-area: second;
+
+            img {
+                height: 192px;
+                width: 100%;
+                object-fit: cover;
+            }
 
             &::before {
                 background: linear-gradient(0deg, rgba(118, 42, 169, 0.85) 12.29%, rgba(175, 57, 254, 0.76) 42.92%, rgba(175, 57, 254, 0.25) 100%);
@@ -99,6 +114,15 @@
                 &::before {
                     background: linear-gradient(0deg, rgba(27, 30, 34, 0.85) 13.67%, rgba(27, 30, 34, 0.50) 59.79%, rgba(175, 57, 254, 0.20) 111.25%);
                 }
+
+                .news-img {
+                    height: 100%;
+    
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
             }
             
             .third2 {
@@ -107,9 +131,72 @@
                 &::before {
                     background: linear-gradient(0deg, rgba(27, 30, 34, 0.85) 13.67%, rgba(27, 30, 34, 0.50) 59.79%, rgba(175, 57, 254, 0.20) 111.25%);
                 }
+
+                .news-img {
+                    height: 100%;
+    
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
             }
         }
+
+
+        @include mq(xl) {
+            grid-template-areas:
+                "first second"
+                "third third";
+
+            .second {
+                img {
+                    height: 100%;
+                }
+            }
+
+            .third {
+                .news-info {
+
+                    .date {
+                        font-size: 12px;
+                    }
+    
+                    a {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+
+        @include mq(lg) {
+            
+            .news-info {
+
+                a {
+                    font-size: 20px !important;
+                }
+            }
+
+        }
         
+        @include mq(md) {
+            display: block;
+            
+            .news-item {
+                margin-bottom: 24px;
+                .news-info {
+                    a {
+                        font-size: 20px !important;
+                    }
+                }
+            }
+            
+            .third {
+                display: block;
+            }
+            
+        }
     }
 }
 

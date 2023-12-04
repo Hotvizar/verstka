@@ -18,8 +18,8 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            height: 306px;
-            width: 306px;
+            aspect-ratio: 1 / 1;
+            width: calc((100% / 3) - 40px );
 
             a {
                 display: flex;
@@ -41,6 +41,28 @@
                     z-index: -1;
                 }
             }
+        }
+
+        @include mq(xl) {
+            .vreview-item {
+                width: calc((100% / 3) - 20px );
+            }
+        }
+        
+        @include mq(lg) {
+            .vreview-item {
+                width: calc((100% / 3) - 12px );
+            }
+        }
+
+        @include mq(md) {
+            flex-direction: column;
+
+            .vreview-item {
+                margin-bottom: 24px;
+                width: 100%;
+            }
+            
         }
     }
 

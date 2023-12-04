@@ -47,4 +47,29 @@
         }
     }
 
+    @media (max-width: 1320px) {
+        .cat-item {
+            flex-direction: column;
+            text-align: center;
+            height: 100%;
+
+            a {
+                margin-left: 0;
+            }
+            img {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @include mq(420) {
+        
+        .cat-item {
+            padding: 20px;
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+
 }
