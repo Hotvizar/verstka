@@ -1,5 +1,7 @@
 // HEADER
 .header {
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
     padding: 14px 0 36px;
 
     .header-row {
@@ -163,8 +165,6 @@
             .cart {
                 margin-right: 3px;
                 a {
-                    height: auto;
-                    width: auto;
 
                     .basket {
                         height: 19px;
@@ -175,4 +175,10 @@
         }
     }
 
+}
+
+.home {
+    .header {
+        box-shadow: none;
+    }
 }
