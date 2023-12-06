@@ -1,16 +1,34 @@
 $(function () {
 
-	$("#mobmenu .menu-item-has-children").on("click", function(){
+	$("#mobmenu .menu-item-has-children").on("click", function () {
 		$(this).children("ul").slideToggle();
+	});
+
+	$('#product-img-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon slide-left"><use xlink:href="image/icons/symbol/sprite.svg#slide-left" /></svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon slide-right"><use xlink:href="image/icons/symbol/sprite.svg#slide-right" /></svg></button>',
+		/* responsive: [
+			{
+				breakpoint: 1300,
+				settings: {
+					arrows: false,
+				}
+			},
+		], */
 	});
 
 });
 
 
 Fancybox.bind("[data-fancybox]", {
-    Thumbs: {
-        type: "classic",
-      },
+	Thumbs: {
+		type: "classic",
+	},
 });
 
 /* function openNav() {
