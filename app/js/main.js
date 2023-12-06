@@ -1,5 +1,8 @@
 $(function () {
 
+	$("#mobmenu .menu-item-has-children").on("click", function(){
+		$(this).children("ul").slideToggle();
+	});
 
 });
 

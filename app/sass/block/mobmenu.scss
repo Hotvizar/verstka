@@ -1,15 +1,42 @@
 #mobmenu {
 
     .menu-list {
-        ul {
+        >ul {
             margin-bottom: 30px;
 
-            li {
+            >li {
                 margin-bottom: 24px;
-
-                a {
+                position: relative;
+             
+                >a {
                     font-size: 18px;
                     font-weight: 700;
+                }
+
+                &.menu-item-has-children {
+                    &::after {
+                        content: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3e%3cpath d='M1 1L6 6L11 1' stroke='black' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        line-height: 1.2;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    >ul {
+                        display: none;
+                        list-style: none;
+                        padding-left: 12px;
+                        margin-top: 12px;
+
+                        li {
+                            margin-bottom: 12px;
+                        }
+                    }
                 }
             }
         }
