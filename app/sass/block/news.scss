@@ -80,3 +80,109 @@
 
     }
 }
+
+.single-news {
+    margin-bottom: 90px;
+    
+    img {
+        height: auto;
+        width: 100%;
+    }
+    
+    .title {
+        margin-bottom: 69px;
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 12px;
+
+            @include mq(sm) {
+                font-size: 36px;
+            }
+        }
+    }
+
+    .other-news {
+
+        h3 {
+            font-size: 38px;
+            margin-bottom: 24px;
+        }
+
+        .news-item {
+            position: relative;
+    
+            &:before {
+                background: linear-gradient(0deg, rgba(118, 42, 169, 0.85) 12.29%, rgba(175, 57, 254, 0.76) 42.92%, rgba(175, 57, 254, 0.25) 100%);
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+    
+            &:hover {
+                a {
+                    text-decoration: underline;
+                }
+            }
+    
+            .news-img {
+                height: 100%;
+    
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                }
+            }
+    
+            .news-info {
+                color: #fff;
+                position: absolute;
+                bottom: 32px;
+                left: 0;
+                margin: 0 24px;
+    
+                .date {
+                    font-size: 10px;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+    
+                a {
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 130%;
+                }
+            }
+        }
+
+        .all-news {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            color: $fc;
+            margin-top: 24px;
+
+            &::after  {
+                border-top: 2px dashed $yel;
+                content: "";
+                display: block;
+                height: 0;
+                width: 100%;
+                transition: all .3s;
+            }
+        }
+
+        @include mq(sm) {
+            text-align: center;
+            
+            .news-item {
+                text-align: left;
+            }
+        }
+    }
+
+}
