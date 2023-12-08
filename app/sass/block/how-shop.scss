@@ -1,0 +1,62 @@
+.how-shop {
+    margin-bottom: 100px;
+    
+    .step-icon {
+        text-align: center;
+        margin-bottom: 21px;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            border-bottom: 2px solid #FFD500;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: calc(50% - 2px);
+            height: 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .step-counter {
+            background-color: #FFD500;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 64px;
+            width: 64px;
+
+            &::before {
+                border: 2px solid #000;
+                content: "";
+                border-radius: 50%;
+                position: absolute;
+                left: 7px;
+                right: 7px;
+                top: 7px;
+                bottom: 7px;
+            }
+        }
+
+
+    }
+
+    .step-text {
+        h5 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+    }
+
+    @include mq(380) {
+        
+        .col {
+            width: 100%;
+        }
+        
+    }
+
+}

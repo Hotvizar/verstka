@@ -65,6 +65,10 @@ a {
 	}
 }
 
+b, strong {
+    font-weight: bold;
+}
+
 button,
 .form-control {
 	&:focus {
