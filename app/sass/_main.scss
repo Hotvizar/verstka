@@ -283,6 +283,17 @@ button,
     }
 }
 
+@include placeholder(#000);
+
+.form-group {
+	margin-bottom: 24px;
+}
+.form-control {
+	border: 2px solid #D9D9D9;
+	border-radius: 0;
+	height: 35px;
+}
+
 .offcanvas.offcanvas-start {
 	width: 350px;
 }
