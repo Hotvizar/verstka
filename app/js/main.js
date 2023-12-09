@@ -14,7 +14,7 @@ $(function () {
 		nextArrow: '<button type="button" class="slick-next"><svg class="icon slide-right"><use xlink:href="image/icons/symbol/sprite.svg#slide-right" /></svg></button>',
 	});
 
-	//$("#noticeCart").modal('show');
+	//$("#orderSuccess").modal('show');
 
 });
 
