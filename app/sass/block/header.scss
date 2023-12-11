@@ -64,10 +64,13 @@
             }
 
             .callback {
-                a {
+                .btn-link {
                     font-size: 14px;
                     font-weight: 700;
                     display: inline-block;
+                    color: $fc;
+                    text-decoration: none;
+                    padding: 0;
                     line-height: 19px;
 
                     &::after  {

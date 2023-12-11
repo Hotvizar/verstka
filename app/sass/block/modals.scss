@@ -164,3 +164,44 @@
         }
     }
 }
+
+#callback {
+    .modal-body {
+        padding: 21px 24px 30px;
+    }
+    
+    .phone {
+        background-color: #FFD500;
+        border-radius: 50%;
+        margin: 0 auto;
+        height: 36px;
+        width: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+
+        .phone-icon {
+            fill: $fc;
+            height: 22px;
+            width: 18px;
+        }
+    }
+
+    h5 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 150%;
+        margin-bottom: 24px;
+    }
+
+    .form-group {
+        text-align: center;
+    }
+
+    .form-control {
+        display: inline-block;
+        max-width: 280px;
+        margin-bottom: 24px;
+    }
+}
