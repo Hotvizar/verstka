@@ -1,31 +1,12 @@
 @charset "UTF-8";
 
-@import "fonts";
+//@import "fonts";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 @import "variables";
 @import "mixins";
 @import "rtitle";
 @import "main";
 @import "block/header";
-@import "block/main-menu";
-@import "block/video-banner";
-@import "block/menu-catalog";
-@import "block/about";
-@import "block/goods";
-@import "block/video-review";
-@import "block/latest-news";
-@import "block/home-map";
-@import "block/mobmenu";
-@import "block/catalog";
-@import "block/category";
-@import "block/slick";
-@import "block/slick-theme";
-@import "block/product";
-@import "block/modals";
-@import "block/news";
-@import "block/how-shop";
-@import "block/contacts";
-@import "block/bag";
-@import "block/checkout";
-
 
 @import "block/footer";
