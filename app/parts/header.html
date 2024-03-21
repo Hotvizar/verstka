@@ -36,7 +36,7 @@
 					<div class="site-name">Accountant <span>Service</span></div>
 				</div>
 
-				<div class="main-menu">
+				<div class="main-menu d-none d-lg-block">
 					<ul class="list-unstyled">
 						<li><a href="#">Про нас</a></li>
 						<li><a href="#">Ви отримаєте</a></li>
@@ -45,7 +45,13 @@
 					</ul>
 				</div>
 
-				<button class="btn btn-fiol">Залишити заявку</button>
+				<button class="btn btn-fiol d-none d-lg-block">Залишити заявку</button>
+
+				<button type="button" class="btn btn-menu d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobmenu" aria-controls="mobmenu">
+					<svg class="hamburger"><use xlink:href="image/icons/symbol/sprite.svg#hamburger" /></svg>
+				</button>
+
+				@@include('mobmenu.html')
 
 			</div>
 

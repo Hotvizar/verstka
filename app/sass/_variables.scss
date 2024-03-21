@@ -3,24 +3,13 @@ $fc: #000;
 $ff:  "Mulish", sans-serif;
 $fiol: #6360bc;
 
-/* @media (min-width: 1320px) {
-
-	.container,
-	.container-lg,
-	.container-md,
-	.container-sm,
-	.container-xl,
-	.container-xxl {
-		max-width: 1320px;
-	}
-} */
-
 $breakpoints: (
+	xs: 0,
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
 	xl: 1200px,
-	xxl: 1320px,
+	xxl: 1400px,
 	480: 480px,
 	420: 420px,
 	380: 380px,
