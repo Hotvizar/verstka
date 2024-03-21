@@ -26,6 +26,21 @@
         }
     }
 
+    .header-banner-text {
+        font-size: 22px;
+        line-height: 145%;
+        h1 {
+            line-height: 142%;
+            margin-bottom: 32px;
+
+            span {
+                color: $fiol;
+            }
+        }
+    }
+}
+
+.header, .footer {
     .nav-row {
         background: #e7ebf5;
         border-radius: 30px;
@@ -76,19 +91,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-
-    .header-banner-text {
-        font-size: 22px;
-        line-height: 145%;
-        h1 {
-            line-height: 142%;
-            margin-bottom: 32px;
-
-            span {
-                color: $fiol;
             }
         }
     }
