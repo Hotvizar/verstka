@@ -1,0 +1,43 @@
+#home-slider {
+    .slide-item {
+        position: relative;
+
+        &::before {
+            content: "";
+            background: #0477bf;
+            display: block;
+            opacity: 0.5;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .caption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            max-width: 1112px;
+            width: 100%;
+
+            h2 {
+                font-weight: 800;
+                font-size: 76px;
+                color: #fff;
+                line-height: 142%;
+                text-align: center;
+                margin-bottom: 111px;
+            }
+
+            .btn-orange {
+                height: 60px;
+                max-width: 259px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
