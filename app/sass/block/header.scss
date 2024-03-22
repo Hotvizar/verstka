@@ -1,4 +1,44 @@
 // HEADER
 .header {
-    
+    .header-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 19px 0 14px;
+
+        .main-menu {
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0;
+                
+                li {
+                    margin-right: 48px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &.menu-item-has-children a {
+                        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L8 8L15 1' stroke='black' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+                        background-repeat: no-repeat;
+                        background-position: 100% 65%;
+                        padding-right: 26px;
+                    }
+
+                    a {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.social {
+    a {
+        margin: 0 6px;
+    }
 }
