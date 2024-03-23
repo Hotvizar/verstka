@@ -1,0 +1,52 @@
+.special-services {
+    margin-top: 82px;
+
+    h3 {
+        margin-bottom: 9px;
+    }
+
+    .specserv-box {
+        margin-top: 61px;
+
+        .box-image {
+            position: relative;
+            padding: 0 24px 24px 0;
+
+            img {
+                border-radius: 20px;
+            }
+
+            &::before {
+                background: #c4e1f2;
+                border-radius: 20px;
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 24px;
+                height: calc(100% - 105px);
+                z-index: -1;
+            }
+
+        }
+
+        .list-specservices {
+            
+            .specservice {
+                margin-top: 8px;
+                .icon {
+                    margin-bottom: 16px;
+                }
+
+                h5 {
+                    font-weight: 800;
+                    font-size: 28px;
+                    line-height: 142%;
+                    color: $blue;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}
