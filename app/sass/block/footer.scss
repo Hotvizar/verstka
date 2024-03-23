@@ -1,4 +1,96 @@
 /* FOOTER */
 .footer {
-    
+    background: #e9e9e9;
+    font-size: 16px;
+    padding: 100px 0;
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    h6 {
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 1;
+        color: $blue;
+        margin-bottom: 18px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            padding-left: 24px;
+            margin-bottom: 7px;
+
+            &::before {
+                content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='15' viewBox='0 0 12 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.7559 7.5C11.783 7.5 11.81 7.49613 11.837 7.49613C11.783 7.49613 11.7289 7.49613 11.6748 7.49613C7.73172 7.36483 5.98223 2.51802 5.9243 0H5.91658C5.85865 2.51802 4.1053 7.36096 0.162197 7.49613C0.108129 7.49613 0.054068 7.49613 0 7.49613C0.027034 7.49613 0.0540647 7.5 0.0810987 7.5C0.0540647 7.5 0.027034 7.50386 0 7.50386C0.05793 7.50386 0.108129 7.50386 0.162197 7.50386C4.1053 7.63517 5.85479 12.482 5.91658 15H5.9243C5.98223 12.482 7.73559 7.63517 11.6748 7.50386C11.7289 7.50386 11.783 7.50386 11.837 7.50386C11.81 7.50386 11.783 7.5 11.7559 7.5Z' fill='%2366ADD9' /%3e%3c/svg%3e");
+                margin-left: -24px;
+                padding-right: 12px;
+                vertical-align: middle;
+                line-height: 1;
+            }
+
+            a {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 50%;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer-contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        height: 100%;
+
+        .btn-orange {
+            padding: 1px 18px;
+            width: 109px;
+        }
+
+        .social {
+            text-align: right;
+            margin-bottom: 15px;
+
+            a {
+                margin: 0 0 0 12px;
+            }
+
+            svg {
+                circle {
+                    fill: #66add9;
+                }
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-align: right;
+            color: $blue;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
