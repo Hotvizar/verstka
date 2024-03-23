@@ -1,0 +1,92 @@
+.contacts {
+    background: $blue;
+    color: #fff;
+    margin-top: 84px;
+    padding: 100px 0;
+    
+    .contacts-info {
+        border-bottom: 1px solid #66add9;
+        font-size: 25px;
+        padding-bottom: 60px;
+
+        h3 {
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            .cont-icon {
+                margin-right: 34px;
+            }
+
+            h6 {
+                font-weight: 800;
+                font-size: 28px;
+                line-height: 1;
+                margin-top: 17px;
+                margin-bottom: 22px;
+            }
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .social {
+            margin-top: 32px;
+            svg {
+                height: 60px;
+                width: 60px;
+                circle {
+                    fill: #66add9;
+                }
+            }
+            
+        }
+        
+    }
+
+    .order-form-block {
+        font-size: 25px;
+        padding-top: 62px;
+
+        h5 {
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 29px;
+        }
+    }
+
+    .home-order-form {
+        margin-top: 45px;
+
+        @include placeholder(#fff);
+
+        .form-control, .form-select {
+            background-color: $blue;
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .form-select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L8 8L15 1' stroke='white' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+            background-position: right 24px center;
+            option {
+                color: #fff;
+            }
+        }
+
+        .btn-orange {
+            height: 60px;
+            max-width: 259px;
+            width: 100%;
+        }
+    }
+}

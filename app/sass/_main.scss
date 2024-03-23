@@ -117,3 +117,26 @@ button,
 		}
 	}
 }
+
+@include placeholder(#a3a3a3);
+
+.form-control, .form-select {
+	border: 1px solid #a3a3a3;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	color: $fc;
+	margin-bottom: 24px;
+	padding: 2px 24px;
+	height: 60px;
+
+	&:focus {
+		border-color: #a3a3a3;
+	}
+}
+.form-select {
+	color: #a3a3a3;
+	option {
+		color: #000;
+	}
+}
