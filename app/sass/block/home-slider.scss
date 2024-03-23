@@ -1,7 +1,11 @@
 #home-slider {
     line-height: 0;
+
     .slide-item {
+        background-position: center;
+        background-size: cover;
         position: relative;
+        min-height: 752px;
 
         &::before {
             content: "";
@@ -22,12 +26,14 @@
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
-            max-width: 1112px;
+            max-width: 1136px;
+            padding-left: 12px;
+            padding-right: 12px;
             width: 100%;
 
             h2 {
                 font-weight: 800;
-                font-size: 76px;
+                @include font-size(76px);
                 color: #fff;
                 line-height: 142%;
                 text-align: center;
@@ -38,6 +44,16 @@
                 height: 60px;
                 max-width: 259px;
                 margin: 0 auto;
+            }
+        }
+
+        @include mq(md) {
+            min-height: 600px;
+
+            .caption {
+                h2 {
+                    margin-bottom: 50px;
+                }
             }
         }
     }
