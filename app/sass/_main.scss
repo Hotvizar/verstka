@@ -82,7 +82,7 @@ button,
 	border-radius: 0;
 	transition: all .3s;
 }
-.btn-orange {
+.btn.btn-orange {
 	background: $or;
 	border-radius: 10px;
 	font-weight: 700;
@@ -106,8 +106,9 @@ button,
 		transform: scale(0);
 	}
 
-	&:hover {
-		background: $or;
+	&:hover, &:active, .active {
+		background-color: $or;
+		border-color: $or;
 		color: #fff;
 		&::before {
 			transform: scale(1);
