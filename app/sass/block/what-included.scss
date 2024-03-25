@@ -1,0 +1,41 @@
+.what-included {
+    margin-bottom: 100px;
+    margin-top: 33px;
+    
+    h3 {
+        margin-bottom: 42px;
+    }
+
+    .inc-title {
+        border: 1px solid $blue;
+        border-radius: 20px;
+        text-align: center;
+        padding: 24px;
+        margin-bottom: 24px;
+
+        .icon {
+            margin-bottom: 18px;
+        }
+
+        h5 {
+            color: $blue;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+#content .what-included {
+    ul {
+        li {
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid #66add9;
+            padding: 14.04px 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

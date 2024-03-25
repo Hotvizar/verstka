@@ -1,0 +1,103 @@
+#breadcrumbs {
+    margin-bottom: 0;
+    line-height: 1;
+    a, span {
+        font-size: 14px;
+        font-weight: 300;
+        color: #fff;
+        line-height: 1;
+    }
+    a {
+        margin-right: 8px;
+    }
+    .breadcrumb_last {
+        font-weight: 700;
+        margin-left: 8px;
+    }
+}
+
+.page-header {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 93px 0;
+    margin-bottom: 58px;
+
+    h1 {
+        margin-bottom: 0;
+        margin-top: 65px;
+        line-height: 1;
+    }
+}
+
+#content {
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        
+        li {
+            border-top: 1px solid #66add9;
+            padding: 14.54px 24px 14.54px 58px;
+            position: relative;
+            line-height: 133%;
+
+            &:last-child {
+                border-bottom: 1px solid #66add9;
+            }
+
+            &::before {
+                content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='25' viewBox='0 0 22 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.8493 12.5C21.8995 12.5 21.9498 12.4936 22 12.4936C21.8995 12.4936 21.799 12.4936 21.6985 12.4936C14.37 12.2747 11.1184 4.1967 11.0108 0H10.9964C10.8888 4.1967 7.63001 12.2683 0.301456 12.4936C0.200967 12.4936 0.100489 12.4936 0 12.4936C0.0502447 12.4936 0.100483 12.5 0.150728 12.5C0.100483 12.5 0.0502447 12.5064 0 12.5064C0.107667 12.5064 0.200967 12.5064 0.301456 12.5064C7.63001 12.7253 10.8816 20.8033 10.9964 25H11.0108C11.1184 20.8033 14.3772 12.7253 21.6985 12.5064C21.799 12.5064 21.8995 12.5064 22 12.5064C21.9498 12.5064 21.8995 12.5 21.8493 12.5Z' fill='%2366ADD9' /%3e%3c/svg%3e");
+                position: absolute;
+                left: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+                line-height: 1;
+            }
+        }
+    }
+
+    .description, .advantages {
+        background: $blue;
+        border-radius: 20px;
+        color: #fff;
+        padding: 42px 24px;
+        height: 100%;
+
+        h5 {
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .btn-orange {
+            height: 60px;
+            max-width: 259px;
+            margin-top: 17px;
+        }
+    }
+
+    .services-costs, .additional-services {
+        h5 {
+            line-height: 1;
+            margin-bottom: 28px;
+        }
+        margin-bottom: 48px;
+    }
+
+    .service-img {
+        margin-top: 29px;
+
+        img {
+            border-radius: 20px;
+        }
+    }
+}
