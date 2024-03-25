@@ -30,9 +30,10 @@
             </div>
             <div class="col col-lg-3">
                 <div class="footer-contacts">
-                    <button class="btn btn-orange">Order</button>
+                    <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#order">Order</button>
                     <div>
                         @@include('social.html')
+                        
                         <p><a href="mailto:clean.service@gmail.com">clean.service@gmail.com</a></p>
                     </div>
                 </div>
@@ -45,6 +46,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
+
+@@include('modals.html')
 
 </body>
 

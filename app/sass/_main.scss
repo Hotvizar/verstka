@@ -133,9 +133,15 @@ button,
 		border-color: #a3a3a3;
 	}
 }
+
 .form-select {
 	color: #a3a3a3;
 	option {
 		color: #000;
 	}
+}
+
+textarea.form-control {
+	height: 160px;
+	width: 100%;
 }
