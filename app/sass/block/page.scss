@@ -16,6 +16,12 @@
     }
 }
 
+.error404 #breadcrumbs {
+    a, span {
+        color: $fc;
+    }
+}
+
 .page-header {
     background-position: center;
     background-size: cover;
@@ -23,6 +29,29 @@
     color: #fff;
     padding: 93px 0;
     margin-bottom: 58px;
+    position: relative;
+
+    > .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        background: $blue;
+        opacity: 0.5;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &.or-bg {
+        &::before {
+            background-color: $or;
+        }
+    }
 
     h1 {
         margin-bottom: 0;

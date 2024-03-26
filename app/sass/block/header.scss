@@ -7,24 +7,60 @@
         padding: 19px 0 14px;
 
         .main-menu {
-            ul {
+            >ul {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 margin-bottom: 0;
                 
-                li {
+                >li {
                     margin-right: 48px;
 
                     &:last-child {
                         margin-right: 0;
                     }
 
-                    &.menu-item-has-children a {
-                        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L8 8L15 1' stroke='black' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
-                        background-repeat: no-repeat;
-                        background-position: 100% 65%;
-                        padding-right: 26px;
+                    &.menu-item-has-children {
+                        position: relative;
+                        
+                        > a {
+                            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L8 8L15 1' stroke='black' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+                            background-repeat: no-repeat;
+                            background-position: 100% 65%;
+                            padding-right: 26px;
+                        }
+
+                        ul {
+                            background-color: #fff;
+                            border-radius: 10px;
+                            min-width: 250px;
+                            opacity: 0;
+                            visibility: hidden;
+                            padding: 18px;
+                            margin-left: -18px;
+                            position: absolute;
+                            left: 0;
+                            top: 100%;
+                            z-index: 5;
+                            transform: scaleY(0);
+                            transform-origin: 0 0;
+                            transition: all .5s;
+
+                            li {
+                                margin-bottom: 6px;
+                                a {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            > ul {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: scaleY(1);
+                            }
+                        }
                     }
 
                     a {
@@ -89,8 +125,7 @@
             margin-bottom: 14px;
 
             >a {
-                font-size: 22px;
-                font-weight: 900;
+                font-weight: 800;
             }
         }
     }

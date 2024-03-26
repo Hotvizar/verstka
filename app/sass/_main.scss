@@ -145,3 +145,29 @@ textarea.form-control {
 	height: 160px;
 	width: 100%;
 }
+
+.error404 {
+	.page-header {
+		background: #edf6fb;
+		color: #000;
+		margin-bottom: 0;
+		padding-bottom: 34px;
+
+		&::before {
+			display: none;
+		}
+	}
+}
+.page-404 {
+	background: #edf6fb url("image/img-404.svg") no-repeat;
+	background-position: center bottom;
+	min-height: 680px;
+
+	h1 {
+		font-weight: 800;
+		font-size: 250px;
+		line-height: 1;
+		color: $blue;
+		margin-bottom: 10px;
+	}
+}
