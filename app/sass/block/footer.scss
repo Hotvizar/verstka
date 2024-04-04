@@ -89,7 +89,7 @@
     
     @include mq(sm) {
         padding: 50px 0;
-        
+
         .nav-row {
             flex-direction: column;
 
@@ -103,10 +103,6 @@
 
                     li {
                         margin-bottom: 12px;
-
-                        a {
-                            
-                        }
                     }
                 }
             }
