@@ -36,8 +36,43 @@
                 background: #dfe2eb;
             }
 
+            .w-text {
+                line-height: 1;
+            }
+
             .w-icon {
                 margin-right: 12px;
+            }
+        }
+    }
+
+    @include mq(xxl) {
+        .worry-list {
+            .w-item {
+                margin: 0 12px 24px;
+            }
+        }
+    }
+
+    @include mq(lg) {
+        padding-top: 50px;
+    }
+    
+    @include mq(sm) {
+
+        .worry-list {
+            .w-item {
+                margin: 0 0 24px;
+            }
+        }
+    }
+    
+    @include mq(420) {
+        .worry-list {
+            .w-item {
+                .w-text {
+                    font-size: 16px;
+                }
             }
         }
     }

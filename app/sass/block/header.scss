@@ -3,7 +3,7 @@
     background-image: url('image/header-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 737px;
+    min-height: 737px;
     padding-top: 16px;
     padding-bottom: 44px;
 
@@ -36,6 +36,15 @@
             span {
                 color: $fiol;
             }
+            
+        }
+        
+        @include mq(md) {
+            h1 {
+                @include font-size(48px);
+            }
+            
+            font-size: 18px;
         }
     }
 

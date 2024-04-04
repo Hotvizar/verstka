@@ -11,12 +11,14 @@
         .dir-item {
             border: 1px solid #000;
             border-radius: 24px;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             padding: 2px 31px;
+            line-height: 1;
             margin-bottom: 24px;
             height: 48px;
+            width: fit-content;
 
             &:last-child {
                 margin-bottom: 0;
@@ -39,5 +41,20 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+    }
+
+    @include mq(xxl) {
+        .directions {
+            .dir-item {
+                padding: 2px 24px;
+                width: 100%;
+            }
+    
+        }
+    }
+
+    @include mq(lg) {
+        text-align: center;
+        padding: 50px 0;
     }
 }

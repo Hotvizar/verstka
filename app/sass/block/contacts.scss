@@ -23,5 +23,15 @@
                 max-width: none;
             }
         }
+
+        
+    }
+    @include mq(sm) {
+        padding: 50px 0;
+        text-align: center;
+
+        .contacts-block {
+            padding: 40px 24px;
+        }
     }
 }

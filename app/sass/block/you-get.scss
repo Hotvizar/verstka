@@ -47,7 +47,11 @@
     .you-doc-img {
         background: #cecdf5;
         border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 39px 22px 45px;
+        height: 100%;
     }
     h5 {
         font-weight: 900;
@@ -69,6 +73,7 @@
     justify-content: space-between;
     border-radius: 40px;
     padding: 18px 32px;
+
     .open-text {
         flex: 1 1 274px;
         margin-right: 42px;
@@ -83,6 +88,46 @@
         p {
             line-height: 161%;
             margin-bottom: 0;
+        }
+    }
+
+    @include mq(xxl) {
+        height: calc(50% + 3px);
+    }
+}
+
+@include mq(md) {
+    #you-get {
+        padding: 50px 0;
+        
+        .you-get-info {
+            h3 {
+                text-align: center;
+            }
+            padding: 48px 24px;
+        }
+    }
+    .open {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+        .open-text {
+            margin-right: 0;
+            flex: auto;
+        }
+    }
+    .you-doc {
+        text-align: center;
+    }
+}
+@include mq(380) {
+    #you-get {
+
+        .you-get-info {
+            ul li {
+                font-size: 18px;
+                padding: 14px 0;
+            }
         }
     }
 }
