@@ -61,6 +61,7 @@
         align-items: center;
 
         .btn-link {
+            background-color: #fff;
             border: 2px solid $bll;
             border-radius: 50%;
             margin: 0 7px;
@@ -70,12 +71,22 @@
             justify-content: center;
             height: 48px;
             width: 48px;
+            transition: all .3s;
 
             .chevron-left,
             .chevron-right {
                 fill: $bl;
                 height: 18px;
                 width: 11px;
+                transition: all .3s;
+            }
+
+            &:hover {
+                background-color: $bld;
+                .chevron-left,
+                .chevron-right {
+                    fill: #fff;
+                }
             }
         }
     }
