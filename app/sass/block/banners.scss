@@ -1,4 +1,4 @@
-.banner-partners {
+.banner-partners, .banner-services {
     margin-top: 100px;
     position: relative;
     z-index: 2;
@@ -24,4 +24,8 @@
         }
     }
 
+}
+
+.banner-services {
+    margin-top: -162px;
 }
