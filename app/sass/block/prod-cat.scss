@@ -1,5 +1,6 @@
 .prod-cat {
     margin-top: -156px;
+
     .cat-item {
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -45,6 +46,46 @@
 
             .cat-link {
                 transform: scale(1.29);
+            }
+        }
+    }
+
+    .row {
+        > div {
+            &:nth-child(4n+1) {
+                .cat-item {
+                    .cat-link {
+                        background: linear-gradient(13.53deg, rgba(96, 198, 184, 0.75) 20.39%, rgba(96, 198, 184, 0.06) 108.76%);
+                        backdrop-filter: blur(2.5px);
+                    }
+                }
+            }
+            
+            &:nth-child(4n+2) {
+                .cat-item {
+                    .cat-link {
+                        background: linear-gradient(13.53deg, rgba(136, 168, 255, 0.75) 20.39%, rgba(136, 168, 255, 0.0225) 108.76%);
+                        backdrop-filter: blur(2.5px);
+                    }
+                }
+            }
+            
+            &:nth-child(4n+3) {
+                .cat-item {
+                    .cat-link {
+                        background: linear-gradient(13.53deg, rgba(0, 180, 191, 0.75) 20.39%, rgba(0, 180, 191, 0) 108.76%);
+                        backdrop-filter: blur(2.5px);
+                    }
+                }
+            }
+            
+            &:nth-child(4n+4) {
+                .cat-item {
+                    .cat-link {
+                        background: linear-gradient(13.53deg, rgba(105, 188, 119, 0.75) 20.39%, rgba(105, 188, 119, 0) 108.76%);
+                        backdrop-filter: blur(2.5px);
+                    }
+                }
             }
         }
     }

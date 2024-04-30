@@ -12,4 +12,18 @@ $(function () {
         }
     });
 
+    $('#products-slider').slick({
+        infinite: true,
+        autoplay: true,
+        dots: true,
+        appendDots: $("#slider-progress"),
+        arrows: true,
+        prevArrow: $("#arrow-prev"),
+        nextArrow: $("#arrow-next"),
+        autoplaySpeed: 5000,
+        speed: 800,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+
 });
