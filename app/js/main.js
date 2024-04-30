@@ -26,4 +26,18 @@ $(function () {
         slidesToScroll: 1
     });
 
+    $('#partners-slider').slick({
+        infinite: true,
+        autoplay: true,
+        dots: true,
+        appendDots: $("#pslider-progress"),
+        arrows: true,
+        prevArrow: $("#parrow-prev"),
+        nextArrow: $("#parrow-next"),
+        autoplaySpeed: 5000,
+        speed: 800,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+
 });
