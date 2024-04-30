@@ -1,0 +1,23 @@
+.banner-partners {
+    .banner-item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 24px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 306px;
+        text-align: center;
+
+        h5 {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 116%;
+            margin-bottom: 28px;
+        }
+    }
+
+}
