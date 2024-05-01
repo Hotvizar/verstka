@@ -1,5 +1,36 @@
 .partners {
     margin: 100px 0;
+
+    .btn-outline {
+        white-space: nowrap;
+        max-width: none;
+        width: 245px;
+    }
+
+    @include mq(md) {
+        .slide-control {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+    
+            .slider-buttons {
+                margin-bottom: 24px;
+                order: 1;
+            }
+    
+            .about-partnership {
+                margin-bottom: 24px;
+            }
+        }
+        
+        #pslider-progress {
+            flex-basis: auto;
+            margin-bottom: 24px;
+            order: 2;
+            width: 100%;
+        }
+    
+    }
 }
 
 #partners-slider {

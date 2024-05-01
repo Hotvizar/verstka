@@ -19,7 +19,7 @@
 					<a href="/"><img src="image/logo.svg" alt="" class="img-fluid"></a>
 				</div>
 
-				<nav class="main-menu">
+				<nav class="main-menu d-none d-lg-block">
 					<ul class="list-unstyled">
 						<li><a href="#">Про компанію</a></li>
 						<li><a href="#">Продукти</a></li>
@@ -29,14 +29,14 @@
 					</ul>
 				</nav>
 
-				<div class="header-search">
+				<div class="header-search d-none d-lg-block">
 					<div class="input-group" id="group-search">
 						<input name="search" type="text" value="" class="form-control" placeholder="Пошук..." aria-label="Пошук..." aria-describedby="btn-search">
 						<button class="btn btn-outline" type="button" id="btn-search"><img src="image/search-icon.svg" alt="Search"></button>
 					</div>
 				</div>
 
-				<div class="lang-switch">
+				<div class="lang-switch d-none d-lg-block">
 					<div class="dropdown">
 						<button type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 							UA
@@ -50,6 +50,12 @@
 						</div>
 					</div>
 				</div>
+
+				<button type="button" class="btn btn-menu d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobmenu" aria-controls="mobmenu">
+					<svg class="hamburger"><use xlink:href="image/icons/symbol/sprite.svg#hamburger" /></svg>
+				</button>
+
+				@@include('mobmenu.html')
 
 			</div>
 		</div>

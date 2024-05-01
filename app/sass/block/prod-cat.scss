@@ -2,7 +2,7 @@
     margin-top: -156px;
 
     .cat-item {
-        background-size: 100% 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
@@ -37,7 +37,7 @@
         }
 
         &:hover {
-            background-size: 110% 110%;
+            transform: scale(1.02);
 
             a {
                 text-decoration-color: rgba(255, 255, 255, 1); 
@@ -89,4 +89,14 @@
             }
         }
     }
+
+    @include mq(420) {
+        .cat-item {
+            h5 {
+                @include font-size(44px);
+                text-align: center;
+            }
+        }
+    }
+    
 }

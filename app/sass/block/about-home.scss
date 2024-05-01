@@ -69,4 +69,42 @@
             }
         }
     }
+
+    @include mq(xl) {
+        .about-text {
+            margin-left: 0;
+        }
+
+        .about-images {
+            padding: 0 12px;
+
+            .map-img {
+                max-width: 200px;
+            }
+        }
+    }
+    
+    @include mq(lg) {
+
+        .about-images {
+            padding: 0 12px;
+
+            .map-img {
+                max-width: calc(100vw / 2);
+            }
+        }
+    }
+    
+    @include mq(sm) {
+
+        h3 {
+            text-align: center;
+        }
+
+        .about-images {
+            .map-img {
+                top: calc(100vw / 5.55);
+            }
+        }
+    }
 }

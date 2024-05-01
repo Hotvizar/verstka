@@ -66,6 +66,7 @@
     height: 100%;
     padding: 0 12px; //для пробела
     min-height: 1px;
+    text-align: center;
     [dir="rtl"] & {
         float: right;
     }

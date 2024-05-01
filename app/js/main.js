@@ -23,7 +23,35 @@ $(function () {
         autoplaySpeed: 5000,
         speed: 800,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '60px',
+                }
+            },
+            {
+                breakpoint: 390,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ],
     });
 
     $('#partners-slider').slick({
@@ -37,7 +65,21 @@ $(function () {
         autoplaySpeed: 5000,
         speed: 800,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+        ],
     });
 
 });
