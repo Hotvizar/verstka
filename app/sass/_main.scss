@@ -14,7 +14,6 @@ body {
 	line-height: 145%;
 	margin: 0 auto;
 	min-width: 320px;
-	padding-bottom: 300px;
 	//max-width: 1680px;
 }
 
@@ -153,3 +152,5 @@ button,
 		transition: all .5s;
 	}
 }
+
+@include placeholder($grey);

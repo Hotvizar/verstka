@@ -1,4 +1,97 @@
 /* FOOTER */
 .footer {
-    
+    background-color: $bl;
+    color: #fff;
+    padding: 60px 0 78px;
+
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-basis: 283px;
+
+            img {
+                max-width: 196px;
+                margin-top: -9px;
+            }
+
+            .copy {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1;
+                color: #88a8ff;
+            }
+        }
+
+        .footer-menu {
+            ul {
+                columns: 2;
+                column-gap: 84px;
+                margin-bottom: 0;
+
+                li {
+                    margin-bottom: 16px;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .footer-lang {
+            margin-left: 129px;
+
+            .lang-switch {
+                .btn-link {
+                    color: #fff;
+                    padding: 4px;
+                    line-height: 1;
+                    height: auto;
+
+                    &::after {
+                        color: #a0afa1;
+                    }
+                }
+            }
+        }
+
+        .footer-search {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 306px;
+
+            .input-group {
+                flex-wrap: nowrap;
+
+                @include placeholder($bl);
+
+                .form-control {
+                    border-radius: 33px;
+                    border: none;
+                    background: #88a8ff;
+                    color: #fff;
+                    height: 33px;
+                }
+                .btn-outline {
+                    border: none;
+                    border-radius: 33px;
+                    background: #88a8ff;
+                    padding: 4px;
+                    max-width: none;
+                    height: auto;
+                    width: unset;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
 }
