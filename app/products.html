@@ -1,0 +1,84 @@
+@@include('parts/header.html', {title: "Продукти", class: ""})
+
+<div class="container">
+
+    @@include('parts/breadcrumbs.html', {bred: "Продукти"})
+
+    <div id="content" class="goods">
+        <h1>Продукти</h1>
+
+        <div class="prod-filter">
+            <div class="list-category">
+                <a href="#" class="btn btn-outline light">Препарати заліза</a>
+                <a href="#" class="btn btn-outline light">Антибіотики</a>
+                <a href="#" class="btn btn-outline light">Інгібітори протонної помпи</a>
+                <a href="#" class="btn btn-outline light">БАДи</a>
+            </div>
+            <a href="#" class="btn btn-outline">Всі продукти</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4 products">
+            
+            <div class="col">
+                <div class="product-item">
+                    <img src="image/products/prod1.jpg" alt="" class="img-fluid">
+                    <div class="prod-info">
+                        <h5><a href="#" class="stretched-link">Тайфер</a></h5>
+                        <p>Інʼєкційний препарат <br>заліза</p>
+                        <a href="#" class="readmore">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-item">
+                    <img src="image/products/prod2.jpg" alt="" class="img-fluid">
+                    <div class="prod-info">
+                        <h5><a href="#" class="stretched-link">Тайфер</a></h5>
+                        <p>Ліпосомоване залізо <br>в капсулах</p>
+                        <a href="#" class="readmore">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-item">
+                    <img src="image/products/prod3.jpg" alt="" class="img-fluid">
+                    <div class="prod-info">
+                        <h5><a href="#" class="stretched-link">Мофіцин</a></h5>
+                        <p>Антибіотик у розчині <br>для інфузій</p>
+                        <a href="#" class="readmore">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-item">
+                    <img src="image/products/prod4.jpg" alt="" class="img-fluid">
+                    <div class="prod-info">
+                        <h5><a href="#" class="stretched-link">Левотрен</a></h5>
+                        <p>Антибіотик у розчині<br>для інфузій</p>
+                        <a href="#" class="readmore">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-item">
+                    <img src="image/products/prod5.jpg" alt="" class="img-fluid">
+                    <div class="prod-info">
+                        <h5><a href="#" class="stretched-link">Лагісон</a></h5>
+                        <p>Дієтична добавка на основі лактіуму</p>
+                        <a href="#" class="readmore">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+@@include('parts/footer.html')

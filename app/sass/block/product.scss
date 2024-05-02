@@ -135,3 +135,58 @@
         margin: 0 auto;
     }
 }
+
+.goods {
+    margin-bottom: 100px;
+
+    h1 {
+        margin-bottom: 38px;
+    }
+
+    @include mq(sm) {
+        text-align: center;
+    }
+}
+
+.prod-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    .list-category {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            margin-right: 24px;
+            margin-bottom: 24px;
+            white-space: nowrap;
+            max-width: none;
+            width: fit-content;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include mq(md) {
+        display: block;
+    }
+    
+    @include mq(sm) {
+        text-align: center;
+
+        .list-category {
+            justify-content: center;
+
+            a, a:last-child {
+                margin: 0 12px 24px;
+            }
+        }
+
+        >.btn-outline {
+            margin: 0 auto;
+        }
+    }
+}

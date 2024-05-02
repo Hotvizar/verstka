@@ -100,7 +100,7 @@ button,
 		margin-left: 12px;
 		transition: all .5s;
 	}
-	&:hover {
+	&:hover, &:focus, &:active, &.active:focus, &:active:focus {
 		background-color: $bld;
 		border-color: $bld;
 		color: #fff;
@@ -108,6 +108,18 @@ button,
 		&::after {
 			content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.573786 1.07378C1.33883 0.308739 2.57921 0.308739 3.34426 1.07378L8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852C8.12016 10.1502 6.87978 10.1502 6.11473 9.3852L0.573788 3.84426C-0.191257 3.07921 -0.191259 1.83883 0.573786 1.07378Z' fill='%2388A8FF' /%3e%3cpath d='M0.573786 1.07378C1.33883 0.308739 2.57921 0.308739 3.34426 1.07378L8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852C8.12016 10.1502 6.87978 10.1502 6.11473 9.3852L0.573788 3.84426C-0.191257 3.07921 -0.191259 1.83883 0.573786 1.07378Z' fill='%23B8CBFF' /%3e%3cpath d='M8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852L3.34426 14.9262C2.57921 15.6913 1.33883 15.6913 0.573784 14.9262C-0.191261 14.1612 -0.191261 12.9208 0.573784 12.1557L6.11473 6.6148C6.87977 5.84975 8.12016 5.84968 8.8852 6.61473Z' fill='%2388A8FF' /%3e%3cpath d='M8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852L3.34426 14.9262C2.57921 15.6913 1.33883 15.6913 0.573784 14.9262C-0.191261 14.1612 -0.191261 12.9208 0.573784 12.1557L6.11473 6.6148C6.87977 5.84975 8.12016 5.84968 8.8852 6.61473Z' fill='%23B8CBFF' /%3e%3c/svg%3e");
 			transform: translateX(6px);	
+		}
+	}
+
+	&.light {
+		&::after {
+			display: none;
+		}
+
+		&:hover, &:focus, &:active, &.active:focus, &:active:focus {
+			background-color: $bll;
+			border-color: $bll;
+			color: #fff;
 		}
 	}
 }
@@ -160,3 +172,36 @@ button,
 }
 
 @include placeholder($grey);
+
+.wrap-breadcrumbs {
+	font-size: 14px;
+	font-weight: 700;
+	color: $grn;
+	margin: 40px 0;
+
+	.breadcrumb {
+		margin-bottom: 0;
+	}
+	
+	a, span {
+		font-size: 14px;
+		font-weight: 300;
+		color: $grey;
+	}
+
+	a {
+		text-decoration: underline;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	span {
+		margin: 0 6px;
+	}
+}
+
+#content {
+	min-height: 54vh;
+}
