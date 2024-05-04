@@ -1,0 +1,65 @@
+@@include('parts/header.html', {title: "Контакти", class: ""})
+
+<div class="wrap-contacts">
+    <div class="container">
+
+        @@include('parts/breadcrumbs.html', {bred: "Контакти"})
+
+        <div id="content" class="page-contacts">
+            <h1>Контакти</h1>
+            
+            <div class="contacts-box">
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="contacts">
+                            
+                            <div class="contact-item">
+                                <img src="image/loc-icon.svg" alt="">
+                                <h5>Адреса</h5>
+                                <p>ТЕХНОПАК МАНУФЕКЧЕ ЛІМІТЕД Ірландія, Дублін, D11 E6C3, Норз-Парк, Фінглас, блок 1, Офіс 4</p>
+                            </div>
+    
+                            <div class="contact-item">
+                                <img src="image/email-icon.svg" alt="">
+                                <h5>Email</h5>
+                                <p><a href="mailto:pharma@tekhnopakmanufacture.com">pharma@tekhnopakmanufacture.com</a></p>
+                            </div>
+    
+                        </div>  
+                    </div>
+    
+                    <div class="col-md-7">
+                        <div class="contact-form">
+                            <h5>Напишіть нам повідомлення</h5>
+    
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Імʼя*" aria-label="Імʼя">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Телефон*" aria-label="Телефон">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email*" aria-label="Email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="" class="form-control" placeholder="Повідомлення..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-outline">Відправити</button>
+                            </form>
+    
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+
+        </div> <!-- /#content -->
+
+    </div>
+</div>
+
+@@include('parts/footer.html')

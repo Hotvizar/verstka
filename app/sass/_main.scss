@@ -206,3 +206,10 @@ button,
 #content {
 	min-height: 54vh;
 }
+
+.form-control {
+	border: 2px solid $bll;
+	border-radius: 24px;
+	height: 40px;
+	padding: 5px 24px;
+}
