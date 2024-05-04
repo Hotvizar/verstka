@@ -83,3 +83,9 @@ $(function () {
     });
 
 });
+
+const content = document.querySelector('.text-instruct');
+scrollnav.init(content, {
+    sections: 'h4', 
+    easingStyle: "linear",
+});
