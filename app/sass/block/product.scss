@@ -236,6 +236,10 @@
             color: #000;
             margin-bottom: 16px;
             text-transform: none;
+
+            @include mq(420) {
+                @include font-size(100px);
+            }
         }
 
         .short-attr {
@@ -251,7 +255,7 @@
 
         .links-goto {
             border-top: 2px solid $sir;
-            padding-top: 25px;
+            padding: 25px 0;
             margin-top: 63px;
 
             a {
@@ -316,6 +320,7 @@
             height: 100%;
 
             .scroll-nav {
+                background-color: #fff;
                 position: sticky;
                 top: 0;
                 flex: 1 1 40%;
@@ -349,6 +354,20 @@
                     font-size: 18px;
                     font-weight: 700;
                     margin-bottom: 1rem;
+                }
+            }
+
+            @include mq(md) {
+                flex-direction: column;
+
+                .scroll-nav {
+                    position: relative;
+                }
+
+                .text-instruct {
+                    border-left: none;
+                    padding-left: 0;
+                    width: 100%;
                 }
             }
         }
