@@ -48,3 +48,190 @@
         }
     }
 }
+
+.partnership {
+
+    h1 {
+        margin-bottom: 38px;
+        @include mq(sm) {
+            text-align: center;
+        }
+    }
+
+    .part-banner1, .part-banner2 {
+        background-color: #d8e2ff;
+        border-radius: 24px;
+        font-weight: 800;
+        @include font-size(38px);
+        color: $fc;
+        line-height: 116%;
+        text-align: center;
+        padding: 24px;
+        min-height: 186px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 47px;
+    }
+
+    .part-banner2 {
+        background-color: $grnl;
+        margin-bottom: 52px;
+    }
+
+    .services {
+        margin-bottom: 100px;
+
+        h5 {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 1;
+            color: $fc;
+            margin-bottom: 48px;
+        }
+
+        .service {
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .serv-title {
+                background: linear-gradient(135deg, #4e74c6 0%, rgba(78, 116, 198, 0.51) 71.88%, rgba(78, 116, 198, 0.46) 100%);
+                min-height: 142px;
+                font-weight: 700;
+                @include font-size(28px);
+                line-height: 115%;
+                color: #fff;
+                padding: 24px;
+                flex: 1;
+
+                @include mq(xl) {
+                    br {
+                        display: none;
+                    }
+                }
+                
+                @include mq(md) {
+                    min-height: auto;
+                }
+            }
+        }
+
+        @include mq(sm) {
+            text-align: center;
+        }
+    }
+
+    .we-have {
+        margin-bottom: 100px;
+
+        h5 {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 1;
+            color: $fc;
+            margin-bottom: 48px;
+
+            @include mq(sm) {
+                text-align: center;
+            }
+        }
+
+        .have-item {
+            background-color: $grnl;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 24px;
+            height: 100%;
+
+            .icon {
+                margin-right: 24px;
+            }
+
+            .text {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 142%;
+                color: $fc;
+            }
+
+            @include mq(420) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                .icon {
+                    margin-right: 0;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .part-banner3 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 24px;
+        color: #fff;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 306px;
+        text-align: center;
+        margin-bottom: 100px;
+
+        h5 {
+            font-weight: 700;
+            font-size: 38px;
+            @include font-size(38px);
+            line-height: 116%;
+            margin-bottom: 28px;
+
+            @include mq(sm) {
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .btn-blue {
+            max-width: 311px;
+        }
+    }
+
+    .partners-list {
+        margin-bottom: 100px;
+
+        h5 {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 1;
+            color: $fc;
+            margin-bottom: 48px;
+
+            @include mq(sm) {
+                text-align: center;
+            }
+        }
+
+        .partner-item {
+            border: 2px solid #d8e2ff;
+            border-radius: 24px;
+            padding: 24px;
+            text-align: center;
+    
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
