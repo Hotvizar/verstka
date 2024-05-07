@@ -37,6 +37,10 @@
                     margin-bottom: 16px;
                     a {
                         color: #fff;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }

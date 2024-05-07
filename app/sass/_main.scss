@@ -40,6 +40,14 @@ h3,
 	}
 }
 
+h2, .h2 {
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 126%;
+	color: $fc;
+	margin-bottom: 24px;
+}
+
 a {
 	color: $fc;
 	text-decoration: none;
@@ -212,4 +220,35 @@ button,
 	border-radius: 24px;
 	height: 40px;
 	padding: 5px 24px;
+}
+
+.pharmacovigilance {
+	margin-bottom: 95px;
+
+	h1 {
+		margin-bottom: 38px;
+	}
+
+	.pharm-form-link {
+		margin-top: 40px;
+
+		a {
+			font-weight: 800;
+			font-size: 28px;
+			line-height: 155%;
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+			color: $bld;
+
+			&:hover {
+				color: $grn;
+			}
+		}
+	}
+}
+
+.alignleft {
+	float: left;
+	margin-right: 24px;
+	margin-bottom: 24px;
 }
