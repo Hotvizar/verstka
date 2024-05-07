@@ -109,6 +109,7 @@ button,
 		margin-left: 12px;
 		transition: all .5s;
 	}
+	
 	&:hover, &:focus, &:active, &.active:focus, &:active:focus {
 		background-color: $bld;
 		border-color: $bld;
@@ -129,6 +130,28 @@ button,
 			background-color: $bll;
 			border-color: $bll;
 			color: #fff;
+		}
+	}
+
+	&.back {
+		&::after {
+			display: none;
+		}
+
+		&::before {
+			content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.573786 1.07378C1.33883 0.308739 2.57921 0.308739 3.34426 1.07378L8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852C8.12016 10.1502 6.87978 10.1502 6.11473 9.3852L0.573788 3.84426C-0.191257 3.07921 -0.191259 1.83883 0.573786 1.07378Z' fill='%2388A8FF' /%3e%3cpath d='M0.573786 1.07378C1.33883 0.308739 2.57921 0.308739 3.34426 1.07378L8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852C8.12016 10.1502 6.87978 10.1502 6.11473 9.3852L0.573788 3.84426C-0.191257 3.07921 -0.191259 1.83883 0.573786 1.07378Z' fill='%234E74C6' /%3e%3cpath d='M8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852L3.34426 14.9262C2.57921 15.6913 1.33883 15.6913 0.573784 14.9262C-0.191261 14.1612 -0.191261 12.9208 0.573784 12.1557L6.11473 6.6148C6.87977 5.84975 8.12016 5.84968 8.8852 6.61473Z' fill='%2388A8FF' /%3e%3cpath d='M8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852L3.34426 14.9262C2.57921 15.6913 1.33883 15.6913 0.573784 14.9262C-0.191261 14.1612 -0.191261 12.9208 0.573784 12.1557L6.11473 6.6148C6.87977 5.84975 8.12016 5.84968 8.8852 6.61473Z' fill='%234E74C6' /%3e%3c/svg%3e");
+			line-height: 0;
+			margin-right: 12px;
+			transform: rotate(180deg);
+			transition: all .5s;
+		}
+
+		&:hover, &:focus, &:active, &.active:focus, &:active:focus {
+	
+			&::before {
+				content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.573786 1.07378C1.33883 0.308739 2.57921 0.308739 3.34426 1.07378L8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852C8.12016 10.1502 6.87978 10.1502 6.11473 9.3852L0.573788 3.84426C-0.191257 3.07921 -0.191259 1.83883 0.573786 1.07378Z' fill='%2388A8FF' /%3e%3cpath d='M0.573786 1.07378C1.33883 0.308739 2.57921 0.308739 3.34426 1.07378L8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852C8.12016 10.1502 6.87978 10.1502 6.11473 9.3852L0.573788 3.84426C-0.191257 3.07921 -0.191259 1.83883 0.573786 1.07378Z' fill='%23B8CBFF' /%3e%3cpath d='M8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852L3.34426 14.9262C2.57921 15.6913 1.33883 15.6913 0.573784 14.9262C-0.191261 14.1612 -0.191261 12.9208 0.573784 12.1557L6.11473 6.6148C6.87977 5.84975 8.12016 5.84968 8.8852 6.61473Z' fill='%2388A8FF' /%3e%3cpath d='M8.8852 6.61473C9.65025 7.37977 9.65025 8.62016 8.88521 9.3852L3.34426 14.9262C2.57921 15.6913 1.33883 15.6913 0.573784 14.9262C-0.191261 14.1612 -0.191261 12.9208 0.573784 12.1557L6.11473 6.6148C6.87977 5.84975 8.12016 5.84968 8.8852 6.61473Z' fill='%23B8CBFF' /%3e%3c/svg%3e");
+				transform: translateX(-6px) rotate(180deg);	
+			}
 		}
 	}
 }
@@ -222,30 +245,32 @@ button,
 	padding: 5px 24px;
 }
 
-.pharmacovigilance {
-	margin-bottom: 95px;
+.form-check {
+	margin-bottom: 8px;
+}
 
-	h1 {
-		@include font-size(48px); 
-		margin-bottom: 38px;
-	}
+.form-check-input {
+	border: 2px solid $bll;
 
-	.pharm-form-link {
-		margin-top: 40px;
+	&:checked {
+		background-color: #88a8ff;
+		border-color: #b8cbff;
 
-		a {
-			font-weight: 800;
-			font-size: 28px;
-			line-height: 155%;
-			text-decoration: underline;
-			text-decoration-skip-ink: none;
-			color: $bld;
-
-			&:hover {
-				color: $grn;
-			}
+		&[type=radio] {
+			background-image: none;
 		}
 	}
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.form-check-label {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 142%;
+	color: $grey;
 }
 
 .alignleft {
