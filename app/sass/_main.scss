@@ -226,6 +226,7 @@ button,
 	margin-bottom: 95px;
 
 	h1 {
+		@include font-size(48px); 
 		margin-bottom: 38px;
 	}
 
