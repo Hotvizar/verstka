@@ -278,3 +278,32 @@ button,
 	margin-right: 24px;
 	margin-bottom: 24px;
 }
+
+.wrap-404 {
+	background-color: $grnl;
+	overflow: hidden;
+
+	#content {
+		padding-bottom: 100px;
+	}
+}
+
+.page-404 {
+	font-weight: 300;
+	font-size: 16px;
+	color: $bld;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 440px;
+	
+	h6 {
+		font-weight: 700;
+		font-size: 20px;
+		color: $bld;
+		margin-top: -92px;
+
+		@include mq(420) {
+			margin-top: -63px;
+		}
+	}
+}
