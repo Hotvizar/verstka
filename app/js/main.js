@@ -82,7 +82,7 @@ $(function () {
         ],
     });
 
-    $("#attention").modal('show');
+    //$("#attention").modal('show');
 
 });
 
