@@ -288,6 +288,95 @@ button,
 	}
 }
 
+#attention {
+
+	.modal-header {
+		border: none;
+		display: block;
+		padding: 66px 81px 0;
+		text-align: center;
+
+		h5 {
+			font-weight: 700;
+			font-size: 48px;
+			text-transform: uppercase;
+			color: $bl;
+			line-height: 1;
+			margin-bottom: 0;
+		}
+	}
+
+	.modal-content {
+		background: #fff;
+		border-radius: 0;
+		
+		.modal-body {
+			padding: 41px 81px 0;
+			margin: 0 0 25px;
+		}
+
+		.modal-footer {
+			border: none;
+			justify-content: center;
+			margin-bottom: 77px;
+			padding: 0;
+
+			.btn {
+				&:after {
+					display: none;
+				}
+			}
+
+			.btn-blue {
+				margin-right: 51px;
+				max-width: 193px;
+			}
+
+			.btn-outline {
+				max-width: 220px;
+			}
+		}
+
+		@include mq(md) {
+			.modal-body {
+				padding: 41px 40px 0;
+			}
+		}
+		
+		@include mq(sm) {
+			.modal-footer {
+				.btn-blue {
+					margin-right: 24px;
+				}
+			}
+		}
+		
+		@include mq(480) {
+			.modal-body {
+				padding: 41px 24px 0;
+			}
+
+			.modal-footer {
+				flex-direction: column;
+
+				.btn-blue {
+					margin-right: 0;
+					margin-bottom: 24px;
+					max-width: 220px;
+				}
+			}
+		}
+	}
+
+	
+	
+	@media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 950px;
+        }
+    }
+}
+
 .page-404 {
 	font-weight: 300;
 	font-size: 16px;

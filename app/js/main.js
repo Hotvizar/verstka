@@ -82,6 +82,8 @@ $(function () {
         ],
     });
 
+    $("#attention").modal('show');
+
 });
 
 const content = document.querySelector('.text-instruct');
