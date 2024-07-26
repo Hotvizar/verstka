@@ -342,6 +342,10 @@
                             text-decoration: none;
                         }
                     }
+
+                    &.scroll-nav__item--active a {
+                        color: $grn;
+                    }
                 }
             }
 
