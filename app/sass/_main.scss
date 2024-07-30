@@ -141,3 +141,21 @@ button,
 		top: auto;
 	}
 }
+
+.btn-black {
+	background-color: $fc;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: #fff;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	padding: 9px 13px 5px;
+	height: 60px;
+	width: 100%;
+	max-width: 306px;
+	transition: all .6s;
+}
