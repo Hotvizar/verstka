@@ -15,10 +15,11 @@
             color: $fc;
             line-height: 1;
             text-decoration: underline;
+            text-decoration-color: $fc;
             text-decoration-skip-ink: none;
 
             &:hover {
-                text-decoration: none;
+                text-decoration-color: transparent;
             }
         }
     }
@@ -107,11 +108,12 @@
                 a {
                     font-size: 16px;
                     text-decoration: underline;
+                    text-decoration-color: $gld;
                     text-decoration-skip-ink: none;
                     color: $gld;
 
                     &:hover {
-                        text-decoration: none;
+                        text-decoration-color: transparent;
                     }
                 }
             }

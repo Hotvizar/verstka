@@ -1,0 +1,80 @@
+.discography {
+    background-color: $wh;
+    padding: 100px 0;
+
+    .discography-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 64px;
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: 20px;
+            color: $fc;
+            line-height: 1;
+            text-decoration: underline;
+            text-decoration-color: $fc;
+            text-decoration-skip-ink: none;
+
+            &:hover {
+                text-decoration-color: transparent;
+            }
+        }
+    }
+
+    .albums {
+        .album {
+            img {
+                margin-bottom: 30px;
+            }
+
+            .year {
+                font-size: 20px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                line-height: 1;
+                margin-bottom: 22px;
+
+                &::after {
+                    background-color: $fc;
+                    content: "";
+                    height: 1px;
+                    margin-left: 12px;
+                    margin-bottom: 6px;
+                    width: 100%;
+                }
+            }
+
+            h5 {
+                margin-bottom: 16px;
+
+                a {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 130%;
+                    color: $fc;
+                    transition: all .5s;
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+
+                    &:hover {
+                        text-decoration-color: $fc;
+                        text-decoration-skip-ink: none;
+                    }
+                }
+            }
+
+            .label {
+                a {
+                    color: $gld;
+                }
+            }
+        }
+    }
+}
