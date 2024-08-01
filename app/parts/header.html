@@ -14,10 +14,12 @@
 	<header class="header">
 		<div class="container">
 			<div class="header-row">
+				
 				<div class="logo">
 					<a href="/"><img src="image/logo-white.svg" alt="" class="img-fluid"></a>
 				</div>
-				<div class="nav-col">
+				
+				<div class="nav-col d-none d-lg-block">
 					<div class="top-nav">
 						<div class="lang-switch">
 							<ul class="list-unstyled">
@@ -52,6 +54,13 @@
 						</ul>
 					</div>
 				</div>
+				
+				<button type="button" class="btn btn-menu d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobmenu" aria-controls="mobmenu">
+					<svg class="hamburger"><use xlink:href="image/icons/symbol/sprite.svg#hamburger" /></svg>
+				</button>
+				
+				@@include('mobmenu.html')
+
 			</div>
 		</div>
 	</header>
