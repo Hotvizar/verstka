@@ -1,0 +1,100 @@
+.news {
+    background-color: $fc;
+    color: #fff;
+    padding: 100px 0;
+
+    .news-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 64px;
+
+        h3 {
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: 20px;
+            color: #fff;
+            line-height: 1;
+            text-decoration: underline;
+            text-decoration-color: #fff;
+            text-decoration-skip-ink: none;
+
+            &:hover {
+                text-decoration-color: transparent;
+            }
+        }
+    }
+
+    .news-list {
+        .news-item {
+            position: relative;
+
+            .news-info {
+                height: 100%;
+
+                &.decor-arrow-bl, &.decor-arrow-br {
+                    padding-top: 0;
+
+                    &:after {
+                        content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='16' viewBox='0 0 8 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.01147 1L1.00011 8L7.01147 15' stroke='%23b5965a' /%3e%3c/svg%3e");
+                    }
+
+                    &::before {
+                        background-color: $gld;
+                    }
+                }
+
+                &.decor-arrow-br {
+                    &:after {
+                        content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='16' viewBox='0 0 8 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.988525 15L6.99989 8L0.988527 0.999999' stroke='%23b5965a' /%3e%3c/svg%3e");
+                        left: auto;
+                        right: 0;
+                    }
+                }
+
+                .news-date {
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: $gld;
+                    line-height: 1;
+                }
+
+                .news-title {
+                    margin: 23px 0 14px;
+                    
+                    a {
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 130%;
+                        color: #fff;
+                        text-decoration: underline;
+                        text-decoration-color: transparent;
+                        text-decoration-skip-ink: none;
+                    }
+                }
+
+                .news-excerpt {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+
+            &:hover {
+                .news-info {
+                    .news-title {
+                        a {
+                            text-decoration-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

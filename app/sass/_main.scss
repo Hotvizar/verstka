@@ -98,7 +98,8 @@ button,
 
 .decor-arrow-tl, 
 .decor-arrow-tr, 
-.decor-arrow-bl {
+.decor-arrow-bl,
+.decor-arrow-br {
 	position: relative;
 	padding-top: 14px;
 	
@@ -136,6 +137,18 @@ button,
 		bottom: 0;
 		top: auto;
 	}
+	&:before {
+		bottom: 7.313px;
+		top: auto;
+	}
+}
+
+.decor-arrow-br {
+	&:after {
+		bottom: 0;
+		top: auto;
+	}
+
 	&:before {
 		bottom: 7.313px;
 		top: auto;
