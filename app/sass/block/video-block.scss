@@ -63,6 +63,7 @@
                     text-decoration-color: transparent;
                 }
             }
+            
         }
 
         .video-list {
@@ -108,6 +109,39 @@
                 }
             }
 
+        }
+    }
+
+    @include mq(md) {
+        background-size: auto 291px;
+
+        &::after {
+            bottom: auto;
+            top: 0;
+            height: 291px;
+        }
+        
+        .video-block {
+            padding: 64px 0;
+            
+            .vb-header {
+                flex-direction: column;
+                align-items: flex-start;
+
+                h3 {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    @include mq(sm) {
+        .video-block {
+            
+            .vb-header {
+                align-items: center;
+                text-align: center;
+            }
         }
     }
 }

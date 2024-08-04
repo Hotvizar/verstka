@@ -22,6 +22,15 @@
                 text-decoration-color: transparent;
             }
         }
+
+        @include mq(sm) {
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                margin-bottom: 24px;
+            }
+        }
     }
 
 }
@@ -151,6 +160,63 @@
                 } 
             }
 
+        }
+    }
+
+    @include mq(lg) {
+        .event-item {
+            .event {
+
+                h5 {
+                    min-height: auto;
+                }
+
+                .btn-black {
+                    margin-bottom: 24px;
+                }
+                .dostup {
+                    margin-top: 0;
+                    margin-bottom: 24px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    
+    @include mq(md) {
+        .event-item {
+            .event {
+
+                .event-calendar {
+                    .date {
+                        @include font-size(50px);
+                    }
+                }
+
+                h5 {
+                    @include font-size(50px);
+                }
+
+                .btn-black {
+                    height: 48px;
+                    width: 270px;
+                }
+            }
+        }
+    }
+
+    @include mq(sm) {
+        .event-item {
+            .event {
+                text-align: center;
+
+                .btn-black {
+                    margin: 0 auto 24px;
+                }
+                .dostup {
+                    text-align: inherit;
+                }
+            }
         }
     }
 }

@@ -3,6 +3,9 @@
    max-height: 830px;
    min-height: 700px;
    margin-bottom: 100px;
+   @include mq(sm) {
+      margin-bottom: 50px;
+   }
 
    .slick-slider, 
    .slick-list,

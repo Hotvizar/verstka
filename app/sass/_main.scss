@@ -36,6 +36,12 @@ h3,
 	font-weight: 700;
 	color: $fc;
 	line-height: 77%;
+
+	@include mq(sm) {
+		
+		@include font-size(86px);
+
+    }
 }
 
 a {
@@ -130,6 +136,8 @@ button,
 }
 
 .decor-arrow-bl {
+	padding-top: 0;
+	padding-bottom: 14px;
 	
 	&:after {
 		bottom: 0;
@@ -142,6 +150,9 @@ button,
 }
 
 .decor-arrow-br {
+	padding-top: 0;
+	padding-bottom: 14px;
+	
 	&:after {
 		bottom: 0;
 		top: auto;
