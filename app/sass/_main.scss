@@ -26,7 +26,13 @@ h1,
 	font-family: $kt;
 	font-size: 75px;
 	font-weight: 700;
-	line-height: 77%;
+	line-height: 104%;
+
+	@include mq(sm) {
+		
+		@include font-size(86px);
+
+    }
 }
 
 h3,
@@ -180,4 +186,29 @@ button,
 	width: 100%;
 	max-width: 306px;
 	transition: all .6s;
+}
+
+.wrap-breadcrumbs {
+	margin: 55px 0 65px;
+
+	.breadcrumb {
+		font-size: 14px;
+		color: $gld;
+
+		a {
+			color: $gld;
+		}
+
+		a {
+			text-decoration: underline;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	
+		span {
+			margin: 0 6px;
+		}
+	}
 }
