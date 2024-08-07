@@ -1,0 +1,323 @@
+//.page-dirigent {}
+
+.dirigent-main-info {
+    
+    .col-info-left {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .dir-img {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            margin-bottom: 33px;
+        }
+
+        .soc-links {
+            border: 2px solid $gld;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+
+            .link {
+                a {
+                    color: $gld;
+                    font-size: 20px;
+                    font-weight: 700;
+                    font-weight: 700;
+                    text-decoration: underline;
+                    text-decoration-color: $gld;
+
+                    &:hover {
+                        text-decoration-color: transparent;
+                    }
+                }
+
+                svg {
+                    fill: $gld;
+                    margin-right: 12px;
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .col-info-right {
+        h1 {
+            margin: 32px 0 55px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: $gld;
+            margin-bottom: 40px;
+        }
+
+        .dostig {
+            background-color: $grey;
+            font-size: 20px;
+            line-height: 145%;
+            padding: 38px 24px 18px;
+            margin-left: -24px;
+
+            h5 {
+                font-family: $kt;
+                font-size: 50px;
+                font-weight: 700;
+                line-height: 94%;
+                margin-bottom: 47px;
+            }
+
+            ul {
+                margin-left: 16px;
+                li {
+                    font-size: 20px;
+                    
+                    &::marker {
+                        font-size: 25px;
+                    }
+
+                    h6 {
+                        font-family: $kt;
+                        font-size: 25px;
+                        font-weight: 700;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.timeline-wrap {
+    margin: 65px 0 100px;
+}
+.dir-timeline {
+    display: flex;
+    padding: 178px 0 180px;
+    min-height: 360px;
+
+    .time-marker {
+        border-bottom: 2px solid $fc;
+        position: relative;
+        width: 100%;
+
+        &::before {
+            background-color: #fff;
+            border: 3px solid $fc;
+            border-radius: 50%;
+            content: "";
+            display: block;
+            height: 18px;
+            width: 18px;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            z-index: 1;
+        }
+
+        .time-info {
+            border-left: 1px dashed $fc;
+            padding-left: 27px;
+            position: absolute;
+            left: 9px;
+
+            &::before {
+                background-color: $fc;
+                border-radius: 50px;
+                content: "";
+                display: block;
+                position: absolute;
+                left: -3.5px;
+                height: 6px;
+                width: 6px;
+            }
+
+            h6 {
+                font-family: $kt;
+                font-size: 25px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                line-height: 80%;
+            }
+
+            p {
+                margin-bottom: -8px;
+            }
+        }
+
+        &:nth-child(odd) {
+            .time-info {
+                bottom: 0;
+                height: 178px;
+
+                &::before {
+                    top: 0;
+                }
+            } 
+        }
+        
+        &:nth-child(even) {
+            .time-info {
+                padding-top: 64px;
+                top: 100%;
+
+                &::before {
+                    bottom: 0;
+                }
+            }
+        }
+
+        &:nth-child(1) {
+            max-width: 70px;
+
+            .time-info {
+                width: 187px;
+            }
+        }
+        
+        &:nth-child(2) {
+            max-width: 192px;
+
+            .time-info {
+                width: 171px;
+            }
+        }
+        
+        &:nth-child(3) {
+            max-width: 74px;
+
+            .time-info {
+                width: 297px;
+            }
+        }
+        
+        &:nth-child(4) {
+            max-width: 288px;
+
+            .time-info {
+                width: 247px;
+            }
+        }
+        
+        &:nth-child(5) {
+            max-width: 37px;
+
+            .time-info {
+                width: 171px;
+            }
+        }
+        
+        &:nth-child(6) {
+            max-width: 219px;
+
+            .time-info {
+                width: 362px;
+            }
+        }
+        
+        &:nth-child(7) {
+            max-width: 178px;
+
+            .time-info {
+                width: 267px;
+            }
+        }
+        
+        &:nth-child(8) {
+            .time-info {
+                width: 229px;
+            }
+        }
+
+    }
+}
+
+.dostig-cards {
+    .cards-row1 {
+        align-items: flex-end;
+        margin-bottom: 64px;
+        
+        .card1-img {
+            margin-bottom: 64px;
+        }
+
+        .card1-text {
+            h3 {
+                margin: 34px 0 29px;
+                line-height: 1;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .card2-text {
+            font-size: 20px;
+            line-height: 145%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+
+            h3 {
+                font-size: 75px;
+                margin-bottom: 4px;
+            }
+            
+        }
+    }
+
+    .cards-row2 {
+        .card3-text {
+            font-size: 20px;
+            line-height: 145%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            max-width: 318px;
+            margin-bottom: 24px;
+            padding-top: 59px;
+
+            h3 {
+                font-size: 75px;
+                margin-bottom: 20px;
+            }
+            
+        }
+
+        .card4 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        
+        .card4-text1 {
+
+            h5 {
+                font-family: $kt;
+                font-size: 50px;
+                font-weight: 700;
+                margin: 36px 0;
+                line-height: 120%;
+            }
+        }
+
+        .card4-text2 {
+            font-size: 20px;
+            line-height: 145%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            padding-top: 59px;
+
+            h3 {
+                font-size: 75px;
+                margin-bottom: 20px;
+            }
+            
+        }
+    }
+}

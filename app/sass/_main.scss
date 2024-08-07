@@ -54,6 +54,7 @@ a {
 	color: $fc;
 	text-decoration: none;
 	transition: all .5s;
+	text-decoration-skip-ink: none;
 
 	&:focus {
 		outline: none;
