@@ -236,3 +236,30 @@ button,
 		}
 	}
 }
+
+.pagination {
+	margin: 64px 0;
+	.nav-links {
+		text-align: center;
+		width: 100%;
+		a, span {
+			border: 1px solid $gld;
+			font-size: 20px;
+			font-weight: 700;
+			color: $gld;
+			border-radius: 0;
+			display: inline-block;
+			margin: 0 6px 12px;
+			line-height: 60px;
+			text-align: center;
+			transition: all .3s;
+			height: 60px;
+			vertical-align: middle;
+			width: 60px;
+			&:hover, &.current {
+				color: $fc;
+				text-decoration: none;
+			}
+		}
+	}
+}
