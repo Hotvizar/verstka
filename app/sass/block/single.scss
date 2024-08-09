@@ -1,0 +1,52 @@
+.single-album {
+
+    .album-top-info {
+        border-bottom: 1px solid $fc;
+        padding-bottom: 64px;
+
+        h1 {
+            font-size: 50px;
+            line-height: 104%;
+            margin-bottom: 50px;
+
+            @include mq(sm) {
+		
+                @include font-size(86px);
+        
+            }
+        }
+
+        .about-album {
+            color: $gld;
+            ul {
+                margin-bottom: 52px;
+
+                li {
+                    margin-bottom: 12px;
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .album-description {
+        padding-top: 64px;
+
+        @include mq(md) {
+            padding-top: 32px;
+        }
+
+        h5 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 32px;
+        }
+
+        ol {
+            padding-left: 27px;
+        }
+    }
+}
