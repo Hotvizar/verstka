@@ -1,0 +1,126 @@
+@@include('parts/header.html', {title: "Афіша", class: "archive"})
+
+<div class="container">
+    @@include('parts/breadcrumbs.html', {bred: "Афіша"})
+</div>
+
+<div id="content" class="page-affiche">
+    <div class="container">
+        <h1>Афіша</h1>
+    </div>
+
+    <div class="events-list">
+        
+        <div class="event-item" style="background-image: url('image/event-bg.jpg');">
+            <div class="container">
+                <div class="event">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="event-calendar">
+                                <div class="date">
+                                    <div class="day-month">09.04</div>
+                                    <div class="delimiter"></div>
+                                    <div class="time">17:00</div>
+                                </div>
+                                <div class="day-week">Четвер</div>
+                            </div>
+                            <h5>Сакральний Шевченко: Станкович, Скорик, Сильвестров</h5>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="#" class="btn btn-black" target="_blank">Квитки</a>
+                            <div class="dostup">Зала доступна для маломобільних груп</div>
+                        </div>
+                    </div>
+                    <div class="row event-footer g-2 g-md-3 g-lg-4">
+                        <div class="col-md-5">
+                            <div class="event-address">Київ, Національний центр «Український Дім»</div>
+                        </div>
+                        <div class="col-md-4 text-lg-center">
+                            Диригент: Микола Гобдич
+                        </div>
+                        <div class="col-md-3 text-lg-center">
+                            <a href="#">Більше інформації про подію</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.event-item -->
+
+        <div class="event-item" style="background-image: url('image/event-bg.jpg');">
+            <div class="container">
+                <div class="event">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="event-calendar">
+                                <div class="date">
+                                    <div class="day-month">12.04</div>
+                                    <div class="delimiter"></div>
+                                    <div class="time">19:00</div>
+                                </div>
+                                <div class="day-week">Субота</div>
+                            </div>
+                            <h5>Світлій пам'яті Ганни Гаврилець: концерт-презентація нотної збірки</h5>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="#" class="btn btn-black" target="_blank">Квитки</a>
+                            <div class="dostup">Зала доступна для маломобільних груп</div>
+                        </div>
+                    </div>
+                    <div class="row event-footer g-2 g-md-3 g-lg-4">
+                        <div class="col-md-5">
+                            <div class="event-address">Київ, Національний заповідник «Софія Київська»</div>
+                        </div>
+                        <div class="col-md-4 text-lg-center">
+                            Диригент: Микола Гобдич
+                        </div>
+                        <div class="col-md-3 text-lg-center">
+                            <a href="#">Більше інформації про подію</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.event-item -->
+
+        <div class="event-item" style="background-image: url('image/event-bg.jpg');">
+            <div class="container">
+                <div class="event">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="event-calendar">
+                                <div class="date">
+                                    <div class="day-month">28.04</div>
+                                    <div class="delimiter"></div>
+                                    <div class="time">21:00</div>
+                                </div>
+                                <div class="day-week">Четвер</div>
+                            </div>
+                            <h5>Фестиваль Bouquet Kyiv Stage</h5>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="#" class="btn btn-black" target="_blank">Квитки</a>
+                            <div class="dostup d-none">Зала доступна для маломобільних груп</div>
+                        </div>
+                    </div>
+                    <div class="row event-footer g-2 g-md-3 g-lg-4">
+                        <div class="col-md-5">
+                            <div class="event-address">Київ, Національний заповідник «Софія Київська»</div>
+                        </div>
+                        <div class="col-md-4 text-lg-center">
+                            Диригент: Микола Гобдич
+                        </div>
+                        <div class="col-md-3 text-lg-center">
+                            <a href="#">Більше інформації про подію</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.event-item -->
+
+    </div>
+
+    <button id="more-events" class="btn btn-outline btn-loadmore" type="button" data-param-posts='' data-max-pages='' >ПОКАЗАТИ БІЛЬШЕ ПОДІЙ</button>
+
+</div>
+
+
+@@include('parts/footer.html')

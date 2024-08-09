@@ -189,6 +189,29 @@ button,
 	transition: all .6s;
 }
 
+.btn-outline {
+	background-color: transparent;
+	border: 2px solid $fc;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: $fc;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	padding: 9px 13px 5px;
+	height: 60px;
+	width: 100%;
+	max-width: 370px;
+	transition: all .6s;
+
+	&:hover {
+		border-color: $gld;
+	}
+}
+
 .wrap-breadcrumbs {
 	margin: 55px 0 65px;
 
