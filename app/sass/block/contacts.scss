@@ -1,0 +1,122 @@
+.wrap-contacts {
+    background-image: url("image/contacts-bg.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.page-contacts {
+
+    h1 {
+        color: #fff;
+        margin-bottom: 73px;
+    }
+
+    .contacts-box {
+        background-color: #fff;
+        padding: 43px 24px 47px;
+        max-width: 904px;
+        margin: 0 auto 237px;
+
+        .contacts {
+            text-align: center;
+            padding-top: 67px;
+
+            .contact-item {
+                margin-bottom: 29px;
+
+                img {
+                    margin-bottom: 10px;
+                }
+
+                h6 {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: $gld;
+                    margin-bottom: 4px;
+                }
+
+                &.email {
+                    margin-bottom: 64px;
+                    p {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        font-size: 20px;
+                        text-decoration: underline;
+                        text-decoration-skip-ink: none;
+                        color: $fc;
+
+                        &:hover {
+                            text-decoration-color: transparent;
+                        }
+                    }
+                }
+
+                .social {
+                    a {
+                        margin: 0 6px;
+                        svg {
+                            fill: $fc;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+            .form-control {
+                border-radius: 0;
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 36px;
+            }
+
+            textarea {
+                height: 147px;
+                margin-bottom: 25px;
+            }
+
+            .btn-black {
+                border: 2px solid $fc;
+                width: 208px;
+
+                &:hover {
+                    border-color: $gld;
+                }
+            }
+        }
+
+        @include mq(md) {
+            .contacts {
+                padding-top: 0;
+            }
+
+            .contact-form {
+
+                h5 {
+                    text-align: center;
+                }
+            }
+
+        }
+
+        @include mq(420) {
+
+            .contact-form {
+
+                .btn-black {
+                    max-width: none;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}

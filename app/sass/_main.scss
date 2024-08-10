@@ -90,21 +90,25 @@ button,
 	transition: all .3s;
 }
 
-@include placeholder(#000);
+@include placeholder($fc);
 
 .form-control {
-	border: 1px solid #000;
-	border-radius: 24px;
-	font-size: 18px;
+	border: 1px solid $fc;
+	border-radius: 0;
+	font-size: 16px;
 	font-weight: 400;
 	color: $fc;
-	margin-bottom: 24px;
-	padding: 2px 32px;
-	height: 48px;
+	margin-bottom: 20px;
+	padding: 6px 24px;
+	height: 40px;
 
 	&:focus {
-		border-color: #000;
+		border-color: $fc;
 	}
+}
+
+textarea.form-control {
+	padding: 10px 24px;
 }
 
 .decor-arrow-tl, 
@@ -219,8 +223,16 @@ button,
 		font-size: 14px;
 		color: $gld;
 
+		.wrap-contacts & {
+			color: #fff;
+		}
+
 		a {
 			color: $gld;
+
+			.wrap-contacts & {
+				color: #fff;
+			}
 		}
 
 		a {
@@ -268,6 +280,5 @@ button,
 	img {
 		max-width: 100%;
 		height: auto;
-		margin-bottom: 24px;
 	}
 }
