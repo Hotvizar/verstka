@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-$fc: #1e181d;
-$grey: #f2eff1;
-$gld: #b5965a;
+$fc: #000;
 
-$kt:  "KyivType", sans-serif;
-$fx:  "Fixel Display", sans-serif;
+$ff:  "Manrope", sans-serif;
+$mul:  "Mulish", sans-serif;
+$fiol: #6360bc;
 
 $breakpoints: (
 	xs: 0,
@@ -15,7 +14,6 @@ $breakpoints: (
 	xl: 1200px,
 	xxl: 1400px,
 	480: 480px,
-	450: 450px,
 	420: 420px,
 	380: 380px,
 );
