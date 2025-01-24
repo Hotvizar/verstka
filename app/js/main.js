@@ -6,7 +6,28 @@ $(function () {
         sm = el.next(".submenu");
         $(".header .submenu").not(sm).removeClass("open");
         sm.toggleClass("open");
-    })
+    });
+
+    //fixed menu
+    var mmenu = $(".header"),
+        admbar = $(".admin-bar .header");
+	
+	$(window).on('scroll', function() {
+		var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (admbar && scrollTop > 1) {
+            admbar.addClass("admbar");
+        } else {
+            admbar.removeClass("admbar");
+        }
+
+		if (scrollTop > 200) {
+			mmenu.addClass("sm-header");
+		} else {
+			mmenu.removeClass("sm-header");
+		}
+		
+	});
 
 });
  

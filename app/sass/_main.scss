@@ -15,6 +15,9 @@ body {
 	color: $fc;
 	line-height: 33px;
 	min-width: 320px;
+	padding-top: 138px;
+
+	padding-bottom: 300px;
 }
 
 :focus {
@@ -29,6 +32,14 @@ h1,
 	font-size: 78px;
 	font-weight: 400;
 	line-height: 88px;
+}
+
+h3,
+.h3 {
+	font-family: $ff;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 74px;
 }
 
 a {
@@ -77,4 +88,10 @@ button,
 	align-items: center;
 	padding: 5px 24px;
 	flex-basis: 174px;
+	transition: all .3s;
+
+	&:hover {
+		background-color: darken($pnk, 10);
+		color: #fff;
+	}
 }

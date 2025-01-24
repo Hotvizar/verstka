@@ -1,5 +1,37 @@
 // HEADER
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: all .5s;
+
+    .admin-bar & {
+        top: 32px;
+        
+        @media (max-width: 782px) {
+            top: 46px;
+        }
+        
+        @media (max-width: 600px) {
+            &.admbar {
+                top: 0;
+            }
+        }
+    }
+
+    &.sm-header {
+        .header-row-wrap {
+            padding: 10px 0;
+        }
+        .logo {
+            img {
+                max-width: 75px;
+            }
+        }
+    }
+
     .header-row-wrap {
         background-color: $grey;
         border-bottom: 2px solid $lgrn;
@@ -10,6 +42,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            .logo {
+                img {
+                    transition: all .5s;
+                }
+            }
 
             .main-menu {
                 flex-basis: 500px;
@@ -42,6 +80,7 @@
                                 transition: all .5s ease;
                                 transform: scaleY(0);
                                 transform-origin: top;
+                                z-index: 9;
 
                                 .sbm-title {
                                     font-weight: 400;
