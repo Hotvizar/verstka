@@ -1,0 +1,72 @@
+.why-us {
+    padding: 100px 0 58px;
+
+    .wu-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 58px;
+
+        h4 {
+            font-size: 48px;
+            font-weight: 400;
+            margin-left: 47px;
+            margin-bottom: 0;
+        }
+    }
+
+    .wu-item {
+        border-radius: 20px;
+        color: #fff;
+        overflow: hidden;
+        padding: 32px;
+
+        &.wu-img {
+            background-size: cover;
+            background-position: center center;
+            padding: 0;
+            height: 100%;
+        }
+
+        h5 {
+            font-size: 38px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        ul {
+            font-weight: 300;
+            margin-bottom: 0;
+            line-height: 30px;
+        }
+
+        &.green {
+            background-color: $fc;
+        }
+        
+        &.lgreen {
+            background-color: $lgrn;
+        }
+        
+        &.pink {
+            background-color: $pnk;
+        }
+
+        .btn-outline {
+            border-color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            max-width: 376px;
+            line-height: 1;
+
+            &::after {
+                content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13.869995' height='13.229980' viewBox='0 0 13.87 13.23' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs/%3e%3cpath id='Vector' d='M6 1.26L7.25 0L13.87 6.6L7.25 13.23L6 11.97L10.34 7.61L0 7.61L0 5.61L10.35 5.61L6 1.26Z' fill='%23FFFFFF' fill-opacity='1.000000' fill-rule='evenodd'/%3e%3c/svg%3e ");
+                margin-left: 12px;
+            }
+        }
+    }
+}

@@ -29,6 +29,17 @@ $(function () {
 		
 	});
 
+    $('#home-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: true,
+        dots: false,
+        arrows: false,
+        autoplaySpeed: 5000,
+        speed: 1500,
+    });
+
     $('#courses-slider').slick({
         infinite: true,
         autoplay: false,

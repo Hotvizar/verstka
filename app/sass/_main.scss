@@ -82,6 +82,14 @@ button,
 	box-shadow: none;
 }
 
+.btn {
+	padding: 5px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .5s;
+}
+
 .btn-pink  {
 	background-color: $pnk;
 	font-size: 20px;
@@ -89,10 +97,6 @@ button,
 	color: #fff;
 	border-radius: 35px;
 	height: 60px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 5px 24px;
 	flex-basis: 174px;
 	transition: all .3s;
 
@@ -111,11 +115,11 @@ button,
 	box-sizing: border-box;
 	border: 2px solid $lgrn;
 	border-radius: 36px;
-	padding: 5px 24px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	max-width: 162px;
+	flex-basis: 162px;
 	height: 48px;
 	width: 100%;
+
+	&:hover {
+		border-color: $pnk;
+	}
 }
