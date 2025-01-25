@@ -39,7 +39,13 @@ h3,
 	font-family: $ff;
 	font-size: 48px;
 	font-weight: 600;
-	line-height: 74px;
+	line-height: 1;
+	margin-bottom: 0;
+
+	&::after {
+		content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='114.000000' height='30.000000' viewBox='0 0 114 30' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs/%3e%3cpath id='Vector' d='M97.77 0L94.66 2.9L105.54 12.91L0 12.91L0 17.08L105.54 17.08L94.66 27.09L97.77 30L114 15L97.77 0Z' fill='%23DA9089' fill-opacity='1.000000' fill-rule='nonzero'/%3e%3c/svg%3e ");
+		margin-left: 12px;
+	}
 }
 
 a {
@@ -81,8 +87,8 @@ button,
 	font-size: 20px;
 	font-weight: 600;
 	color: #fff;
-	border-radius: 36px;
-	height: 48px;
+	border-radius: 35px;
+	height: 60px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -90,8 +96,26 @@ button,
 	flex-basis: 174px;
 	transition: all .3s;
 
+	&::after {
+		content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13.869995' height='13.229980' viewBox='0 0 13.87 13.23' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs/%3e%3cpath id='Vector' d='M6 1.26L7.26 0L13.87 6.6L7.26 13.23L6 11.97L10.34 7.61L0 7.61L0 5.61L10.35 5.61L6 1.26Z' fill='%23FFFFFF' fill-opacity='1.000000' fill-rule='evenodd'/%3e%3c/svg%3e ");
+		margin-left: 12px;
+	}
+
 	&:hover {
 		background-color: darken($pnk, 10);
 		color: #fff;
 	}
+}
+
+.btn-outline {
+	box-sizing: border-box;
+	border: 2px solid $lgrn;
+	border-radius: 36px;
+	padding: 5px 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 162px;
+	height: 48px;
+	width: 100%;
 }

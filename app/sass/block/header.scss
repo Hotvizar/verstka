@@ -137,6 +137,14 @@
                     }
                 }
             }
+
+            .btn-pink {
+                height: 48px;
+                
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 }
