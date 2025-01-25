@@ -15,6 +15,7 @@
     .courses-slider-wrap {
         position: relative;
         margin-left: calc((100% - 1296px) / 2);
+        margin-bottom: 58px;
 
         #courses-slider {
             margin-right: -24px;
@@ -99,6 +100,32 @@
 
         .slick-slide {
             padding: 0 12px; //для пробела
+        }
+    }
+
+    .consult {
+        
+        .consult-box {
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            color: #fff;
+            padding: 32px;
+            height: 248px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h5 {
+                font-size: 38px;
+                font-weight: 400;
+                margin-bottom: 55px;
+            }
+
+            .btn-pink {
+                height: 48px;
+                max-width: 200px;
+            }
         }
     }
 }
