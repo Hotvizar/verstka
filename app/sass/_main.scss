@@ -97,7 +97,8 @@ button,
 	color: #fff;
 	border-radius: 35px;
 	height: 60px;
-	flex-basis: 174px;
+	//flex-basis: 174px;
+	width: fit-content;
 	transition: all .3s;
 
 	&::after {

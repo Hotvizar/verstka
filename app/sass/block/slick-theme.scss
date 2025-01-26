@@ -74,7 +74,8 @@ $slick-opacity-not-active: 0.25 !default;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
-    background: transparent;
+    background: #fff;
+    border-radius: 50%;
     color: transparent;
     top: 50%;
     -webkit-transform: translate(0, -50%);
@@ -85,7 +86,7 @@ $slick-opacity-not-active: 0.25 !default;
     outline: none;
     &:hover, &:focus {
         outline: none;
-        background: transparent;
+        background: #fff;
         color: transparent;
         &:before {
             opacity: $slick-opacity-on-hover;
@@ -104,10 +105,15 @@ $slick-opacity-not-active: 0.25 !default;
     right: -68px;
 }
 
-.arrow-next {
+.arrow-next, .arrow-prev {
     fill: $lgrn;
     height: 48px;
     width: 48px;
+    transition: all .3s;
+
+    &:hover {
+        fill: $pnk;
+    }
 }
 
 /* Dots */
