@@ -1,0 +1,63 @@
+.reviews {
+    background-color: #D6DFD9;
+    padding: 100px 0 58px;
+    overflow: hidden;
+
+    h3 {
+        margin-bottom: 58px;
+    }
+
+    .reviews-slider-wrap {
+        margin-left: calc((100% - 1296px) / 2);
+
+        .slick-list {
+            margin: 0 -12px; //для пробела
+        }
+
+        .slick-slide {
+            padding: 0 12px; //для пробела
+        }
+    }
+
+    #reviews-slider {
+        margin-right: -128px;
+    }
+    
+    .review {
+        background-color: #fff;
+        border-radius: 20px;
+        display: inline-flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 416px;
+        min-height: 451px;
+        line-height: 30px;
+        padding: 25px 32px 32px;
+
+        h5 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .statut {
+            font-size: 15px;
+            font-weight: 400;
+            color: $lgrn;
+            line-height: 20px;
+            margin-bottom: 32px;
+        }
+
+        .text-rv {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 270px;
+        }
+
+        .rev-image {
+            border: 1px solid $grey;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    }
+}

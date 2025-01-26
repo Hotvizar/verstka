@@ -9,6 +9,10 @@
 
         .btn-outline {
             width: 162px;
+
+            &::after {
+                display: none;
+            }
         }
     }
 

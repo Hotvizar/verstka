@@ -66,6 +66,33 @@ $(function () {
             },
         ],
     });
+    
+    $('#reviews-slider').slick({
+        infinite: true,
+        autoplay: false,
+        dots: false,
+        arrows: true,
+        nextArrow: false,
+        prevArrow: '<button type="button" class="slick-prev btn btn-link"><svg class="arrow-next"><use xlink:href="image/icons/symbol/sprite.svg#arrow-next" /></svg></button>',
+        autoplaySpeed: 5000,
+        speed: 800,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+        ],
+    });
 
 });
  
