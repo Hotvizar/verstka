@@ -1,4 +1,46 @@
 /* FOOTER */
 .footer {
+    background-color: $fc;
+    color: #fff;
+    padding: 49px 0 60px;
+
+    a {
+        font-weight: 300;
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-menu {
+        padding-right: 65px;
+        ul {
+            columns: 2;
+            margin-bottom: 0;
+
+            li {
+                margin-bottom: 18px;
+            }
+        }
+    }
     
+    .foo-wrap-col1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: -30px;
+    }
+
+    .footer-contacts {
+        .cont-box {
+            margin-bottom: 39px;
+            .cont-info {
+                h6 {
+                    color: #fff;
+                }
+            }
+        }
+    }
 }

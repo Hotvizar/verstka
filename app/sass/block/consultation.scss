@@ -13,78 +13,79 @@
             margin-bottom: 58px;
         }
 
-        .cont-box {
-            display: flex;
-            align-items: center;
-            margin-bottom: 47px;
-
-            .icon {
-                background-color: $lgrn;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 54px;
-                margin-right: 17px;
-                width: 54px;
-
-                svg {
-                    fill: #fff;
-                    height: 31px;
-                    width: 31px;
-                }
-            }
-
-            .cont-info {
-                h6 {
-                    font-size: 20px;
-                    font-weight: 600;
-                    color: $fc;
-                    margin-bottom: 8px;
-                }
-
-                a {
-                    &:hover {
-                        text-decoration: underline;
-                    }
-
-                    &.email {
-                        text-decoration: underline;
-
-                        &:hover {
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-        }
-
-        .social {
-            a {
-                background-color: $lgrn;
-                border-radius: 50%;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 12px;
-                height: 40px;
-                width: 40px;
-
-                svg {
-                    fill: #fff;
-                    height: 85%;
-                }
-
-                &:hover {
-                    background-color: $fc;
-                }
-            }
-        }
     }
 
     .form-consultation {
         .btn-pink {
             height: 48px;
+        }
+    }
+}
+
+.cont-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 47px;
+
+    .icon {
+        background-color: $lgrn;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 54px;
+        margin-right: 17px;
+        width: 54px;
+
+        svg {
+            fill: #fff;
+            height: 31px;
+            width: 31px;
+        }
+    }
+
+    .cont-info {
+        h6 {
+            font-size: 20px;
+            font-weight: 600;
+            color: $fc;
+            margin-bottom: 8px;
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.email {
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.social {
+    a {
+        background-color: $lgrn;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        height: 40px;
+        width: 40px;
+
+        svg {
+            fill: #fff;
+            height: 85%;
+        }
+
+        &:hover {
+            background-color: $fc;
         }
     }
 }
