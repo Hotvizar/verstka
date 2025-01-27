@@ -74,6 +74,8 @@ button,
 	}
 }
 
+@include placeholder($fc);
+
 .btn.focus,
 .btn:focus,
 .btn-light:not(:disabled):not(.disabled).active:focus,
@@ -97,7 +99,6 @@ button,
 	color: #fff;
 	border-radius: 35px;
 	height: 60px;
-	//flex-basis: 174px;
 	width: fit-content;
 	transition: all .3s;
 
@@ -142,7 +143,26 @@ button,
 	}
 
 	&:hover {
-		border-color: $pnk;
+		border-color: $fc;
 		color: $fc;
 	}
+}
+
+.form-control {
+	background-color: $grey;
+	border: 2px solid $lgrn;
+	border-radius: 24px;
+	font-size: 20px;
+	font-weight: 400;
+	color: $fc;
+	height: 48px;
+	margin-bottom: 24px;
+	padding: 5px 32px;
+
+	&:focus {
+		border-color: $lgrn;
+	}
+}
+textarea.form-control {
+	height: 172px;
 }
