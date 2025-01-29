@@ -1,17 +1,28 @@
 .spec-cond {
     padding: 100px 0 58px;
 
+    @include mq(sm) {
+        padding: 58px 0;
+    }
+
     h3 {
         margin-bottom: 58px;
     }
 
     .banner-item {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
         border-radius: 20px;
         overflow: hidden;
         display: flex;
         align-items: center;
         padding: 32px;
         min-height: 433px;
+
+        @include mq(md) {
+            background-position: 67% center;
+        }
 
         .banner-caption {
             color: #fff;
@@ -27,6 +38,16 @@
                 height: 48px;
                 margin-top: 48px;
             }
+        }
+    }
+
+    @media  (max-width: 1277px) {
+        .slick-prev {
+            left: -12px;   
+        }
+        
+        .slick-next {
+            right: -12px;
         }
     }
 }

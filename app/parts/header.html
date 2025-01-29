@@ -17,7 +17,8 @@
 			<div class="container">
 				<div class="header-row">
 					<div class="logo"><img src="image/logo.svg" alt="" class="img-fluid"></div>
-					<div class="main-menu">
+					
+					<div class="main-menu d-none d-lg-block">
 						<ul class="list-unstyled">
 							<li class="menu-item-has-children">
 								<a href="#">Курси</a>
@@ -59,7 +60,15 @@
 							</li>
 						</ul>
 					</div>
-					<a href="/#consult-form" class="btn btn-pink">Консультація</a>
+
+					<a href="/#consultation" class="btn btn-pink d-none d-lg-flex">Консультація</a>
+
+					<button type="button" class="btn btn-menu d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobmenu" aria-controls="mobmenu">
+						<svg class="hamburger"><use xlink:href="image/icons/symbol/sprite.svg#hamburger" /></svg>
+					</button>
+	
+					@@include('mobmenu.html')
+
 				</div>
 			</div>
 		</div>

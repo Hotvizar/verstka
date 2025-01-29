@@ -55,13 +55,14 @@ $(function () {
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 678,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
+                    nextArrow: '<button type="button" class="slick-next btn btn-link"><svg class="arrow-next"><use xlink:href="image/icons/symbol/sprite.svg#arrow-next" /></svg></button>',
                 }
             },
         ],
@@ -80,15 +81,22 @@ $(function () {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1400,
                 settings: {
                     slidesToShow: 3,
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 630,
+                settings: {
+                    slidesToShow: 1,
+                    nextArrow: '<button type="button" class="slick-next btn btn-link"><svg class="arrow-next"><use xlink:href="image/icons/symbol/sprite.svg#arrow-next" /></svg></button>',
                 }
             },
         ],

@@ -9,11 +9,11 @@
 
     .admin-bar & {
         top: 32px;
-        
+
         @media (max-width: 782px) {
             top: 46px;
         }
-        
+
         @media (max-width: 600px) {
             &.admbar {
                 top: 0;
@@ -25,6 +25,7 @@
         .header-row-wrap {
             padding: 10px 0;
         }
+
         .logo {
             img {
                 max-width: 75px;
@@ -144,11 +145,68 @@
 
             .btn-pink {
                 height: 48px;
-                
+
                 &::after {
                     display: none;
                 }
             }
+
+            .btn-menu {
+                padding: 0;
+                height: auto;
+                width: auto;
+
+                .hamburger {
+                    fill: $fc;
+                    height: 60px;
+                    width: 60px;
+                }
+            }
+        }
+    }
+}
+
+.offcanvas {
+    max-width: 320px;
+}
+
+#mobmenu {
+
+    .offcanvas-header {
+        img {
+            max-width: 80px;
+        }
+    }
+
+    .offcanvas-body {
+        >ul {
+            margin-bottom: 0;
+
+            >li {
+
+                >a {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                ul {
+                    margin-left: 20px;
+
+                    li {
+                        line-height: 1.2;
+                        margin-bottom: 10px;
+                        a {
+                            font-size: 16px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-pink {
+            margin-top: 20px;
+            width: 100%;
         }
     }
 }

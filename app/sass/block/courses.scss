@@ -5,6 +5,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         margin-bottom: 49px;
 
         .btn-outline {
@@ -24,6 +25,7 @@
         #courses-slider {
             margin-right: -24px;
         }
+
         .course-item {
             border-radius: 30px;
             overflow: hidden;
@@ -64,7 +66,8 @@
                     color: #fff;
                     font-size: 38px;
                     font-weight: 400;
-                    line-height: 48px;
+                    //line-height: 48px;
+                    line-height: 1.2632;
                     height: 155px;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -105,6 +108,105 @@
         .slick-slide {
             padding: 0 12px; //для пробела
         }
+
+        @include mq(xxl) {
+            margin-left: calc((100% - 1116px) / 2);
+
+            .course-item {
+                .crs-info {
+                    h5 {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        
+        @include mq(xl) {
+            margin-left: calc((100% - 936px) / 2);
+
+            .slick-prev {
+                left: -50px;   
+            }
+            
+            .slick-next {
+                right: -50px;
+            }
+
+            .course-item {
+                .crs-info {
+                    
+                    .crs-footer {
+                        flex-direction: column-reverse;
+                        justify-content: center;
+
+                        .btn-pink {
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include mq(lg) {
+            margin-left: calc((100% - 696px) / 2);
+        }
+
+        @include mq(md) {
+            margin-left: 0;
+
+            #courses-slider {
+                margin-right: -34px;
+                margin-left: 12px;
+            }
+
+            .slick-prev {
+                top: 10%;
+                left: 24px;
+                z-index: 9;    
+            }
+            
+            .slick-next {
+                top: 10%;
+                right: 24px;
+                z-index: 9;
+            }
+
+            .slick-slide {
+                text-align: center;
+            }
+
+            .course-item {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 678px) {
+            #courses-slider {
+                margin-right: 12px;
+                margin-left: 12px;
+            }
+
+            .slick-prev {
+                top: 50%;
+                left: 0px;   
+            }
+            
+            .slick-next {
+                top: 50%;
+                right: 0px;
+            }
+        }
+        
+        @media (max-width: 610px) {
+            
+            .slick-prev {
+                top: 17%;  
+            }
+            
+            .slick-next {
+                top: 17%;
+            }
+        }
     }
 
     .consult {
@@ -125,6 +227,10 @@
                 font-size: 38px;
                 font-weight: 400;
                 margin-bottom: 55px;
+
+                @include mq(420) {
+                    font-size: 30px;
+                }
             }
 
             .btn-pink {

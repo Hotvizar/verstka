@@ -1,3 +1,7 @@
 #home-slider {
     margin-bottom: 96px;
+
+    @include mq(sm) {
+        margin-bottom: 50px;
+    }
 }
