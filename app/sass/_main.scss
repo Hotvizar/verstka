@@ -32,7 +32,16 @@ h1,
 	font-family: $ff;
 	font-size: 78px;
 	font-weight: 400;
-	line-height: 88px;
+	line-height: 1.1282;
+	margin-bottom: 0;
+
+	@include mq(md) {
+		font-size: 60px;
+	}
+	
+	@include mq(sm) {
+		@include font-size(78px);
+	}
 }
 
 h3,
@@ -118,6 +127,7 @@ button,
 	color: #fff;
 	border-radius: 35px;
 	height: 60px;
+	line-height: 1;
 	width: fit-content;
 	transition: all .3s;
 
@@ -236,8 +246,21 @@ textarea.form-control {
 			font-size: 38px;
 			font-weight: 400;
 			color: $fc;
+			display: block;
 			line-height: 1;
-			padding: 28px 32px;
+			padding: 28px 58px 28px 32px;
+			position: relative;
+
+			@include mq(lg) {
+				@include font-size(38px);
+			}
+
+			&::after {
+				position: absolute;
+				right: 32px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
 
 			>span {
 				color: $lgrn;
