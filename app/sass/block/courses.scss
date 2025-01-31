@@ -10,10 +10,6 @@
 
         .btn-outline {
             width: 162px;
-
-            &::after {
-                display: none;
-            }
         }
     }
 
@@ -66,7 +62,6 @@
                     color: #fff;
                     font-size: 38px;
                     font-weight: 400;
-                    //line-height: 48px;
                     line-height: 1.2632;
                     height: 155px;
                     overflow: hidden;

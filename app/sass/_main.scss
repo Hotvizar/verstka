@@ -18,6 +18,7 @@ body {
 	max-width: 1920px;
 	margin: 0 auto;
 	padding-top: 138px;
+	--bs-body-color: #244235;
 }
 
 :focus {
@@ -160,6 +161,12 @@ button,
 		}
 	}
 
+	&.no-arr {
+		&::after {
+			display: none;
+		}
+	}
+
 	&:hover, &:focus, &:active, &.active:focus, &:active:focus {
 		border-color: $fc;
 		color: $fc;
@@ -181,6 +188,89 @@ button,
 		border-color: $lgrn;
 	}
 }
+
 textarea.form-control {
 	height: 172px;
+}
+
+.wrap-breadcrumbs {
+	font-size: 15px;
+	padding-top: 35px;
+	margin-bottom: 40px;
+	position: relative;
+	z-index: 1;
+
+	a, span {
+		font-size: 15px;
+		font-weight: 400;
+		color: #fff;
+	}
+
+	a {
+		text-decoration: underline;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	span {
+		margin: 0 6px;
+	}
+}
+
+.accordion {
+	border: 2px solid $fc;
+	border-radius: 20px;
+	overflow: hidden;
+
+	--bs-accordion-btn-icon: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24.000000' height='24.000000' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs/%3e%3cpath id='Vector' d='M0 10L24 10L24 14L0 14L0 10Z' fill='%23718878' fill-opacity='1.000000' fill-rule='nonzero'/%3e%3cpath id='Vector' d='M14 0L14 24L10 24L10 0L14 0Z' fill='%23718878' fill-opacity='1.000000' fill-rule='nonzero'/%3e%3c/svg%3e");
+	--bs-accordion-btn-active-icon: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24.000000' height='24.000000' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs/%3e%3cpath id='Vector' d='M0 10L24 10L24 14L0 14L0 10Z' fill='%23718878' fill-opacity='1.000000' fill-rule='nonzero'/%3e%3c/svg%3e");
+
+	.accordion-item {
+		border-bottom: 2px solid $fc;
+
+		.accordion-button {
+			background-color: #fff;
+			box-shadow: none;
+			font-size: 38px;
+			font-weight: 400;
+			color: $fc;
+			line-height: 1;
+			padding: 28px 32px;
+
+			>span {
+				color: $lgrn;
+				margin-right: 12px;
+
+				span {
+					font-weight: 600;
+					color: $fc;
+				}
+
+			}
+		}
+
+		.accordion-body {
+			padding: 0 32px 32px;
+
+			.module-info {
+				border: 2px solid #D6DFD9;
+				border-radius: 30px;
+				padding: 32px;
+
+				ul {
+					margin-bottom: 0;
+					li {
+						font-weight: 600;
+
+						span {
+							font-weight: 400;
+							color: $lgrn;
+						}
+					}
+				}
+			}
+		}
+	}
 }
