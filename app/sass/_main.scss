@@ -297,3 +297,63 @@ textarea.form-control {
 		}
 	}
 }
+
+.page-header {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+	min-height: 628px;
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		background-color: $fc;
+		opacity: 0.65;
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+	}
+
+	.header-text {
+		position: relative;
+		z-index: 1;
+	}
+
+	h1 {
+		margin-bottom: 55px;
+
+		span:first-child {
+			color: $pnk;
+			display: block;
+		}
+
+		span:last-child {
+			display: flex;
+			align-items: baseline;
+
+			&::before {
+				content: "";
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='478.500000' height='41.000000' viewBox='0 0 478.5 41' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs/%3e%3cpath id='Vector' d='M457.5 0L453.47 3.96L467.55 17.65L0 17.65L0 23.34L467.55 23.34L453.47 37.03L457.5 41L478.5 20.5L457.5 0Z' fill='%23DA9089' fill-opacity='1.000000' fill-rule='nonzero'/%3e%3c/svg%3e ");
+				background-repeat: no-repeat;
+				background-position: 100% center;
+				margin-right: 14px;
+				height: 41px;
+				width: 478.5px;
+				flex-basis: 478.5px;
+			}
+		}
+	}
+
+	.header-subtitle {
+		columns: 2;
+		column-gap: 107px;
+		max-width: 880px;
+		margin-bottom: 0;
+
+		li {
+			line-height: 1.4;
+		}
+	}
+}

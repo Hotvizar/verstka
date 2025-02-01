@@ -1,0 +1,294 @@
+.about {
+
+    .timeline-wrap {
+        margin: 100px 0 58px;
+    
+        @include mq(sm) {
+            margin: 58px 0;
+        }
+    }
+
+    .com-timeline {
+        display: flex;
+        padding: 178px 0 180px;
+        min-height: 360px;
+    
+        .time-marker {
+            border-bottom: 2px solid $fc;
+            position: relative;
+            width: 100%;
+    
+            &::before {
+                background-color: #fff;
+                border: 3px solid $fc;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 18px;
+                width: 18px;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                z-index: 1;
+            }
+    
+            .time-info {
+                border-left: 2px dotted $fc;
+                padding-left: 25px;
+                position: absolute;
+                left: 8px;
+    
+                &::before {
+                    border-top: 2px solid $fc;
+                    border-right: 2px solid $fc;
+                    content: "";
+                    display: block;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    left: -5px;
+                    height: 8px;
+                    width: 8px;
+                }
+    
+                h6 {
+                    font-family: $ff;
+                    font-size: 38px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                    line-height: 1;
+                }
+    
+                p {
+                    margin-bottom: -8px;
+                }
+            }
+    
+            &:nth-child(odd) {
+                .time-info {
+                    bottom: 0;
+                    height: 178px;
+    
+                    &::before {
+                        top: 0;
+                    }
+                }
+            }
+    
+            &:nth-child(even) {
+                .time-info {
+                    padding-top: 64px;
+                    top: 100%;
+    
+                    &::before {
+                        transform: rotate(135deg);
+                        bottom: 0;
+                    }
+                }
+            }
+    
+            &:nth-child(1) {
+                max-width: 218px;
+    
+                .time-info {
+                    width: 104%;
+                }
+            }
+    
+            &:nth-child(2) {
+                max-width: 208px;
+            }
+    
+            &:nth-child(3) {
+                max-width: 200px;
+            }
+    
+            &:nth-child(4) {
+                max-width: 434px;
+    
+                .time-info {
+                    width: 154%;
+                }
+            }
+    
+            &:nth-child(5) {
+                max-width: 237px;
+            }
+    
+            /* @include mq(xxl) {
+                &:nth-child(3) {
+                    .time-info {
+                        width: 315%;
+                    }
+                }
+    
+                &:nth-child(8) {
+                    .time-info {
+                        width: 100%;
+                    }
+                }
+                
+            }
+    
+            @include mq(xl) {
+                &:nth-child(odd) {
+                    .time-info {
+                        height: 210px;
+                    }
+                }
+    
+                &:nth-child(3) {
+                    .time-info {
+                        width: 288%;
+                    }
+                }
+            } */
+    
+        }
+    
+        /* @include mq(xxl) {
+            padding: 178px 0 235px;
+        }
+        
+        @include mq(xl) {
+            padding: 210px 0 277px;
+        } */
+    
+        //VERTICAL
+        /* @include mq(lg) {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+    
+            .time-marker {
+                border-bottom: 0;
+                border-left: 2px solid $fc;
+                width: 2px;
+    
+                &::before {
+                    top: 0;
+                    left: -10px;
+                    bottom: auto;
+                }
+    
+                .time-info {
+                    border-left: none;
+                    border-top: 1px dashed $fc;
+                    font-size: 14px;
+                    top: 9px;
+                    padding-top: 20px;
+    
+                    h6 {
+                        font-size: 22px;
+                        margin-bottom: 3px;
+                    }
+                }
+    
+                &:nth-child(odd) {
+                    .time-info {
+                        bottom: auto;
+                        height: auto;
+                        padding-left: 20px;
+                        left: -100%;
+                        width: 212px;
+    
+                        &::before {
+                            left: auto;
+                            right: 0;
+                            top: -3.5px;
+                        }
+                    }
+                }
+        
+                &:nth-child(even) {
+                    .time-info {
+                        padding-top: 20px;
+                        padding-left: 0;
+                        padding-right: 20px;
+                        left: auto;
+                        right: 100%;
+                        top: 9px;
+                        width: 212px;
+        
+                        &::before {
+                            bottom: auto;
+                            top: -3.5px;
+                        }
+                    }
+                }
+    
+                &:nth-child(1) {
+                    height: 60px;
+                }
+        
+                &:nth-child(2) {
+                    height: 80px;
+                }
+        
+                &:nth-child(3) {
+                    height: 60px;
+                }
+        
+                &:nth-child(4) {
+                    height: 121px;
+                }
+        
+                &:nth-child(5) {
+                    height: 60px;
+                }
+        
+                &:nth-child(6) {
+                    height: 62px;
+                }
+        
+                &:nth-child(7) {
+                    height: 158px;
+                }
+        
+                &:nth-child(8) {
+                    height: 154px
+                }
+            }
+        }
+    
+        @media (max-width: 450px) {
+            align-items: flex-start;
+    
+            .time-marker {
+                max-width: unset !important;
+                height: auto !important;
+                margin-left: 10px;
+                width: calc(100% - 10px);
+    
+                &::before {
+                    top: -10px;
+                }
+    
+                .time-info {
+                    font-size: 16px;
+                    position: static;
+                    padding: 30px !important;
+                    height: auto !important;
+                    width: 100% !important;
+                    
+                    &::before {
+                        bottom: auto;
+                        top: -3.25px !important;
+                        left: auto;
+                        right: 0;
+                    }
+    
+                    h6 {
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        } */
+    }
+
+    .courses {
+        padding-top: 100px;
+    }
+
+}
