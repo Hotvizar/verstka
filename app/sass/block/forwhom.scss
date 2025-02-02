@@ -17,7 +17,11 @@
         height: 100%;
 
         .fw-icon {
+            display: flex;
+            align-items: center;
             margin-bottom: 24px;
+            height: 90px;
+            width: 90px;
         }
 
         h5 {

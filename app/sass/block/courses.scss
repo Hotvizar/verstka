@@ -206,32 +206,32 @@
 
     .consult {
         background: linear-gradient(to top, $grey 50%, transparent 50%);
-        
-        .consult-box {
-            background-size: cover;
-            background-position: center;
-            border-radius: 20px;
-            color: #fff;
-            padding: 32px;
-            height: 248px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+    }
+}
 
-            h5 {
-                font-size: 38px;
-                font-weight: 400;
-                margin-bottom: 55px;
+.consult-box {
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    color: #fff;
+    padding: 32px;
+    height: 248px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-                @include mq(420) {
-                    font-size: 30px;
-                }
-            }
+    h5 {
+        font-size: 38px;
+        font-weight: 400;
+        margin-bottom: 55px;
 
-            .btn-pink {
-                height: 48px;
-                max-width: 200px;
-            }
+        @include mq(420) {
+            font-size: 30px;
         }
+    }
+
+    .btn-pink {
+        height: 48px;
+        max-width: 200px;
     }
 }

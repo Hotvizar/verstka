@@ -136,6 +136,12 @@ button,
 		margin-left: 12px;
 	}
 
+	&.no-arr {
+		&::after {
+			display: none;
+		}
+	}
+
 	&:hover, &:focus, &:active, &.active:focus, &:active:focus {
 		background-color: darken($pnk, 10);
 		color: #fff;
@@ -305,20 +311,13 @@ textarea.form-control {
 	color: #fff;
 	min-height: 628px;
 	position: relative;
+	padding-bottom: 58px;
 	overflow: hidden;
-
-	&::after {
-		content: "";
-		background-color: $fc;
-		opacity: 0.65;
-		position: absolute;
-		inset: 0;
-		z-index: 0;
-	}
 
 	.header-text {
 		position: relative;
 		z-index: 1;
+		max-width: 910px;
 	}
 
 	h1 {
@@ -326,7 +325,6 @@ textarea.form-control {
 
 		span:first-child {
 			color: $pnk;
-			display: block;
 		}
 
 		span:last-child {
@@ -356,6 +354,10 @@ textarea.form-control {
 			line-height: 1.4;
 		}
 	}
+
+	/* @include mq(xl) {
+		background-position: calc(100% + 270px) center;
+	} */
 
 	@include mq(md) {
 
@@ -391,7 +393,6 @@ textarea.form-control {
         
 		.header-subtitle {
 			columns: unset;
-			margin-bottom: 58px;
 
 			li {
 				margin-bottom: 12px;
