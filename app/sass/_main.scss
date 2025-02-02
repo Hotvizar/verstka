@@ -356,4 +356,49 @@ textarea.form-control {
 			line-height: 1.4;
 		}
 	}
+
+	@include mq(md) {
+
+		h1 {
+			span {
+				&:last-child {
+					&::before {
+						height: 30px;
+					}
+				}
+			}
+		}
+
+		.header-subtitle {
+			column-gap: normal;
+		}
+    }
+
+	@include mq(sm) {
+		min-height: auto;
+
+		h1 {
+			margin-bottom: 58px;
+
+			span {
+				&:last-child {
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+        
+		.header-subtitle {
+			columns: unset;
+			margin-bottom: 58px;
+
+			li {
+				margin-bottom: 12px;
+				br {
+					display: none;
+				}
+			}
+		}
+    }
 }
