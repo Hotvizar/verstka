@@ -211,6 +211,7 @@ textarea.form-control {
 
 .wrap-breadcrumbs {
 	font-size: 15px;
+	font-weight: 600;
 	padding-top: 35px;
 	margin-bottom: 40px;
 	position: relative;
@@ -402,4 +403,34 @@ textarea.form-control {
 			}
 		}
     }
+}
+
+.pagination {
+	margin: 46px 0 0;
+
+	.nav-links {
+		text-align: center;
+		width: 100%;
+		a, span {
+			border: 1px solid $lgrn;
+			border-radius: 50%;
+			font-size: 20px;
+			font-weight: 700;
+			color: $lgrn;
+			display: inline-block;
+			margin: 12px 6px 0;
+			line-height: 60px;
+			text-align: center;
+			transition: all .3s;
+			height: 60px;
+			vertical-align: middle;
+			width: 60px;
+
+			&:hover, &.current {
+				border-color: $fc;
+				color: $fc;
+				text-decoration: none;
+			}
+		}
+	}
 }
