@@ -38,7 +38,7 @@ h1,
 	@include mq(md) {
 		font-size: 60px;
 	}
-	
+
 	@include mq(sm) {
 		@include font-size(78px);
 	}
@@ -90,8 +90,9 @@ a {
 	}
 }
 
-b, strong {
-    font-weight: bold;
+b,
+strong {
+	font-weight: bold;
 }
 
 button,
@@ -120,7 +121,7 @@ button,
 	transition: all .5s;
 }
 
-.btn-pink  {
+.btn-pink {
 	background-color: $pnk;
 	font-size: 20px;
 	font-weight: 600;
@@ -142,7 +143,11 @@ button,
 		}
 	}
 
-	&:hover, &:focus, &:active, &.active:focus, &:active:focus {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active:focus,
+	&:active:focus {
 		background-color: darken($pnk, 10);
 		color: #fff;
 	}
@@ -172,7 +177,11 @@ button,
 			margin-left: 12px;
 		}
 
-		&:hover, &:focus, &:active, &.active:focus, &:active:focus {
+		&:hover,
+		&:focus,
+		&:active,
+		&.active:focus,
+		&:active:focus {
 			color: #fff;
 		}
 	}
@@ -183,7 +192,11 @@ button,
 		}
 	}
 
-	&:hover, &:focus, &:active, &.active:focus, &:active:focus {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active:focus,
+	&:active:focus {
 		border-color: $fc;
 		color: $fc;
 	}
@@ -217,7 +230,8 @@ textarea.form-control {
 	position: relative;
 	z-index: 1;
 
-	a, span {
+	a,
+	span {
 		font-size: 15px;
 		font-weight: 400;
 		color: #fff;
@@ -225,7 +239,7 @@ textarea.form-control {
 
 	a {
 		text-decoration: underline;
-		
+
 		&:hover {
 			text-decoration: none;
 		}
@@ -233,6 +247,15 @@ textarea.form-control {
 
 	span {
 		margin: 0 6px;
+	}
+}
+
+.page .breadcrumb {
+	color: $lgrn;
+
+	a,
+	span {
+		color: $lgrn;
 	}
 }
 
@@ -291,6 +314,7 @@ textarea.form-control {
 
 				ul {
 					margin-bottom: 0;
+
 					li {
 						font-weight: 600;
 
@@ -375,7 +399,7 @@ textarea.form-control {
 		.header-subtitle {
 			column-gap: normal;
 		}
-    }
+	}
 
 	@include mq(sm) {
 		min-height: auto;
@@ -391,18 +415,19 @@ textarea.form-control {
 				}
 			}
 		}
-        
+
 		.header-subtitle {
 			columns: unset;
 
 			li {
 				margin-bottom: 12px;
+
 				br {
 					display: none;
 				}
 			}
 		}
-    }
+	}
 }
 
 .pagination {
@@ -411,7 +436,9 @@ textarea.form-control {
 	.nav-links {
 		text-align: center;
 		width: 100%;
-		a, span {
+
+		a,
+		span {
 			border: 1px solid $lgrn;
 			border-radius: 50%;
 			font-size: 20px;
@@ -426,7 +453,8 @@ textarea.form-control {
 			vertical-align: middle;
 			width: 60px;
 
-			&:hover, &.current {
+			&:hover,
+			&.current {
 				border-color: $fc;
 				color: $fc;
 				text-decoration: none;
@@ -456,7 +484,8 @@ textarea.form-control {
 			text-align: left;
 			width: fit-content;
 
-			a, span {
+			a,
+			span {
 				color: #D6DFD9;
 				font-weight: 600;
 			}
@@ -469,4 +498,89 @@ textarea.form-control {
 			}
 		}
 	}
+}
+
+.page-thankyou {
+	text-align: center;
+	padding-bottom: 230px;
+
+	.thank-you {
+		border: 2px solid $fc;
+		display: inline-flex;
+		flex-direction: column;
+		border-radius: 0 0 30px 30px;
+		position: relative;
+		max-width: 684px;
+		width: 100%;
+
+		.thy-box-top {
+			background-color: $lgrn;
+			border-bottom: 2px solid $fc;
+			text-align: right;
+			padding: 6px 14px;
+		}
+
+		h1 {
+			font-size: 128px;
+			font-weight: 600;
+			margin: 167px 0 126px;
+		}
+
+		.thy-text {
+			font-size: 21px;
+			line-height: 1.36;
+			margin-bottom: 100px;
+		}
+
+		.smile {
+			position: absolute;
+			right: -89px;
+			bottom: -95px;
+			max-height: 203px;
+			max-width: 203px;
+		}
+	}
+
+	@include mq(lg) {
+		.thank-you {
+			width: calc(100% - 65px);
+
+			h1 {
+				@include font-size(128px);
+			}
+
+			.smile {
+				right: -39px;
+				bottom: -45px;
+				max-height: 103px;
+				max-width: 103px;
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		.thank-you {
+			h1 {
+				margin: 70px 0;
+			}
+
+			.thy-text {
+				padding: 0 12px;
+			}
+		}
+	}
+
+	@include mq(380) {
+		.thank-you {
+			h1 {
+				font-size: 44px;
+				margin: 48px 0;
+			}
+
+			.thy-text {
+				padding: 0 12px;
+			}
+		}
+	}
+
 }
