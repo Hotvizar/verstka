@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-$fc: #244235;
-$lgrn: #718878;
-$grey: #EFEFEF;
-$pnk: #DA9089;
+$fc: #000;
 
-$ff:  "Inter Tight", serif;
+$ff:  "Manrope", sans-serif;
+$mul:  "Mulish", sans-serif;
+$fiol: #6360bc;
 
 $breakpoints: (
 	xs: 0,
