@@ -12,8 +12,12 @@
 <body class="@@class">
 
 	<header class="header">
+
+		<button type="button" class="btn btn-menu d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobmenu" aria-controls="mobmenu">
+			<svg class="hamburger"><use xlink:href="image/icons/symbol/sprite.svg#hamburger" /></svg>
+		</button>
 		
-		<div class="container">
+		<div class="container-xxl">
 			<div class="main-menu">
 				<ul class="list-unstyled">
 					<li><a href="/">Главная</a></li>
@@ -25,7 +29,7 @@
 							<li class="li"><a href="#">Товары</a></li>
 						</ul>
 					</li>
-					<li class="logo"><a href="/"><img src="image/logo.svg" alt=""></a></li>
+					<li class="logo"><a href="/"><img src="image/logo.svg" alt="" class="img-fluid"></a></li>
 					<li><a href="#">Заказ</a></li>
 					<li><a href="#">Доставка</a></li>
 					<li><a href="#">Контакты</a></li>
@@ -39,3 +43,5 @@
 		</div>
 
 	</header>
+
+	@@include('mobmenu.html')

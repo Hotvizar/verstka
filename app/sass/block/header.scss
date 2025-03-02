@@ -3,6 +3,22 @@
     padding: 26px 0;
     position: relative;
 
+    .btn-menu {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+        height: auto;
+        width: auto;
+
+        .hamburger {
+            fill: $fc;
+            height: 60px;
+            width: 60px;
+        }
+    }
+
     .main-menu {
 
         >ul {
@@ -18,11 +34,12 @@
                 justify-content: center;
                 height: 42px;
                 flex-basis: 134px;
+                padding: 0 6px;
                 margin: 0 6px;
                 transition: all .6s;
                 position: relative;
 
-                &:not(.logo) {
+                &:not(.logo, .mobile) {
                     background-image: 
                             radial-gradient(circle, $lbl 21px, transparent 21px), 
                             radial-gradient(circle, $lbl 21px, transparent 21px), 
@@ -62,6 +79,7 @@
                     font-weight: 500;
                     color: $lbl;
                     line-height: 140%;
+                    white-space: nowrap;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -142,7 +160,6 @@
                         visibility: visible;
                      }
                  }
-
             }
         }
     }
@@ -159,5 +176,86 @@
         a {
             margin-left: 20px;
         }
+    }
+
+    @media (max-width: 1456px) {
+        .icons-group {
+            right: 12px;
+
+            a {
+                margin-left: 12px;
+            }
+        }
+    }
+
+    @include mq(xxl) {
+        .container-xxl {
+            width: calc(100% - 288px);
+        }
+    }
+
+    @include mq(lg) {
+        .main-menu {
+            > ul {
+                li {
+                    &:not(.logo, .mobile) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container-xxl {
+            width: calc(100% - 208px);
+        }
+        .btn-cart, .btn-user {
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
+
+.offcanvas {
+    max-width: 320px;
+}
+
+#mobmenu {
+
+    .offcanvas-header {
+        img {
+            max-width: 80px;
+        }
+    }
+
+    .offcanvas-body {
+        >ul {
+            margin-bottom: 0;
+
+            >li {
+                margin-bottom: 10px;
+                
+                >a {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                ul {
+                    margin-left: 20px;
+
+                    li {
+                        line-height: 1.2;
+                        margin-bottom: 10px;
+
+                        a {
+                            font-size: 16px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
