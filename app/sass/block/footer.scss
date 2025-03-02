@@ -1,4 +1,37 @@
 /* FOOTER */
 .footer {
-    
+    font-size: 16px;
+    font-weight: 500;
+    color: $lbl;
+    padding: 5px 0;
+
+    .row {
+        padding: 6.6px 0;
+    }
+    a {
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        -webkit-text-stroke: 0.6px transparent;
+
+        &:hover {
+            -webkit-text-stroke: 0.6px $lbl;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .telegram {
+        font-weight: 300;
+
+        a {
+            -webkit-text-stroke: 0.6px transparent;
+
+            &:hover {
+                -webkit-text-stroke: 0.6px $lbl;
+            }
+        }
+    }
 }
