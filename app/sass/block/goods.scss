@@ -160,6 +160,22 @@
         }
     }
 
+    @media (max-width: 441px) {
+        .mb-text {
+            padding-bottom: 60px;
+        }
+        
+        .price-btn {
+            flex-direction: column;
+            left: 18px;
+
+            .price {
+                margin-right: 0;
+            }
+        }
+        
+    }
+
     .attributes-group {
         margin-bottom: 30px;
 
