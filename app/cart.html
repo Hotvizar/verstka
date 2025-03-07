@@ -1,0 +1,146 @@
+@@include('parts/header.html', {title: "Корзина", class: "cart"})
+
+<main class="site-main">
+    <div class="container">
+        <div class="page-title"><h1>Корзина</h1></div>
+        <div id="content">
+
+            <div class="products-in-cart">
+                
+                <div class="product-item">
+                    <div class="prod-img">
+                        <img src="image/prod-cart.jpg" alt="" class="img-fluid">
+                    </div>
+    
+                    <div class="prod-name">Далеко-далеко за словесными горами в стране гласных и согласных живут </div>
+    
+                    <div class="prod-price">40000р</div>
+
+                    <div class="quantity">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-number" data-type="minus" data-field="product_id">
+                                    <svg class="icon">
+                                        <use xlink:href="image/icons/symbol/sprite.svg#minus-icon" />
+                                    </svg>
+                                </button>
+                            </span>
+                            <input type="text" name="product_id" class="form-control input-number" value="1" min="1" max="100">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-number" data-type="plus" data-field="product_id">
+                                    <svg class="icon">
+                                        <use xlink:href="image/icons/symbol/sprite.svg#plus-icon" />
+                                    </svg>
+                                </button>
+                            </span>
+                        </div>
+                    </div> <!-- /.quantity -->
+
+                    <div class="total-price">40000р</div> <!-- /.prod-total -->
+
+                    <div class="product-remove">
+                        <a href="" class="remove" aria-label="" data-product_id="" data-product_sku=""><svg class="remove-icon"><use xlink:href="image/icons/symbol/sprite.svg#remove-icon" /></svg></a>
+                    </div>
+
+                </div> <!-- /.product-item -->
+
+                <div class="product-item">
+                    <div class="prod-img">
+                        <img src="image/prod-cart.jpg" alt="" class="img-fluid">
+                    </div>
+    
+                    <div class="prod-name">Хлеб «Пшеничный»</div>
+    
+                    <div class="prod-price">400р</div>
+
+                    <div class="quantity">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-number" data-type="minus" data-field="product_id">
+                                    <svg class="icon">
+                                        <use xlink:href="image/icons/symbol/sprite.svg#minus-icon" />
+                                    </svg>
+                                </button>
+                            </span>
+                            <input type="text" name="product_id" class="form-control input-number" value="1" min="1" max="100">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-number" data-type="plus" data-field="product_id">
+                                    <svg class="icon">
+                                        <use xlink:href="image/icons/symbol/sprite.svg#plus-icon" />
+                                    </svg>
+                                </button>
+                            </span>
+                        </div>
+                    </div> <!-- /.quantity -->
+
+                    <div class="total-price">400р</div> <!-- /.prod-total -->
+
+                    <div class="product-remove">
+                        <a href="" class="remove" aria-label="" data-product_id="" data-product_sku=""><svg class="remove-icon"><use xlink:href="image/icons/symbol/sprite.svg#remove-icon" /></svg></a>
+                    </div>
+
+                </div> <!-- /.product-item -->
+
+            </div>
+
+            <div class="cart-total">
+                <table>
+                    <tr>
+                        <td>Сумма:</td>
+                        <td>2070,00 р</td>
+                    </tr>
+                    <tr>
+                        <td>Итого к оплате:</td>
+                        <td>2070,00 р</td>
+                    </tr>
+                </table>
+            </div> <!-- /.cart-total -->
+
+            <div class="checkout-form">
+                <form>
+    
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Ваше Имя">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Ваша Фамилия">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Ваш номер телефона">
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control" placeholder="Ваш e-mail">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Ваш адрес">
+                        </div>
+                        <div class="col">
+                            <select class="form-select" aria-label="Способ оплаты">
+                                <option selected>Способ оплаты</option>
+                                <option value="1">Наличный расчёт</option>
+                                <option value="2">Безналичный расчёт</option>
+                              </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Я прочитал(а) и принимаю <a href="#">условия использования</a> сайта
+                        </label>
+                    </div>
+                      
+
+                    <div class="col-12 mt-4">
+                        <button class="btn btn-prime m-auto">Подтвердить заказ</button>
+                    </div>
+    
+                </form>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+@@include('parts/footer.html')

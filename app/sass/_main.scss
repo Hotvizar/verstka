@@ -133,7 +133,7 @@ button,
 	}
 }
 
-.btn.btn-addtocart {
+.btn.btn-addtocart, .btn.btn-prime {
 	border: 2px solid $lbl;
 	background-color: #fff;
 	border-radius: 60px;
@@ -171,6 +171,14 @@ button,
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21.451965' height='22.000549' viewBox='0 0 21.452 22.0005' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cpath id='Stroke 65' d='M3.28 4.95C5.89 4.82 8.5 4.7 11.1 4.6C12.32 4.56 13.53 4.52 14.74 4.51C15.9 4.49 17.15 4.34 18.24 4.83C21.96 6.51 20.39 13.25 17.81 15.26C16.02 16.65 13.15 16.76 10.97 16.7C8.94 16.65 6.5 16.42 4.8 15.21C1.87 13.12 3.4 7.42 3.3 3.53C3.36 1.35 1 1 1 1' stroke='%23FFFFFF' stroke-opacity='1.000000' stroke-width='2.000000' stroke-linejoin='round' stroke-linecap='round'/%3e%3cpath id='Stroke 67' d='M11.72 8.9L14.85 8.9' stroke='%23FFFFFF' stroke-opacity='1.000000' stroke-width='2.000000' stroke-linejoin='round' stroke-linecap='round'/%3e%3cpath id='Fill 69' d='M5.24 19.77C5.58 19.77 5.86 20.04 5.86 20.38C5.86 20.72 5.58 21 5.24 21C4.91 21 4.63 20.72 4.63 20.38C4.63 20.04 4.91 19.77 5.24 19.77Z' fill='%23FFFFFF' fill-opacity='1.000000' fill-rule='evenodd'/%3e%3cpath id='Stroke 71' d='M5.86 20.38C5.86 20.72 5.58 21 5.24 21C4.91 21 4.63 20.72 4.63 20.38C4.63 20.04 4.91 19.77 5.24 19.77C5.58 19.77 5.86 20.04 5.86 20.38Z' stroke='%23FFFFFF' stroke-opacity='1.000000' stroke-width='2.000000' stroke-linejoin='round'/%3e%3cpath id='Fill 73' d='M16.91 19.77C17.25 19.77 17.52 20.04 17.52 20.38C17.52 20.72 17.25 21 16.91 21C16.57 21 16.29 20.72 16.29 20.38C16.29 20.04 16.57 19.77 16.91 19.77Z' fill='%23FFFFFF' fill-opacity='1.000000' fill-rule='evenodd'/%3e%3cpath id='Stroke 75' d='M17.52 20.38C17.52 20.72 17.25 21 16.91 21C16.57 21 16.29 20.72 16.29 20.38C16.29 20.04 16.57 19.77 16.91 19.77C17.25 19.77 17.52 20.04 17.52 20.38Z' stroke='%23FFFFFF' stroke-opacity='1.000000' stroke-width='2.000000' stroke-linejoin='round'/%3e%3c/svg%3e ");
 		}
 	}
+}
+
+.btn.btn-prime {
+	&::before {
+		display: none;
+	}
+
+	width: fit-content;
 }
 
 .btn-user {
@@ -389,4 +397,43 @@ button,
 			}
 		}
 	}
+}
+
+.form-control,
+.form-select {
+	border: 2px solid $lbl;
+	border-radius: 50px;
+	font-size: 16px;
+	font-weight: 500;
+	color: $fc;
+	height: 52px;
+	padding: 5px 30px;
+}
+
+.form-check-input {
+	background-size: auto;
+	border: 2px solid $lbl;
+	border-radius: 8px !important;
+	margin-top: 2px;
+	margin-right: 19px;
+    height: 25px;
+	width: 25px;
+
+	&:checked {
+		background-color: #fff;
+		border-color: $lbl;
+		&[type=checkbox] {
+			--bs-form-check-bg-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14.000000' height='10.000000' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cpath id='Stroke 1' d='M0.25 4.11C0.55 3.8 1.03 3.77 1.37 4.03L1.46 4.11L5.12 7.86L12.53 0.25C12.83 -0.06 13.31 -0.09 13.65 0.17L13.74 0.25C14.05 0.57 14.08 1.06 13.83 1.4L13.74 1.5L5.72 9.74C5.42 10.05 4.94 10.08 4.6 9.82L4.51 9.74L0.25 5.36C-0.09 5.02 -0.09 4.46 0.25 4.11Z' fill='%23000000' fill-opacity='1.000000' fill-rule='nonzero'/%3e%3c/svg%3e ");
+		} 
+	}
+
+	&:active {
+		filter: unset;
+	}
+	&:focus {
+		border-color: $lbl;
+		outline: 0;
+		box-shadow: none;
+	}
+	
 }
