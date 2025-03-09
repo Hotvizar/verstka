@@ -2,7 +2,7 @@
  * Основные стили
 **/
 html {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 body {
@@ -401,6 +401,7 @@ button,
 		}
 	}
 }
+@include placeholder($lbl);
 
 .form-control,
 .form-select {
@@ -411,6 +412,12 @@ button,
 	color: $fc;
 	height: 52px;
 	padding: 5px 30px;
+}
+
+.form-control {
+	&:focus {
+		border-color: $lbl;
+	}
 }
 
 .form-check-input {
@@ -487,5 +494,52 @@ button,
 		.btn-prime {
 			margin: 42px auto 0;
 		}
+	}
+}
+
+.page-booking {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 140%;
+	margin-top: 24px;
+	margin-bottom: 100px;
+
+	img {
+		filter: drop-shadow( 55px 58px 91.6px rgba(77, 77, 77, 0.23));
+	}
+	h1 {
+		font-size: 73px;
+		// 
+		font-weight: 700;
+		text-align: left;
+		margin-bottom: 15px;
+	}
+
+	.booking {
+		padding-top: 14px;
+	}
+
+	.btn-prime {
+		margin: 24px auto 0;
+		max-width: 212px;
+		width: 100%;
+	}
+
+	@include mq(xl) {
+		h1 {
+			@include font-size(66px);
+		}
+	}
+
+	@include mq(md) {
+		img {
+			max-width: 300px;
+			margin-bottom: 20px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
 	}
 }
