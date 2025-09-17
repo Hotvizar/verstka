@@ -1,10 +1,10 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 $fc: #000;
-$lbl: #262627;
 
-$ff: "Noto Sans", sans-serif;
+$ff:  "Manrope", sans-serif;
+$mul:  "Mulish", sans-serif;
+$fiol: #6360bc;
 
 $breakpoints: (
 	xs: 0,
@@ -16,5 +16,4 @@ $breakpoints: (
 	480: 480px,
 	420: 420px,
 	380: 380px,
-	360: 360px,
 );
