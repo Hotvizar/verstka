@@ -1,0 +1,132 @@
+.main-banner {
+    background-color: #4b2787;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    overflow: hidden;
+    height: 770px;
+
+    .title-banner {
+        font-size: 38px;
+        color: #fff;
+        margin-top: 243px;
+
+        .subtitle {
+            margin-top: 40px;
+        }
+    }
+
+    .footer-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 53%;
+        margin-top: 94px;
+    }
+
+    .box-btnby {
+        border: 2px dashed rgba(205, 233, 73, 1);
+        border-radius: 200px;
+        font-size: 18px;
+        color: #fff;
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+
+        .btn-green {
+            font-size: 18px;
+            margin-right: 13px;
+            height: 60px;
+            width: 131px;
+        }
+    }
+
+    .active-substance {
+        position: relative;
+
+        .text-buble {
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            inset: 0;
+        }
+
+        li:first-child {
+            color: #dff18b;
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        li:nth-child(2) {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            transition: all .3s;
+
+            &:hover {
+                color: $sal;
+            }
+        }
+
+        li:nth-child(3) {
+            color: $sal;
+            font-weight: 300;
+            letter-spacing: 2px;
+            line-height: 22px;
+        }
+
+        .substanse-caption {
+            position: absolute;
+            right: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            #capt-plus {
+                background-color: transparent;
+                border: 0;
+                padding: 0;
+                cursor: pointer;
+            }
+
+            .caption {
+                background: #dff18b;
+                border-radius: 17px;
+                color: #262b76;
+                font-size: 16px;
+                line-height: 20px;
+                padding: 16px 22px;
+                position: absolute;
+                left: calc(100% + 39px);
+                top: 50%;
+                transform: translateY(-50%);
+                min-width: 567px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .5s;
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                &::before {
+                    content: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 49 38' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='49.000000' height='38.000000' fill='none' customFrame='%23000000'%3e%3cpath id='Polygon 1' d='M32.3009 29.7068C33.782 33.0146 31.3617 36.75 27.7375 36.75L10.2625 36.75C6.6383 36.75 4.21803 33.0145 5.69907 29.7067L14.4365 10.1922C16.2017 6.24984 21.7983 6.24984 23.5635 10.1922L32.3009 29.7068Z' fill='rgb(223,241,139)' fill-rule='evenodd' transform='matrix(-4.29308e-08,-1,1,-4.45061e-08,0,38)' /%3e%3c/svg%3e ");
+                    position: absolute;
+                    left: -31px;
+                    top: 51%;
+                    transform: translateY(-50%);
+                }
+
+                &.open {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

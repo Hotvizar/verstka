@@ -8,6 +8,7 @@ html {
 body {
 	background-color: #fff;
 	font-family: $ff;
+	font-optical-sizing: auto;
 	font-size: 18px;
 	font-weight: 400;
 	color: $fc;
@@ -46,7 +47,7 @@ a {
 }
 
 b, strong {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 button,
@@ -55,6 +56,10 @@ button,
 		box-shadow: none;
 		outline: none;
 	}
+}
+
+ul {
+	margin-bottom: 0;
 }
 
 .btn.focus,
@@ -69,72 +74,22 @@ button,
 	border-radius: 0;
 	transition: all .3s;
 }
-.btn-fiol {
-	background: $fiol;
-	border-radius: 24px;
-	font-weight: 700;
-	color: #fff;
+
+.btn-green {
+	background-color: $sal;
+	border-radius: 200px;
+	font-family: $ff;
+	font-weight: 600;
+	color: #262b76;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 48px;
-	max-width: 205px;
 	width: 100%;
 
-	&:hover {
-		background: darken( $fiol, 9 );
-		color: #fff;
+	&:hover, &:focus,
+	&.active, &:first-child:active {
+		background-color: darken($color: $sal, $amount: 12);
+		border-color: transparent;
 	}
-}
-
-@include placeholder(#000);
-
-.form-control {
-	border: 1px solid #000;
-	border-radius: 24px;
-	font-size: 18px;
-	font-weight: 400;
-	color: $fc;
-	margin-bottom: 24px;
-	padding: 2px 32px;
-	height: 48px;
-
-	&:focus {
-		border-color: #000;
-	}
-}
-
-.form-check {
-	border: 1px solid #000;
-	border-radius: 24px;
-	display: flex;
-	align-items: center;
-	padding: 2px 32px;
-	margin-bottom: 24px;
-	height: 48px;
-
-	.form-check-input {
-		border: 2px solid $fiol;
-		float: none;
-		margin-left: 0;
-		margin-top: 0;
-		margin-right: 12px;
-		height: 20px;
-		width: 20px;
-
-		&:checked {
-			background: #cecdf5;
-		}
-		&:focus {
-			box-shadow: none;
-		}
-		&:active {
-			filter: none;
-		}
-	}
-}
-
-textarea.form-control {
-	padding: 18px 32px;
-	height: 172px;
 }

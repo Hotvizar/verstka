@@ -1,4 +1,55 @@
 // HEADER
 .header {
+
+    .container {
+        position: relative;
+    }
     
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        left: calc(1.5rem * .5);
+        right: calc(1.5rem * .5);
+        top: 28px;
+        width: 100%;
+    }
+}
+
+#main-menu {
+    >ul {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+
+        li {
+            margin-left: 44px;
+            a {
+                color: $sal;
+                position: relative;
+
+                &::after {
+                    border: 1px dashed transparent;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    right: 0;
+                    bottom: -8px;
+                    width: 0;
+                    transform: translateX(-50%);
+                    transition: all .5s;
+                }
+
+                &:hover {
+                    &::after {
+                        border-color: $sal;
+                    width: 100%;
+                    transition: all .5s;
+                }   
+                }
+            }
+        }
+    }
 }
