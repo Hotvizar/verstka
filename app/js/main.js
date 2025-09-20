@@ -4,7 +4,6 @@ $(function () {
 });
 
 //Добавление класса следующему элементу
-
 const btn = document.getElementById('capt-plus');
 const next = btn.nextElementSibling;
 

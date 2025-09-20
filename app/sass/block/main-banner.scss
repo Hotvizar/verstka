@@ -3,13 +3,19 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    overflow: hidden;
+    //overflow: hidden;
+    padding: 0.1px 0;
     height: 770px;
+
+    @include mq(xl) {
+        background-position: 62% 0;
+    }
 
     .title-banner {
         font-size: 38px;
         color: #fff;
         margin-top: 243px;
+        width: 50%;
 
         .subtitle {
             margin-top: 40px;
@@ -22,28 +28,95 @@
         justify-content: space-between;
         max-width: 53%;
         margin-top: 94px;
+
+        .box-btnby {
+            border: 2px dashed rgba(205, 233, 73, 1);
+            border-radius: 200px;
+            font-size: 18px;
+            color: #fff;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+
+            .btn-green {
+                font-size: 18px;
+                margin-right: 13px;
+                height: 60px;
+                width: 131px;
+            }
+        }
+
+        @include mq(xl) {
+            max-width: 62%;
+        }
+
+        @include mq(lg) {
+            justify-content: space-evenly;
+            max-width: 100%;
+            margin-top: calc(100% - 330px);
+        }
+
+        @include mq(md) {
+            margin-top: calc(100% - 148px);
+
+            .box-btnby {
+                border: 0;
+                width: 100%;
+
+                .btn-green {
+                    width: 100%;
+                }
+
+                .text {
+                    display: none;
+                }
+            }
+        }
     }
 
-    .box-btnby {
-        border: 2px dashed rgba(205, 233, 73, 1);
-        border-radius: 200px;
-        font-size: 18px;
-        color: #fff;
-        padding: 14px;
-        display: flex;
-        align-items: center;
-        width: fit-content;
+    @include mq(lg) {
+        background-position: calc(50% - 361px) 0;
 
-        .btn-green {
-            font-size: 18px;
-            margin-right: 13px;
-            height: 60px;
-            width: 131px;
+        .title-banner {
+            font-size: 24px;
+            margin: 88px auto 0;
+            text-align: center;
+            max-width: 292px;
+            width: 100%;
+
+            .subtitle {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    @include mq(sm) {
+        background-image: url("image/header-mobbg.jpg") !important;
+        background-position: center;
+        background-size: cover;
+
+        .footer-banner {
+            flex-direction: column-reverse;
+            margin-top: 280px;
+
+            .box-btnby {
+                margin-top: 30px;
+
+                .btn-green {
+                    height: 48px;
+                }
+            }
         }
     }
 
     .active-substance {
         position: relative;
+        min-width: 202px;
+
+        @include mq(sm) {
+            min-width: auto;
+        }
 
         .text-buble {
             color: #fff;
@@ -60,6 +133,7 @@
             text-transform: uppercase;
             margin-bottom: 2px;
         }
+
         li:nth-child(2) {
             font-size: 18px;
             font-weight: 400;
@@ -79,6 +153,24 @@
             font-weight: 300;
             letter-spacing: 2px;
             line-height: 22px;
+        }
+
+        @include mq(sm) {
+            max-width: 160px;
+
+            li:first-child {
+                padding: 0 6px;
+                line-height: 1.2;
+            }
+
+            li:nth-child(2) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            li:nth-child(3) {
+                font-size: 16px;
+            }
         }
 
         .substanse-caption {
@@ -105,7 +197,7 @@
                 left: calc(100% + 39px);
                 top: 50%;
                 transform: translateY(-50%);
-                min-width: 567px;
+                width: 567px;
                 opacity: 0;
                 visibility: hidden;
                 transition: all .5s;
@@ -120,12 +212,70 @@
                     left: -31px;
                     top: 51%;
                     transform: translateY(-50%);
+                    z-index: -1;
                 }
 
                 &.open {
                     opacity: 1;
                     visibility: visible;
                 }
+
+                @include mq(xxl) {
+                    width: 476px;
+                }
+
+                @include mq(xl) {
+                    top: -140%;
+                    width: 319px;
+
+                    &::before {
+                        top: 62%;
+                    }
+                }
+
+                @include mq(lg) {
+                    top: unset;
+                    left: unset;
+                    bottom: 59px;
+                    right: -44px;
+                    width: 576px;
+                    transform: none;
+
+                    &::before {
+                        left: unset;
+                        top: unset;
+                        bottom: -26px;
+                        transform: rotate(-90deg);
+                        right: 30px;
+                    }
+                }
+
+                @include mq(md) {
+                    right: 0;
+                    width: 516px;
+
+                    &::before {
+                        transform: rotate(-110deg);
+                        right: -4px;
+                    }
+                }
+                
+                @include mq(sm) {
+                    right: calc(100% - 50vw);
+                    width: calc(100vw - 24px);
+
+                    &::before {
+                        transform: rotate(-90deg) translateY(64%);
+                        right: 50%;
+                    }
+                }
+            }
+
+            @include mq(sm) {
+                right: unset;
+                top: 89%;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }
