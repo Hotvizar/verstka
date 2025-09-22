@@ -14,6 +14,8 @@ body {
 	color: $fc;
 	line-height: 145%;
 	min-width: 320px;
+
+	padding-bottom: 300px;
 }
 
 :focus {
@@ -92,4 +94,23 @@ ul {
 		background-color: darken($color: $sal, $amount: 12);
 		border-color: transparent;
 	}
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $ff;
+}
+
+h3,
+.h3 {
+	color: #3a2676;
+	font-size: 45px;
+	font-weight: 600;
+	line-height: 55px;
+	text-align: center;
+	text-transform: uppercase;
 }
