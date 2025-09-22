@@ -1,5 +1,5 @@
 .stress {
-    padding: 57px 0 30px;
+    padding: 57px 0 45px;
 
     h3 {
         margin-bottom: 16px;
@@ -13,6 +13,9 @@
         text-align: center;
     }
 
+    @include mq(lg) {
+        padding: 57px 0 15px;
+    }
     @include mq(md) {
 
         h3 {
