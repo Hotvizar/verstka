@@ -1,0 +1,57 @@
+.nocheck {
+    background-image: url("image/nocheck-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #6e56a2;
+    height: 306px;
+
+    .text-nocheck {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        margin: 0 11%;
+
+        h5 {
+            font-size: 38px;
+            font-weight: 600;
+            line-height: 44px;
+            margin-bottom: 32px;
+        }
+
+        .btn-green {
+            padding: 4px 32px;
+            width: fit-content;
+        }
+    }
+
+    @include mq(lg) {
+        background-image: url("image/nocheck-mobbg.jpg");
+        
+        .text-nocheck {
+            margin: 0 4%;
+
+            h5 {
+                @include font-size(38px);
+            }
+        }
+
+    }
+    
+    @include mq(sm) {
+        height: 260px;
+
+        .text-nocheck {
+            margin: 0 8%;
+            
+            h5 {
+                font-size: 22px;
+                line-height: 25px;
+            }
+        }
+
+    }
+}
