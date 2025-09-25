@@ -68,8 +68,10 @@ ul {
 .btn:focus,
 .btn-light:not(:disabled):not(.disabled).active:focus,
 .btn-light:not(:disabled):not(.disabled):active:focus,
-.show>.btn-light.dropdown-toggle:focus {
+.show>.btn-light.dropdown-toggle:focus,
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
 	box-shadow: none;
+	border-color: transparent;
 }
 
 .btn {
