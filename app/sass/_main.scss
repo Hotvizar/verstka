@@ -8,7 +8,6 @@ html {
 body {
 	background-color: #fff;
 	font-family: $ff;
-	font-optical-sizing: auto;
 	font-size: 18px;
 	font-weight: 400;
 	color: $fc;
@@ -46,9 +45,8 @@ a {
 	}
 }
 
-b,
-strong {
-	font-weight: 600;
+b, strong {
+    font-weight: bold;
 }
 
 button,
@@ -59,87 +57,84 @@ button,
 	}
 }
 
-ul {
-	margin-bottom: 0;
-}
-
 .btn.focus,
 .btn:focus,
 .btn-light:not(:disabled):not(.disabled).active:focus,
 .btn-light:not(:disabled):not(.disabled):active:focus,
-.show>.btn-light.dropdown-toggle:focus,
-.btn-check:checked+.btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check)+.btn:active {
+.show>.btn-light.dropdown-toggle:focus {
 	box-shadow: none;
-	border-color: transparent;
 }
 
 .btn {
 	border-radius: 0;
 	transition: all .3s;
 }
-
-.btn-green {
-	background-color: $sal;
-	border-radius: 200px;
-	font-family: $ff;
-	font-weight: 600;
-	color: #262b76;
+.btn-fiol {
+	background: $fiol;
+	border-radius: 24px;
+	font-weight: 700;
+	color: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 48px;
+	max-width: 205px;
 	width: 100%;
 
-	&:hover,
-	&:focus,
-	&.active,
-	&:first-child:active {
-		background-color: darken($color: $sal, $amount: 12);
-		border-color: transparent;
+	&:hover {
+		background: darken( $fiol, 9 );
+		color: #fff;
 	}
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	font-family: $ff;
-}
-
-h3,
-.h3 {
-	color: #3a2676;
-	font-size: 45px;
-	font-weight: 600;
-	line-height: 55px;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-@include placeholder(#c1b3ea);
+@include placeholder(#000);
 
 .form-control {
-	border: 2px solid #8872c8;
+	border: 1px solid #000;
 	border-radius: 24px;
 	font-size: 18px;
+	font-weight: 400;
+	color: $fc;
+	margin-bottom: 24px;
+	padding: 2px 32px;
+	height: 48px;
+
+	&:focus {
+		border-color: #000;
+	}
+}
+
+.form-check {
+	border: 1px solid #000;
+	border-radius: 24px;
 	display: flex;
 	align-items: center;
-	padding: 2px 18px;
+	padding: 2px 32px;
+	margin-bottom: 24px;
 	height: 48px;
+
+	.form-check-input {
+		border: 2px solid $fiol;
+		float: none;
+		margin-left: 0;
+		margin-top: 0;
+		margin-right: 12px;
+		height: 20px;
+		width: 20px;
+
+		&:checked {
+			background: #cecdf5;
+		}
+		&:focus {
+			box-shadow: none;
+		}
+		&:active {
+			filter: none;
+		}
+	}
 }
 
 textarea.form-control {
-	padding: 12px 17px;
+	padding: 18px 32px;
+	height: 172px;
 }
