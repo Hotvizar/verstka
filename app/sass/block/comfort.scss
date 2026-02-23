@@ -1,0 +1,45 @@
+.comfort {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 670px;
+
+    h3 {
+        color: #fff;
+        max-width: 782px;
+        text-align: center;
+        margin: 0 auto 65px;
+    }
+
+    .button-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn-green {
+            margin-right: 12px;
+            max-width: 224px;
+            height: 60px;
+        }
+
+        .btn-white {
+            max-width: fit-content;
+            height: 60px;
+
+            span {
+                display: flex;
+
+                .telegram {
+                    fill: $fc;
+                    margin-left: 12px;
+                    height: 34px;
+                    width: 34px;
+                }
+            }
+        }
+    }
+}

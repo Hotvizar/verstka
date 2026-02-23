@@ -73,7 +73,8 @@ button,
 }
 
 .btn-green,
-.btn-grey {
+.btn-grey,
+.btn-white {
 	border-radius: 30px;
 	font-family: $ff;
 	font-size: 16px;
@@ -94,6 +95,11 @@ button,
 
 .btn-grey {
 	background: $grey;
+	color: $fc;
+}
+
+.btn-white {
+	background-color: #fff;
 	color: $fc;
 }
 
