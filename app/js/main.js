@@ -4,9 +4,9 @@ const headerSlider = new Swiper('#header-slider', {
     pagination: {
         el: '.swiper-pagination',
     },
-    /* autoplay: {
+    autoplay: {
         delay: 5000,
-    }, */
+    },
 });
 
 $(function () {
