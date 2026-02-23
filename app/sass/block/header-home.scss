@@ -48,7 +48,7 @@
         }
 
         .header-left-title {
-            margin-top: calc($index * 4.4);
+            margin-top: 114px;
 
             h2 {
                 font-family: $ff;
@@ -88,7 +88,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: calc($index * 3.5);
+            margin-top: 89px;
 
             .btn {
                 height: 60px;
@@ -105,7 +105,7 @@
 
         .partner-link {
             color: $green;
-            margin-top: calc($index * 3.5);
+            margin-top: 89px;
             display: inline-block;
             text-decoration: underline;
             text-underline-offset: 8px;
