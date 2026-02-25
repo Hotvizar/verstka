@@ -74,7 +74,9 @@ button,
 
 .btn-green,
 .btn-grey,
-.btn-white {
+.btn-white,
+.btn-title,
+.btn-guard {
 	border-radius: 30px;
 	font-family: $ff;
 	font-size: 16px;
@@ -98,10 +100,43 @@ button,
 	color: $fc;
 }
 
+.btn-title {
+	border-radius: 24px;
+	background: rgba(245, 245, 247, 1);
+	color: $green;
+	margin-bottom: 35px;
+	width: fit-content;
+}
+
 .btn-white {
 	background-color: #fff;
 	color: $fc;
 }
+
+.btn-guard {
+	border-radius: 24px;
+	background: $fc;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+	height: 42px;
+
+	&.mb-59 {
+		margin-bottom: 59px;
+	}
+
+	.guard {
+		fill: #fff;
+		margin-right: 12px;
+		line-height: 0;
+		height: 15px;
+		width: 12px;
+	}
+}
+
+.primary {
+	background-color: $green;
+} 
 
 .more-icon {
 	border-radius: 24px;
