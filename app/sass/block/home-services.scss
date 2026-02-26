@@ -1,0 +1,88 @@
+.home-services {
+    background-image: url('image/home-services-bg.jpg');
+    background-size: cover;
+    padding: 35px 0 97px;
+
+    .btn-title {
+        background-color: $green;
+        color: #fff;
+    }
+
+    h3 {
+        color: #fff;
+        margin-bottom: 46px;
+    }
+
+    .list-services {
+        .service-item {
+            border-radius: 24px;
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.42);
+            color: #fff;
+            position: relative;
+            display: flex;
+            padding: 24px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                padding: 1px;
+                border-radius: inherit;
+                background: linear-gradient(-15deg, $grey, transparent, $grey);
+                mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+                -webkit-mask:
+                    linear-gradient(#000 0 0) content-box,
+                    linear-gradient(#000 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                z-index: -1;
+            }
+
+            .sv-image {
+                flex: 1 0 148px;
+                margin-right: 24px;
+
+                img {
+                    border-radius: 24px;
+                }
+            }
+
+            h5 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 14px;
+                line-height: 1.08;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: 0;
+            }
+
+            .more-icon {
+                background: rgba(239, 239, 239, 0.8);
+                position: absolute;
+                right: 24px;
+                top: 25px;
+
+                .arrow-right {
+                    fill: $fc;
+                }
+
+                &:hover {
+                    background-color: $green;
+
+                    .arrow-right {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

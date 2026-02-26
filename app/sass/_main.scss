@@ -14,6 +14,8 @@ body {
 	color: $fc;
 	line-height: 1.33;
 	min-width: 320px;
+
+	padding-bottom: 400px;
 }
 
 :focus {
@@ -103,8 +105,10 @@ button,
 .btn-title {
 	border-radius: 24px;
 	background: rgba(245, 245, 247, 1);
+	font-weight: 400;
 	color: $green;
 	margin-bottom: 35px;
+	text-transform: uppercase;
 	width: fit-content;
 }
 
