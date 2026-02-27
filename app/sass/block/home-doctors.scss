@@ -1,0 +1,105 @@
+.home-doctors {
+    background: rgba(239, 239, 239, .72);
+    padding: 35px 0 97px;
+
+    .btn-title {
+        background-color: #fff;
+    }
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+}
+
+.list-doctors {
+    .doctor-item {
+        background-color: $green;
+        border-radius: 24px;
+        color: #fff;
+        display: flex;
+
+        .dc-image {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            max-width: 220px;
+
+            .experience {
+                border-radius: 24px;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                box-shadow:
+                    0 8px 32px rgba(0, 0, 0, 0.15),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 50%;
+                bottom: 24px;
+                transform: translateX(-50%);
+                height: 48px;
+                width: 100%;
+                max-width: 172px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    padding: 1px;
+                    border-radius: inherit;
+                    background: linear-gradient(-15deg, $grey, transparent, $grey);
+                    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+                    -webkit-mask:
+                        linear-gradient(#000 0 0) content-box,
+                        linear-gradient(#000 0 0);
+                    -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+                    z-index: -1;
+                }
+
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .dc-info {
+            padding: 40px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h5 {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+                margin-bottom: 14px;
+            }
+
+            .posada {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 26px;
+            }
+
+            .dc-buttons {
+                a:not(.btn-white) {
+                    text-decoration: underline;
+                    text-underline-offset: 8px;
+
+                    &:hover {
+                        text-decoration-color: transparent;
+                    }
+                }
+                .btn-white {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-top: 22px;
+                }
+            }
+        }
+    }
+}
