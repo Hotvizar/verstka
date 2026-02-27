@@ -18,13 +18,27 @@ const casesSlider = new Swiper('#cases-slider', {
         delay: 5000,
     }, */
     navigation: {
-        nextEl: '.btn-slider-next',
-        prevEl: '.btn-slider-prev',
+        nextEl: '#cases-slide-next',
+        prevEl: '#cases-slide-prev',
     },
 });
 
-$(function () {
-
-
+const insSlider = new Swiper('#ins-slider', {
+    slidesPerView: 'auto',
+    freeMode: true,
+    speed: 1000,
+    spaceBetween: 24,
+    /* autoplay: {
+        delay: 5000,
+    }, */
+    navigation: {
+        nextEl: '#ins-slide-next',
+        prevEl: '#ins-slide-prev',
+    },
 });
+
+/* $(function () {
+
+
+}); */
 
