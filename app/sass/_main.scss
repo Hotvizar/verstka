@@ -31,6 +31,7 @@ h3,
 	font-family: $ff;
 	font-size: 48px;
 	font-weight: 500;
+	color: $fc;
 	line-height: 1.2;
 }
 
@@ -156,5 +157,46 @@ button,
 		height: 8px;
 		width: 13px;
 		transition: all .3s;
+	}
+}
+
+//section title + navigation btn
+.hs-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.nav-slider {
+		display: flex;
+		align-items: center;
+
+		.btn {
+			--bs-btn-disabled-opacity: 1;
+			border-radius: 50%;
+			border: none;
+			background-color: $grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0;
+			margin-left: 14px;
+			height: 48px;
+			width: 48px;
+
+			svg {
+				fill: #4f5936;
+				height: 14px;
+				width: 29px;
+				transition: all .3s;
+			}
+
+			&:hover {
+				background-color: $green;
+
+				svg {
+					fill: #fff;
+				}
+			}
+		}
 	}
 }

@@ -1,0 +1,72 @@
+.home-cases {
+    padding: 35px 0 97px;
+
+    .hs-title {
+        margin-bottom: 46px;
+    }
+
+    #cases-slider {
+
+        .swiper-slide {
+            max-width: 636px;
+
+            &:first-child {
+                margin-left: calc((50% - 1296px / 2));
+            }
+        }
+
+        .case-slide {
+            background: #efefef;
+            border-radius: 24px;
+            padding: 24px;
+
+            img {
+                border-radius: 24px;
+                margin-bottom: 12px;
+            }
+
+            .cs-title {
+                border-radius: 24px;
+                background-color: #fff;
+                padding: 16px 24px;
+                margin-bottom: 12px;
+
+                h5 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: $fc;
+                    line-height: 32px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .cs-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                >div {
+                    border-radius: 24px;
+                    background: rgba(247, 247, 247, 0.8);
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $green;
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 24px;
+                    height: 48px;
+
+                    span, a {
+                        font-weight: 700;
+                        color: $green;
+                    }
+                    
+                    &.cs-date {
+                        padding: 5px 18px;
+                    }
+
+                }
+            }
+        }
+    }
+}
