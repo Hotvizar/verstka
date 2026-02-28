@@ -51,11 +51,12 @@ a {
 
 b,
 strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 button,
-.form-control {
+.form-control,
+.form-select {
 	&:focus {
 		box-shadow: none;
 		outline: none;
@@ -203,4 +204,22 @@ button,
 			}
 		}
 	}
+}
+
+.form-control,
+.form-select {
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 24px;
+	font-size: 18px;
+	font-weight: 400;
+	color: $fc;
+	height: 48px;
+	margin-bottom: 24px;
+	padding: 5px 24px;
+
+}
+
+textarea.form-control {
+	height: 93px;
 }
