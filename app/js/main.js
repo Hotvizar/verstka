@@ -37,6 +37,10 @@ const insSlider = new Swiper('#ins-slider', {
     },
 });
 
+window.addEventListener('scroll', e => {
+	document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`) // Update method
+})
+
 /* $(function () {
 
 

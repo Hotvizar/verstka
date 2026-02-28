@@ -1,4 +1,49 @@
 /* FOOTER */
 .footer {
-    
+    background-color: $fc;
+    color: #fff;
+    padding: 49px 0;
+
+    .footer-logo {
+        margin-bottom: 25px;
+
+        ~p {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 17px;
+        }
+    }
+
+    .footer-menu {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+
+            li {
+                margin-left: 24px;
+                margin-bottom: 24px;
+
+                &:first-child {
+                    flex-basis: 192px;
+                }
+            }
+
+            .btn-green {
+                background-color: #4F5936;
+
+                &:hover {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+
+    .copy {
+        font-size: 12px;
+        line-height: 17px;
+        text-align: right;
+    }
 }
