@@ -38,8 +38,73 @@ const insSlider = new Swiper('#ins-slider', {
 });
 
 window.addEventListener('scroll', e => {
-	document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`) // Update method
-})
+    document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`) // Update method
+});
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+ScrollSmoother.create({
+    wrapper: '.gswrap',
+    content: '.gs-content'
+});
+
+const sections = gsap.utils.toArray("section");
+
+sections.forEach((section, i) => {
+  if (i === sections.length - 1) return;
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top top",
+      end: "+=100%",
+      scrub: true,
+      pin: true,
+      pinSpacing: false,
+    }
+  });
+
+  // 🔹 Первая половина — лёгкое уменьшение
+  tl.to(section, {
+    scale: 1,
+    ease: "none",
+    duration: 0.5
+  });
+
+  // 🔹 Вторая половина — исчезновение + lift вверх
+  tl.to(section, {
+    y: -200,            // ← lift вверх (можно регулировать)
+    scale: 0.98,
+    opacity: 0,
+    filter: "blur(1px)",
+    ease: "none",
+    duration: 0.5
+  });
+});
+
+
+
+/* sections.forEach((section, i) => {
+    if (i === sections.length - 1) return;
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "+=100%",
+            scrub: true,
+            pin: true,
+            pinSpacing: false,
+        }
+    })
+        .to(section, {
+            scale: 0.98,
+            opacity: 0,
+            filter: "blur(1px)",
+            ease: "none"
+        });
+}); */
+
+
 
 /* $(function () {
 

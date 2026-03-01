@@ -1,6 +1,8 @@
 .home-doctors {
-    background: rgba(239, 239, 239, .72);
+    background: #efefef;
     padding: 35px 0 97px;
+    position: relative;
+    z-index: 6;
 
     .btn-title {
         background-color: #fff;

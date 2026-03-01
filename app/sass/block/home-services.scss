@@ -2,6 +2,8 @@
     background-image: url('image/home-services-bg.jpg');
     background-size: cover;
     padding: 35px 0 97px;
+    position: relative;
+    z-index: 4;
 
     .btn-title {
         background-color: $green;

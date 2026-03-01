@@ -1,5 +1,8 @@
 .home-about {
+    background-color: #fff;
     padding: 35px 0 97px;
+    position: relative;
+    z-index: 3;
 
     .director {
         background-color: $green;
