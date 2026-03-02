@@ -203,6 +203,20 @@ button,
 			}
 		}
 	}
+
+	@include mq(md) {
+        h3 {
+            font-size: 38px;
+        }
+    }
+
+	@include mq(sm) {
+		flex-direction: column;
+
+		.nav-slider {
+			align-self: flex-end;
+		}
+	}
 }
 
 .form-control,

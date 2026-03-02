@@ -6,6 +6,10 @@
 
     .hs-title {
         margin-bottom: 46px;
+
+        @include mq(sm) {
+            margin-bottom: 24px;
+        }
     }
 
     #cases-slider {
@@ -59,15 +63,75 @@
                     padding: 5px 24px;
                     height: 48px;
 
-                    span, a {
+                    span,
+                    a {
                         font-weight: 700;
                         color: $green;
                     }
-                    
+
                     &.cs-date {
                         padding: 5px 18px;
                     }
 
+                }
+            }
+        }
+
+        @include mq(xxl) {
+            .swiper-slide {
+
+                &:first-child {
+                    margin-left: calc((50% - 1116px / 2));
+                }
+            }
+        }
+
+        @include mq(xl) {
+            .swiper-slide {
+
+                &:first-child {
+                    margin-left: calc((50% - 936px / 2));
+                }
+            }
+        }
+
+        @include mq(lg) {
+            .swiper-slide {
+                max-width: 696px;
+
+                &:first-child {
+                    margin-left: calc((50% - 696px / 2));
+                }
+            }
+        }
+
+        @include mq(md) {
+            .swiper-slide {
+                max-width: 516px;
+
+                &:first-child {
+                    margin-left: calc((50% - 516px / 2));
+                }
+            }
+        }
+
+        @include mq(sm) {
+            .swiper-slide {
+                max-width: 100%;
+
+                &:first-child {
+                    margin-left: auto;
+                }
+            }
+
+            .case-slide {
+                .cs-footer {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    
+                    >div {
+                        margin-top: 12px;
+                    }
                 }
             }
         }

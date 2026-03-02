@@ -21,6 +21,12 @@ const casesSlider = new Swiper('#cases-slider', {
         nextEl: '#cases-slide-next',
         prevEl: '#cases-slide-prev',
     },
+    /* breakpoints: {
+        575: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+        },
+    } */
 });
 
 const insSlider = new Swiper('#ins-slider', {
