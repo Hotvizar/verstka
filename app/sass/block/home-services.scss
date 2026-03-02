@@ -1,6 +1,7 @@
 .home-services {
     background-image: url('image/home-services-bg.jpg');
     background-size: cover;
+    background-position: center;
     padding: 35px 0 97px;
     position: relative;
     z-index: 4;
@@ -27,6 +28,8 @@
             position: relative;
             display: flex;
             padding: 24px;
+            height: 100%;
+            will-change: backdrop-filter;
 
             &::before {
                 content: "";
@@ -42,10 +45,11 @@
                 -webkit-mask-composite: xor;
                 mask-composite: exclude;
                 z-index: -1;
+                will-change: mask;
             }
 
             .sv-image {
-                flex: 1 0 148px;
+                flex: 1 0 40.23%;
                 margin-right: 24px;
 
                 img {
@@ -83,6 +87,28 @@
                     .arrow-right {
                         fill: #fff;
                     }
+                }
+            }
+        }
+    }
+
+    @include mq(sm) {
+        h3 {
+            font-size: calc($index * 2.4);
+            text-align: center;
+        }
+    }
+    @include mq(380) {
+        .list-services {
+            .service-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                .sv-image {
+                    margin-right: 0;
+                    margin-bottom: 24px;
+                    max-width: 60%;
                 }
             }
         }
