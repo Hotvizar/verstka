@@ -32,7 +32,7 @@
     }
 
     .contacts-columns {
-        margin-top: 40px;
+        margin-top: 16px;
 
         h5 {
             font-size: 24px;
@@ -62,7 +62,7 @@
 
                 .text-block {
                     line-height: 26px;
-                    margin-bottom: 0;
+                    margin-bottom: 22px;
 
                     li:last-child {
                         margin-top: 18px;
@@ -140,10 +140,15 @@
             justify-content: space-between;
             padding: 28px 24px 24px;
 
+            .btn-green {
+                flex-basis: 252px;
+            }
+
             .btn-white {
+                flex-basis: 311px;
                 margin-left: 24px;
-                white-space: nowrap;
-                
+                //white-space: nowrap;
+
                 span {
                     background-color: $grey;
                     border-radius: 50%;
@@ -172,5 +177,40 @@
                 width: fit-content;
             }
         }
+    }
+
+    @include mq(xxl) {
+        .contacts-columns .contacts-info .info-blocks .tel-block {
+            margin-right: 24px;
+        }
+    }
+
+    @include mq(480) {
+        .contacts-columns {
+            .contacts-info {
+                .info-blocks {
+                    flex-direction: column;
+                }
+            }
+
+            .button-block {
+                display: block;
+
+                .btn-white {
+                    margin-left: 0;
+                    margin-top: 24px;
+                }
+            }
+
+            .contacts-form .btn-green {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.maps {
+    iframe {
+        margin-bottom: -8px;
     }
 }
