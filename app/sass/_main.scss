@@ -222,3 +222,36 @@ button,
 textarea.form-control {
 	height: 93px;
 }
+
+.offcanvas {
+    max-width: 320px;
+}
+
+#mobmenu {
+
+	--bs-offcanvas-padding-y: 12px;
+	--bs-offcanvas-padding-x: 24px;
+
+    .offcanvas-header {
+		margin-top: 29px;
+
+        img {
+            max-width: 93%;
+        }
+    }
+
+    .offcanvas-body {
+        >ul {
+            margin-bottom: 0;
+
+            >li {
+
+                >a {
+                    font-size: 20px;
+					line-height: 32px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

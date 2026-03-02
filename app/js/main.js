@@ -4,9 +4,9 @@ const headerSlider = new Swiper('#header-slider', {
     pagination: {
         el: '.swiper-pagination',
     },
-    autoplay: {
+    /* autoplay: {
         delay: 5000,
-    },
+    }, */
 });
 
 const casesSlider = new Swiper('#cases-slider', {
@@ -37,19 +37,21 @@ const insSlider = new Swiper('#ins-slider', {
     },
 });
 
-window.addEventListener('scroll', e => {
+/* window.addEventListener('scroll', e => {
     document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`) // Update method
-});
+}); */
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+
+//paralax
+/* gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 ScrollSmoother.create({
     wrapper: '.gswrap',
     content: '.gs-content'
 });
 
-const sections = gsap.utils.toArray("section");
+const sections = gsap.utils.toArray("section"); */
 
-sections.forEach((section, i) => {
+/* sections.forEach((section, i) => {
   if (i === sections.length - 1) return;
 
   const tl = gsap.timeline({
@@ -79,31 +81,7 @@ sections.forEach((section, i) => {
     ease: "none",
     duration: 0.5
   });
-});
-
-
-
-/* sections.forEach((section, i) => {
-    if (i === sections.length - 1) return;
-
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "+=100%",
-            scrub: true,
-            pin: true,
-            pinSpacing: false,
-        }
-    })
-        .to(section, {
-            scale: 0.98,
-            opacity: 0,
-            filter: "blur(1px)",
-            ease: "none"
-        });
 }); */
-
 
 
 /* $(function () {
