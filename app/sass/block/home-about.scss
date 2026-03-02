@@ -226,4 +226,71 @@
         }
 
     }
+
+    @include mq(xxl) {
+        .about-block-title {
+            margin-top: 24px;
+        }
+    }
+
+    @include mq(xl) {
+
+        .btn-guard.mb-59 {
+            margin-bottom: 24px;
+        }
+
+        .turbota {
+            height: 100%;
+        }
+
+        .procent {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .about-block-title {
+            h3 {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    @include mq(sm) {
+        .director {
+            .director-img {
+                background-image: none !important;
+                text-align: center;
+
+                img {
+                    width: 80%;
+                }
+            }
+        }
+
+        .about-block-title {
+            margin-bottom: 24px;
+            
+            h3 {
+                font-size: calc($index * 2.4);
+                line-height: 1;
+            }
+
+            .btn-guard {
+                margin-bottom: 24px;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 359px) {
+        .about-last-row .first-text-box {
+            padding: 26px 24px 26px 77px;
+            span {
+                font-size: 56px;
+            }
+        }
+    }
 }
