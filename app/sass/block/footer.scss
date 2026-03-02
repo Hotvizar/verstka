@@ -46,4 +46,32 @@
         line-height: 17px;
         text-align: right;
     }
+
+    @include mq(xl) {
+        .footer-menu {
+            ul {
+
+                li {
+                    margin-left: 12px;
+                    margin-bottom: 12px;
+
+                    &:first-child {
+                        flex-basis: 192px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include mq(lg) {
+        .footer-menu {
+            ul {
+                justify-content: center;
+            }
+
+            .copy {
+                text-align: center;
+            }
+        }
+    }
 }
