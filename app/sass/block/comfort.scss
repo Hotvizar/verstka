@@ -52,5 +52,18 @@
                 }
             }
         }
+
+        @include mq(480) {
+            display: block;
+
+            .btn {
+                max-width: 100%;
+            }
+
+            .btn-green {
+                margin-right: 0;
+                margin-bottom: 24px;
+            }
+        }
     }
 }
