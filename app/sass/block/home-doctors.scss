@@ -96,11 +96,31 @@
                         text-decoration-color: transparent;
                     }
                 }
+
                 .btn-white {
                     font-size: 18px;
                     font-weight: 500;
                     margin-top: 22px;
                 }
+            }
+        }
+    }
+}
+
+@include mq(480) {
+    .list-doctors {
+        .doctor-item {
+            flex-direction: column;
+            align-items: center;
+
+            .dc-image {
+                margin-top: 24px;
+            }
+
+            .dc-info {
+                text-align: center;
+                padding: 24px;
+                width: 100%;
             }
         }
     }
