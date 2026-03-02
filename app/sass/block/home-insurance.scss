@@ -41,6 +41,51 @@
                 line-height: 26px;
             }
         }
+
+        @include mq(xxl) {
+            .swiper-slide {
+
+                &:first-child {
+                    margin-left: calc((50% - 1116px / 2));
+                }
+            }
+        }
+
+        @include mq(xl) {
+            .swiper-slide {
+
+                &:first-child {
+                    margin-left: calc((50% - 936px / 2));
+                }
+            }
+        }
+
+        @include mq(lg) {
+            .swiper-slide {
+
+                &:first-child {
+                    margin-left: calc((50% - 696px / 2));
+                }
+            }
+        }
+
+        @include mq(md) {
+            .swiper-slide {
+
+                &:first-child {
+                    margin-left: calc((50% - 516px / 2));
+                }
+            }
+        }
+        
+        @include mq(sm) {
+            .swiper-slide {
+
+                &:first-child {
+                    margin-left: 12px;
+                }
+            }
+        }
     }
 
     .btn-green {
