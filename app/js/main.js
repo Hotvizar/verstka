@@ -1,3 +1,5 @@
+"use strict"
+
 const headerSlider = new Swiper('#header-slider', {
     speed: 1000,
     spaceBetween: 24,
@@ -21,12 +23,6 @@ const casesSlider = new Swiper('#cases-slider', {
         nextEl: '#cases-slide-next',
         prevEl: '#cases-slide-prev',
     },
-    /* breakpoints: {
-        575: {
-            slidesPerView: 1,
-            spaceBetween: 12,
-        },
-    } */
 });
 
 const insSlider = new Swiper('#ins-slider', {
@@ -43,21 +39,63 @@ const insSlider = new Swiper('#ins-slider', {
     },
 });
 
-/* window.addEventListener('scroll', e => {
-    document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`) // Update method
-}); */
-
-
 //paralax
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+ScrollSmoother.create({
+    wrapper: '.gswrap',
+    content: '.gs-content',
+});
+
+const sections = gsap.utils.toArray("section");
+
+sections.forEach((section, i) => {
+    if (i === sections.length - 1) return;
+
+//    console.log(window.innerHeight - section.offsetHeight);
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: section,
+            start: "50% top",
+            end: "+=100%",
+            //markers: true,
+            scrub: true,
+            pin: true,
+            pinSpacing: false,
+        }
+    });
+
+    // Первая половина — лёгкое уменьшение
+    tl.to(section, {
+        scale: 1,
+        ease: "none",
+        duration: 0.5
+    });
+
+    // Вторая половина — исчезновение + lift вверх
+    tl.to(section, {
+        y: -200,            // ← lift вверх (можно регулировать)
+        scale: 0.98,
+        opacity: 0,
+        filter: "blur(2px)",
+        ease: "none",
+        duration: 0.5
+    });
+
+    ScrollTrigger.refresh();
+});
+
+
+//ВТОРОЙ ВАРИАНТ
 /* gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 ScrollSmoother.create({
     wrapper: '.gswrap',
     content: '.gs-content'
 });
 
-const sections = gsap.utils.toArray("section"); */
+const sections = gsap.utils.toArray("section");
 
-/* sections.forEach((section, i) => {
+sections.forEach((section, i) => {
   if (i === sections.length - 1) return;
 
   const tl = gsap.timeline({
@@ -65,25 +103,27 @@ const sections = gsap.utils.toArray("section"); */
       trigger: section,
       start: "top top",
       end: "+=100%",
-      scrub: true,
+      scrub: 1,
       pin: true,
       pinSpacing: false,
+      anticipatePin: 1
     }
   });
 
-  // 🔹 Первая половина — лёгкое уменьшение
+  const lift = window.innerHeight * 0.25; // 25% высоты экрана
+
+  // 🔹 0–50% — лёгкое уменьшение
   tl.to(section, {
-    scale: 1,
+    scale: 0.985,
     ease: "none",
     duration: 0.5
   });
 
-  // 🔹 Вторая половина — исчезновение + lift вверх
+  // 🔹 50–100% — уход вверх + fade
   tl.to(section, {
-    y: -200,            // ← lift вверх (можно регулировать)
-    scale: 0.98,
+    y: -lift,
+    scale: 0.96,
     opacity: 0,
-    filter: "blur(1px)",
     ease: "none",
     duration: 0.5
   });

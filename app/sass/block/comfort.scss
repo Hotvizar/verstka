@@ -8,9 +8,43 @@
     text-align: center;
     height: 670px;
     margin-bottom: 61px;
+    overflow: hidden;
 
     position: relative;
     z-index: 2;
+
+    &::before {
+        background-color: rgb(161, 145, 129, .8);
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        min-width: 100%;
+        min-height: 100%;
+        z-index: 0;
+
+        /* @media (orientation: landscape) {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (orientation: portrait) {
+            width: auto;
+            height: 100%;
+        } */
+    }
 
     h3 {
         color: #fff;
