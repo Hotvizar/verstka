@@ -39,51 +39,54 @@ const insSlider = new Swiper('#ins-slider', {
     },
 });
 
-//paralax
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-ScrollSmoother.create({
-    wrapper: '.gswrap',
-    content: '.gs-content',
-});
-
-const sections = gsap.utils.toArray("section");
-
-sections.forEach((section, i) => {
-    if (i === sections.length - 1) return;
-
-//    console.log(window.innerHeight - section.offsetHeight);
-
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: section,
-            start: "50% top",
-            end: "+=100%",
-            //markers: true,
-            scrub: true,
-            pin: true,
-            pinSpacing: false,
-        }
+if (typeof gsap !== 'undefined') {
+    //paralax
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+    ScrollSmoother.create({
+        wrapper: '.gswrap',
+        content: '.gs-content',
     });
 
-    // Первая половина — лёгкое уменьшение
-    tl.to(section, {
-        scale: 1,
-        ease: "none",
-        duration: 0.5
-    });
+    const sections = gsap.utils.toArray("section");
 
-    // Вторая половина — исчезновение + lift вверх
-    tl.to(section, {
-        y: -200,            // ← lift вверх (можно регулировать)
-        scale: 0.98,
-        opacity: 0,
-        filter: "blur(2px)",
-        ease: "none",
-        duration: 0.5
-    });
+    sections.forEach((section, i) => {
+        if (i === sections.length - 1) return;
 
-    ScrollTrigger.refresh();
-});
+        //    console.log(window.innerHeight - section.offsetHeight);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "40% top",
+                end: "+=100%",
+                //markers: true,
+                scrub: true,
+                pin: true,
+                pinSpacing: false,
+            }
+        });
+
+        // Первая половина — лёгкое уменьшение
+        tl.to(section, {
+            scale: 1,
+            ease: "none",
+            duration: 0.5
+        });
+
+        // Вторая половина — исчезновение + lift вверх
+        tl.to(section, {
+            y: -200,            // ← lift вверх (можно регулировать)
+            scale: 0.98,
+            opacity: 0,
+            filter: "blur(2px)",
+            ease: "none",
+            duration: 0.5
+        });
+
+        ScrollTrigger.refresh();
+    });
+}
+
 
 
 //ВТОРОЙ ВАРИАНТ

@@ -13,63 +13,6 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 26px;
-
-            .btn-menu {
-                padding: 0;
-                margin-left: 12px;
-                height: auto;
-                width: auto;
-
-                .hamburger {
-                    fill: $fc;
-                    height: 60px;
-                    width: 60px;
-                }
-            }
-        }
-
-        .main-menu {
-            border-radius: 24px;
-            background-color: #efefef;
-
-            ul {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                li {
-
-                    a {
-                        background-color: #efefef;
-                        border-radius: 24px;
-                        font-size: 16px;
-                        font-weight: 400;
-                        color: $fc;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 5px 22px;
-                        line-height: 16px;
-                        text-align: center;
-                        height: 48px;
-
-                        @media (max-width: 1399px) and (min-width: 992px) {
-                            padding: 5px 10px;
-                        }
-                    }
-
-                    &.active,
-                    &:hover {
-
-                        a {
-                            font-weight: 600;
-                            background-color: #e6e6e6;
-                        }
-                    }
-
-
-                }
-            }
         }
 
         .header-left-title {

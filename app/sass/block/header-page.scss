@@ -1,0 +1,86 @@
+.header-page {
+    padding-top: 24px;
+
+    .header-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+
+        .hr-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+			margin-left: 12px;
+
+			.main-menu ul li a {
+				padding: 5px 22px;
+
+				@include mq(xl) {
+					white-space: nowrap;
+					padding: 5px 14px;
+				}
+			}
+
+            .btn-green {
+                margin-left: 12px;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+.wrap-breadcrumbs {
+	border-radius: 24px;
+	background: #f7f7f7;
+	padding-left: 23px;
+	margin-bottom: 35px;
+	width: fit-content;
+	
+	#breadcrumbs {
+		margin-bottom: 0;
+		
+		span {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			>span {
+				
+				a {
+					background-color: #f7f7f7;
+					border-radius: 24px;
+					font-size: 16px;
+					font-weight: 400;
+					color: $green;
+					text-transform: uppercase;
+					min-height: 48px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					&::after {
+						content: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 12.5996 7.00195' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.599609' height='7.001953' fill='none' customFrame='%23000000'%3e%3cpath id='→' d='M7.632 7.002C7.488 7.002 7.416 6.936 7.416 6.804C7.416 6.756 7.428 6.699 7.452 6.633C7.476 6.567 7.5 6.498 7.524 6.426L8.28 4.23L0 4.446L0 2.556L8.28 2.772L7.524 0.576C7.5 0.504 7.476 0.435 7.452 0.369C7.428 0.297 7.416 0.239999 7.416 0.198C7.416 0.0659999 7.488 0 7.632 0C7.704 0 7.806 0.0479997 7.938 0.143999L12.402 3.204C12.534 3.3 12.6 3.402 12.6 3.51C12.6 3.63 12.534 3.732 12.402 3.816L7.938 6.858C7.806 6.954 7.704 7.002 7.632 7.002Z' fill='rgb(160,164,105)' fill-rule='nonzero' /%3e%3c/svg%3e ");
+						margin: 0 12px;
+						line-height: 0;
+					}
+				}
+
+				&.breadcrumb_last, &:last-child {
+					border-radius: 24px;
+					background: #efefef;
+					font-size: 16px;
+					font-weight: 400;
+					color: $green;
+					text-transform: uppercase;
+					height: 48px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 5px 23px;
+				}
+			}
+
+		}
+	}
+}
