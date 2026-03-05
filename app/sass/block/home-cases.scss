@@ -22,60 +22,7 @@
             }
         }
 
-        .case-slide {
-            background: #efefef;
-            border-radius: 24px;
-            padding: 24px;
 
-            img {
-                border-radius: 24px;
-                margin-bottom: 12px;
-            }
-
-            .cs-title {
-                border-radius: 24px;
-                background-color: #fff;
-                padding: 16px 24px;
-                margin-bottom: 12px;
-
-                h5 {
-                    font-size: 24px;
-                    font-weight: 600;
-                    color: $fc;
-                    line-height: 32px;
-                    margin-bottom: 0;
-                }
-            }
-
-            .cs-footer {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                >div {
-                    border-radius: 24px;
-                    background: rgba(247, 247, 247, 0.8);
-                    font-size: 16px;
-                    font-weight: 400;
-                    color: $green;
-                    display: flex;
-                    align-items: center;
-                    padding: 5px 24px;
-                    height: 48px;
-
-                    span,
-                    a {
-                        font-weight: 700;
-                        color: $green;
-                    }
-
-                    &.cs-date {
-                        padding: 5px 18px;
-                    }
-
-                }
-            }
-        }
 
         @include mq(xxl) {
             .swiper-slide {
@@ -123,16 +70,90 @@
                     margin-left: auto;
                 }
             }
+        }
+    }
+}
 
-            .case-slide {
-                .cs-footer {
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    
-                    >div {
-                        margin-top: 12px;
-                    }
-                }
+.case-item {
+    background: #efefef;
+    border-radius: 24px;
+    padding: 24px;
+
+    img {
+        border-radius: 24px;
+        margin-bottom: 12px;
+    }
+
+    .cs-title {
+        border-radius: 24px;
+        background-color: #fff;
+        padding: 16px 24px;
+        margin-bottom: 12px;
+
+        h5 {
+            font-size: 24px;
+            font-weight: 600;
+            color: $fc;
+            line-height: 32px;
+            margin-bottom: 0;
+        }
+    }
+
+    .cs-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        >div {
+            border-radius: 24px;
+            background: rgba(247, 247, 247, 0.8);
+            font-size: 16px;
+            font-weight: 400;
+            color: $green;
+            display: flex;
+            align-items: center;
+            padding: 5px 24px;
+            height: 48px;
+
+            span,
+            a {
+                font-weight: 700;
+                color: $green;
+            }
+
+            &.cs-date {
+                padding: 5px 18px;
+            }
+
+        }
+
+        @include mq(sm) {
+
+            flex-wrap: wrap;
+            justify-content: center;
+
+            >div {
+                margin-top: 12px;
+            }
+
+        }
+    }
+}
+
+.page-cases {
+    .more-cases {
+        text-align: center;
+        margin-top: 40px;
+
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            color: $green;
+            text-decoration: underline;
+            text-underline-offset: 6px;
+
+            &:hover {
+                text-decoration-color: transparent;
             }
         }
     }
