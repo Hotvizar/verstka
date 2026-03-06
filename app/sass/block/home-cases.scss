@@ -141,6 +141,37 @@
 }
 
 .page-cases {
+    .cases-list {
+        .case-item {
+            position: relative;
+            cursor: pointer;
+            
+            .full-info {
+                background: #ebecda;
+                border-radius: 0 0 24px 24px;
+                padding: 24px 24px;
+                position: absolute;
+                left: 0;
+                top: calc(100% - 24px);
+                opacity: 0;
+                visibility: hidden;
+                z-index: 14;
+                transition: all .5s;
+            }
+
+            &.more-active {
+                background: #ebecda;
+
+                .full-info {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &.opacity {
+                opacity: .5;
+            }
+        }
+    }
     .more-cases {
         text-align: center;
         margin-top: 40px;

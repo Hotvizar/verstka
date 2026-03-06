@@ -132,9 +132,25 @@ sections.forEach((section, i) => {
   });
 }); */
 
+//cases classes toggle
+const items = () => document.querySelectorAll('.cases-list .case-item');
 
-/* $(function () {
+document.addEventListener('click', (e) => {
+    const item = e.target.closest('.cases-list .case-item');
 
+    if (item) {
+        items().forEach(el => {
+            el.classList.add('opacity');
+            el.classList.remove('more-active');
+        });
 
-}); */
+        item.classList.remove('opacity');
+        item.classList.add('more-active');
+        return;
+    }
+
+    items().forEach(el => {
+        el.classList.remove('opacity', 'more-active');
+    });
+});
 
