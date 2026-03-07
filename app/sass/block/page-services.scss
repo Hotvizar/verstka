@@ -195,7 +195,7 @@
             .service-info {
                 .service-price {
                     text-align: center;
-                    
+
                     ul:not(.note) {
                         li {
                             flex-direction: column;
@@ -216,62 +216,63 @@
             }
         }
     }
+}
 
-    .bottom-service-banner {
-        background-size: cover;
-        background-position: center;
-        border-radius: 24px;
-        padding: 51px 31px 36px;
-        margin-top: 86px;
-        margin-bottom: 24px;
+.bottom-services-banner {
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    padding: 51px 31px 36px;
+    margin-top: 86px;
+    margin-bottom: 24px;
 
-        .bsb-info {
-            max-width: 560px;
+    .bsb-info {
+        max-width: 560px;
 
-            h3 {
-                font-size: 32px;
-                font-weight: 500;
-                line-height: 42px;
-                margin-bottom: 24px;
+        h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            color: $green;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+
+        .bsb-buttons {
+            display: flex;
+            align-items: center;
+            margin-top: 39px;
+
+            .btn {
+                height: 60px;
             }
 
-            p {
-                color: $green;
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 18px;
+            .btn-green {
+                margin-right: 12px;
+                max-width: 265px;
             }
 
-            .bsb-buttons {
-                display: flex;
-                align-items: center;
-                margin-top: 39px;
-
-                .btn {
-                    height: 60px;
-                }
+            @include mq(sm) {
+                flex-wrap: wrap;
 
                 .btn-green {
-                    margin-right: 12px;
-                    max-width: 265px;
-                }
-
-                @include mq(sm) {
-                    flex-wrap: wrap;
-                    .btn-green {
-                        margin-right: 0;
-                        margin-bottom: 12px;
-                        max-width: unset;
-                    }
+                    margin-right: 0;
+                    margin-bottom: 12px;
+                    max-width: unset;
                 }
             }
         }
     }
+}
 
-    .license {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
-        margin-bottom: 72px;
-    }
+.license {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 72px;
 }
