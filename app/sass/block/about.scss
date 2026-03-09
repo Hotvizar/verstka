@@ -1,0 +1,180 @@
+.page-about {
+    .about-top {
+        min-height: 391px;
+
+        .ab-title-col {
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 35px 24px 24px;
+            height: 100%;
+
+            .ab-title {
+                color: #fff;
+
+                h1 {
+                    font-weight: 600;
+                    color: #fff;
+                    line-height: 56px;
+                    margin-bottom: 18px;
+                }
+            }
+
+            .ab-title-buttons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .btn {
+                    width: calc(50% - 6px);
+                }
+
+            }
+        }
+
+        .ab-address {
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 38px 24px 24px;
+
+            .header-address {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .addr-marker {
+                    background: rgba(160, 148, 134, .2);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    box-shadow: inset 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    height: 48px;
+                    width: 48px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        padding: 1px;
+                        border-radius: inherit;
+                        background: linear-gradient(-45deg, #fff, transparent, #fff);
+                        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+                        -webkit-mask:
+                            linear-gradient(#000 0 0) content-box,
+                            linear-gradient(#000 0 0);
+                        -webkit-mask-composite: xor;
+                        mask-composite: exclude;
+                        z-index: -1;
+                    }
+
+                    .marker {
+                        fill: #fff;
+                        height: 24px;
+                        min-width: 24px;
+                    }
+                }
+
+                .addr-arrow {
+                    background-color: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 12px 0 -10px;
+                    position: relative;
+                    height: 48px;
+                    min-width: 48px;
+                    z-index: 1;
+
+                    .arrow-right {
+                        fill: $fc;
+                        height: 13px;
+                        width: 21px;
+                    }
+                }
+
+                .addr-text {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #fff;
+                    line-height: 22px;
+                    margin-top: 21px;
+                }
+            }
+        }
+
+        .col1-bg {
+            background-size: cover;
+            background-position: center top;
+            border-radius: 24px;
+            height: 100%;
+        }
+    }
+
+    .row-guard {
+        margin-bottom: 86px;
+    }
+
+    .buttons-guard {
+        display: flex;
+        align-items: center;
+
+        .btn-guard {
+            background-color: $grey;
+            color: $fc;
+            margin-right: 12px;
+            width: fit-content;
+
+            .guard {
+                fill: $fc;
+            }
+        }
+    }
+
+    .ab-socials {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        a {
+            background-color: $green;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-left: 12px;
+            height: 42px;
+            width: 42px;
+
+            svg {
+                fill: #fff;
+
+                &.instagram {
+                    height: 25px;
+                    width: 25px;
+                }
+
+                &.facebook {
+                    height: 27.38px;
+                    width: 15.8px;
+                }
+            }
+
+            &:hover, &:active, &:focus {
+                background-color: rgba(187, 192, 127, 1);
+            }
+        }
+    }
+}

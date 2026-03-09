@@ -68,23 +68,6 @@
             max-width: fit-content;
             height: 60px;
 
-            span {
-                background-color: $grey;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                line-height: 0;
-                margin-left: 12px;
-                height: 34px;
-                width: 34px;
-
-                .telegram {
-                    fill: $fc;
-                    height: 34px;
-                    width: 34px;
-                }
-            }
         }
 
         @include mq(480) {

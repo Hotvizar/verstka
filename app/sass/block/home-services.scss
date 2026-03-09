@@ -9,6 +9,12 @@
     .btn-title {
         background-color: $green;
         color: #fff;
+
+        &:hover, &:focus, &:active {
+            background-color: rgba(187, 192, 127, 1);
+            color: #fff;
+            text-decoration: underline;
+        }
     }
 
     h3 {
@@ -82,11 +88,7 @@
                 }
 
                 &:hover {
-                    background-color: $green;
-
-                    .arrow-right {
-                        fill: #fff;
-                    }
+                    background: rgba(229, 231, 189, 1);
                 }
             }
         }

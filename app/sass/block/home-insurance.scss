@@ -107,5 +107,13 @@
                 width: 34px;
             }
         }
+
+       &:hover, &:active, &:focus, &.btn:first-child:active, &.btn:focus-visible {
+            background-color: $green;
+
+            span {
+                background-color: rgba(229, 231, 189, 1);
+            }
+        }
     }
 }

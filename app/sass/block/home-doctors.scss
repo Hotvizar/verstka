@@ -93,7 +93,8 @@
                     text-underline-offset: 8px;
 
                     &:hover {
-                        text-decoration-color: transparent;
+                        color: rgba(229, 231, 189, 1);
+                        text-decoration-color: rgba(229, 231, 189, 1);
                     }
                 }
 
@@ -101,6 +102,10 @@
                     font-size: 18px;
                     font-weight: 500;
                     margin-top: 22px;
+
+                    &:hover {
+                        background-color: rgba(229, 231, 189, 1);
+                    }
                 }
             }
         }

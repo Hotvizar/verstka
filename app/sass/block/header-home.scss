@@ -222,6 +222,10 @@
                             width: 12.7px;
                         }
                     }
+
+                    &:hover {
+                        background-color: #e5e7bd;
+                    }
                 }
             }
         }
@@ -350,7 +354,7 @@
             text-underline-offset: 6px;
 
             &:hover {
-                text-decoration-color: transparent;
+                text-decoration-color:#bbc07f;
             }
         }
 

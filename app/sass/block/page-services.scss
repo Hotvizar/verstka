@@ -63,9 +63,16 @@
 
                     .more-icon {
                         background-color: $grey;
-
+                        transition: all .3s;
+                        
                         .arrow-right {
                             fill: #4f5936;
+                        }
+                    }
+
+                    &:hover, &:active, &:focus {
+                        .more-icon {
+                            background: rgba(229, 231, 189, 1);
                         }
                     }
                 }

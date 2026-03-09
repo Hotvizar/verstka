@@ -1,0 +1,64 @@
+@@include('parts/header.html', {title: "Про нас"})
+
+@@include('parts/header-page.html')
+
+<div id="content" class="page-about">
+    <div class="container">
+        <div class="row about-top g-4 mb-4">
+            <div class="col-lg-6">
+                <div class="ab-title-col" style="background-image: url('image/about-titlebg.jpg');">
+                    <div class="ab-title">
+                        <h1>Ми поєднуємо турботу <br>з професіоналізмом</h1>
+                        <p>з турботою про Ваше здоровʼя та красу</p>
+                    </div>
+                    <div class="ab-title-buttons">
+                        <a href="#" class="btn btn-green">Записатися на прийом</a>
+                        <a href="#" class="btn btn-white">Запитати адміністратора<span><svg class="telegram"><use xlink:href="image/icons/symbol/sprite.svg#telegram" /></svg></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div class="col1-bg" style="background-image: url('image/about-top-col2bg.jpg');"></div>
+            </div>
+            <div class="col-lg-1">
+                <div class="col1-bg" style="background-image: url('image/about-top-col3bg.jpg');"></div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ab-address h-100" style="background-image: url('image/about-addressbg.jpg')">
+                    <div class="header-address">
+                        <div class="addr-marker">
+                            <svg class="marker"><use xlink:href="image/icons/symbol/sprite.svg#marker" /></svg>
+                        </div>
+                        <div class="addr-arrow">
+                            <svg class="arrow-right"><use xlink:href="image/icons/symbol/sprite.svg#arrow-right" /></svg>
+                        </div>
+                        <div class="addr-text"><strong>Ми тут!</strong><br>Київ, пр. Повітряний Сил, 32</div>
+                    </div>
+                    <div><a href="https://www.google.com/maps/?daddr=50.42981739048401,30.46662871349393" class="btn btn-white google-btn" target="_blank">Прокласти маршрут</a></div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div class="col1-bg" style="background-image: url('image/about-top-col5bg.jpg');"></div>
+            </div>
+        </div> <!-- /.about-top -->
+
+        <div class="row g-4 row-guard">
+            <div class="col-lg-9">
+                <div class="buttons-guard">
+                    <a href="#" class="btn btn-guard"><svg class="guard"><use xlink:href="image/icons/symbol/sprite.svg#guard" /></svg> Конфіденційність</a>
+                    <a href="#" class="btn btn-guard"><svg class="guard"><use xlink:href="image/icons/symbol/sprite.svg#guard" /></svg> Офіційна гарантія</a>
+                    <a href="#" class="btn btn-guard"><svg class="guard"><use xlink:href="image/icons/symbol/sprite.svg#guard" /></svg> Ліцензія МОЗ</a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ab-socials">
+                    <a href="#"><svg class="instagram"><use xlink:href="image/icons/symbol/sprite.svg#instagram" /></svg></a>
+                    <a href="#"><svg class="facebook"><use xlink:href="image/icons/symbol/sprite.svg#facebook" /></svg></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@@include('parts/footer.html')

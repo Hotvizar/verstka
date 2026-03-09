@@ -57,6 +57,10 @@
                         font-weight: 700;
                         margin-bottom: 24px;
                         white-space: nowrap;
+
+                        &:hover, &:active, &:focus, &.btn:first-child:active, &.btn:focus-visible {
+                            background-color: rgba(229, 231, 189, 1);
+                        }
                     }
                 }
 
@@ -72,6 +76,10 @@
 
             .google-btn {
                 margin-bottom: 31px;
+
+                &:hover, &:active, &:focus {
+                    background-color: rgba(229, 231, 189, 1);
+                }
             }
 
             .ci-footer {
@@ -115,6 +123,10 @@
                                 width: 12.7px;
                             }
                         }
+
+                        &:hover, &:active, &:focus {
+                            background-color: rgba(229, 231, 189, 1);
+                        }
                     }
                 }
             }
@@ -134,24 +146,6 @@
             .btn-white {
                 flex-basis: 311px;
                 margin-left: 24px;
-
-                span {
-                    background-color: $grey;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    line-height: 0;
-                    margin-left: 12px;
-                    height: 34px;
-                    width: 34px;
-
-                    .telegram {
-                        fill: $fc;
-                        height: 34px;
-                        width: 34px;
-                    }
-                }
             }
         }
 

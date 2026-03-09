@@ -116,10 +116,15 @@ button,
 .btn-green {
 	background-color: $green;
 	color: #fff;
+
+	&:hover, &:active, &:focus, &.btn:first-child:active, &.btn:focus-visible {
+		background-color: #bbc07f;
+		color: #fff;
+	}
 }
 
 .btn-grey {
-	background: $grey;
+	background-color: $grey;
 	color: $fc;
 
 	span {
@@ -132,6 +137,7 @@ button,
 		margin-left: 12px;
 		height: 34px;
 		width: 34px;
+		transition: all .3s;
 
 		.telegram {
 			fill: $fc;
@@ -139,16 +145,31 @@ button,
 			height: 34px;
 		}
 	}
+
+	&:hover {
+		background-color: $grey;
+		color: $fc;
+
+		span {
+			background: #e5e7bd;
+		}
+	}
 }
 
 .btn-title {
 	border-radius: 24px;
-	background: rgba(245, 245, 247, 1);
+	background: rgb(245, 245, 247);
 	font-weight: 400;
 	color: $green;
 	margin-bottom: 35px;
 	text-transform: uppercase;
 	width: fit-content;
+
+	&:hover, &:focus, &:active, &:first-child:active {
+		background: rgba(235, 236, 218, 1);
+		color: $green;
+		text-decoration: underline;
+	}
 }
 
 .btn-white {
@@ -187,6 +208,23 @@ button,
 			width: 34px;
 			height: 34px;
 		}
+	}
+
+	&:hover, &:active, &:focus, &.btn:first-child:active, &.btn:focus-visible {
+		background-color: #fff;
+		color: $fc;
+
+		span {
+			background: #e5e7bd;
+		}
+	}
+}
+:not(.btn-check)+.btn:active {
+	background-color: #fff;
+	color: $fc;
+
+	span {
+		background: #e5e7bd;
 	}
 }
 
@@ -240,7 +278,7 @@ button,
 
 	&::before {
 		background: #ebecda;
-		border-radius: 50px;
+		border-radius: 50%;
 		content: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 6.70312 6.72021' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.703125' height='6.720215' fill='none' customFrame='%23000000'%3e%3cpath id='+' d='M4.304 0L4.304 2.48L6.704 2.48L6.704 4.256L4.304 4.256L4.304 6.72L2.384 6.72L2.384 4.256L0 4.256L0 2.48L2.384 2.48L2.384 0L4.304 0Z' fill='rgb(160,164,105)' fill-rule='nonzero' transform='matrix(-1,0,0,1,6.70312,0)' /%3e%3c/svg%3e ");
 		display: inline-flex;
 		align-items: center;
@@ -248,6 +286,16 @@ button,
 		margin-right: 12px;
 		height: 34px;
 		width: 34px;
+		transition: all .3s;
+	}
+
+	&:hover, &:active, &:focus {
+		text-decoration: underline;
+		
+		&::before {
+			background: $green;
+			content: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 6.70312 6.72021' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.703125' height='6.720215' fill='none' customFrame='%23000000'%3e%3cpath id='+' d='M4.304 0L4.304 2.48L6.704 2.48L6.704 4.256L4.304 4.256L4.304 6.72L2.384 6.72L2.384 4.256L0 4.256L0 2.48L2.384 2.48L2.384 0L4.304 0Z' fill='rgb(255,255,255)' fill-rule='nonzero' transform='matrix(-1,0,0,1,6.70312,0)' /%3e%3c/svg%3e ");
+		}
 	}
 }
 
@@ -281,12 +329,8 @@ button,
 				transition: all .3s;
 			}
 
-			&:hover {
-				background-color: $green;
-
-				svg {
-					fill: #fff;
-				}
+			&:hover, &:active, &:focus, &:first-child:active {
+				background-color: rgba(235, 236, 218, 0.8);
 			}
 		}
 	}
@@ -373,9 +417,13 @@ textarea.form-control {
 				}
 			}
 
-			&.active,
-			&:hover {
+			&.active {
+				a {
+					font-weight: 600;
+				}
+			}
 
+			&:hover {
 				a {
 					font-weight: 600;
 					background-color: #e6e6e6;
