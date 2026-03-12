@@ -39,6 +39,59 @@ const insSlider = new Swiper('#ins-slider', {
     },
 });
 
+//получаем ширину container
+function updateContainerWidth() {
+  const container = document.querySelector('.container');
+  const width = container.offsetWidth;
+
+  document.documentElement.style.setProperty(
+    '--container-width',
+    width + 'px'
+  );
+}
+
+updateContainerWidth();
+window.addEventListener('resize', updateContainerWidth);
+
+const techSlider = new Swiper('#technology-slider', {
+    slidesPerView: 3,
+    speed: 800,
+    spaceBetween: 24,
+    freeMode: true,
+    //slidesOffsetAfter: -49,
+    loop: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    observer: true,
+    observeSlideChildren: true,
+    observeParents: true,
+    /* breakpoints: {
+        // when window width is >= 320px
+        900: {
+        slidesOffsetAfter: -230,
+        },
+    }, */
+    
+    /* autoplay: {
+        delay: 5000,
+    }, */
+    navigation: {
+        nextEl: '#tech-slide-next',
+        prevEl: '#tech-slide-prev',
+    },
+    pagination: {
+        el: "#tech-slide-pagination",
+        type: "progressbar",
+    },
+});
+
+/* techSlider.on('slideChangeTransitionEnd', () => {
+  techSlider.update();
+}); */
+
+
+
+
 if (typeof gsap !== 'undefined') {
     //paralax
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
