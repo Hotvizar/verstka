@@ -117,7 +117,11 @@ button,
 	background-color: $green;
 	color: #fff;
 
-	&:hover, &:active, &:focus, &.btn:first-child:active, &.btn:focus-visible {
+	&:hover,
+	&:active,
+	&:focus,
+	&.btn:first-child:active,
+	&.btn:focus-visible {
 		background-color: #bbc07f;
 		color: #fff;
 	}
@@ -165,7 +169,10 @@ button,
 	text-transform: uppercase;
 	width: fit-content;
 
-	&:hover, &:focus, &:active, &:first-child:active {
+	&:hover,
+	&:focus,
+	&:active,
+	&:first-child:active {
 		background: rgba(235, 236, 218, 1);
 		color: $green;
 		text-decoration: underline;
@@ -210,7 +217,11 @@ button,
 		}
 	}
 
-	&:hover, &:active, &:focus, &.btn:first-child:active, &.btn:focus-visible {
+	&:hover,
+	&:active,
+	&:focus,
+	&.btn:first-child:active,
+	&.btn:focus-visible {
 		background-color: #fff;
 		color: $fc;
 
@@ -219,6 +230,7 @@ button,
 		}
 	}
 }
+
 :not(.btn-check)+.btn:active {
 	background-color: #fff;
 	color: $fc;
@@ -289,9 +301,11 @@ button,
 		transition: all .3s;
 	}
 
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		text-decoration: underline;
-		
+
 		&::before {
 			background: $green;
 			content: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 6.70312 6.72021' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.703125' height='6.720215' fill='none' customFrame='%23000000'%3e%3cpath id='+' d='M4.304 0L4.304 2.48L6.704 2.48L6.704 4.256L4.304 4.256L4.304 6.72L2.384 6.72L2.384 4.256L0 4.256L0 2.48L2.384 2.48L2.384 0L4.304 0Z' fill='rgb(255,255,255)' fill-rule='nonzero' transform='matrix(-1,0,0,1,6.70312,0)' /%3e%3c/svg%3e ");
@@ -329,7 +343,10 @@ button,
 				transition: all .3s;
 			}
 
-			&:hover, &:active, &:focus, &:first-child:active {
+			&:hover,
+			&:active,
+			&:focus,
+			&:first-child:active {
 				background-color: rgba(235, 236, 218, 0.8);
 			}
 		}
@@ -497,7 +514,7 @@ textarea.form-control {
 				@include mq(md) {
 					margin-top: -90px;
 				}
-				
+
 				@include mq(sm) {
 					margin-top: -17vw;
 				}
@@ -534,4 +551,77 @@ textarea.form-control {
 			}
 		}
 	}
+}
+
+.modal {
+	--bs-modal-width: 636px;
+	--bs-modal-padding: 24px;
+}
+
+.modal-content {
+	--bs-modal-bg: transparent;
+	--bs-modal-border-radius: 24px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 2px 2px 10px 0px rgba(16, 16, 16, 0.15),
+		inset 0 1px 0 rgba(255, 255, 255, 0.42);
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		padding: 1px;
+		border-radius: inherit;
+		background: linear-gradient(-15deg, $grey, transparent, $grey);
+		mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+		-webkit-mask:
+			linear-gradient(#000 0 0) content-box,
+			linear-gradient(#000 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		z-index: -1;
+		will-change: mask;
+	}
+
+	.modal-header {
+		padding: 45px 24px 35px;
+		border-bottom: none;
+		position: relative;
+
+		.btn-close {
+			--bs-btn-close-color: #fff;
+			--bs-btn-close-bg: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 14.1445 14.1421' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.144531' height='14.142090' fill='none' customFrame='%23000000'%3e%3cg id='Group 2147203137'%3e%3crect id='Rectangle 375' width='17.000000' height='2.999999' x='0.000000' y='0.000000' fill='rgb(255,255,255)' transform='matrix(-0.707107,0.707107,-0.707107,-0.707107,14.1445,2.12109)' /%3e%3crect id='Rectangle 376' width='17.000000' height='2.999999' x='0.000000' y='0.000000' fill='rgb(255,255,255)' transform='matrix(-0.707107,-0.707107,0.707107,-0.707107,12.0195,14.1421)' /%3e%3c/g%3e%3c/svg%3e ");
+			--bs-btn-close-opacity: 1;
+			--bs-btn-close-hover-opacity: 0.75;
+			--bs-btn-close-focus-shadow: none;
+			--bs-btn-close-focus-opacity: 1;
+			--bs-btn-close-disabled-opacity: 0.25;
+			--bs-btn-close-white-filter: none;
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			top: 25px;
+			right: 24px;
+		}
+	}
+
+	.modal-title {
+		font-size: 24px;
+		font-weight: 500;
+		color: #fff;
+		line-height: 1;
+	}
+
+	.modal-body {
+		padding-top: 0;
+
+		.btn-green {
+			width: fit-content;
+		}
+	}
+}
+
+.modal-backdrop {
+	--bs-backdrop-bg: #4f5936;
+	--bs-backdrop-opacity: 0.3;
 }
